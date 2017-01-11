@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_actionbar_item_height"
+    android:background="@color/themeBlue">
+
+    <ImageView
+        android:id="@+id/iv_left_one_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/px_10"
+        android:background="@drawable/ic_chevron_left_grey_24dp" />
+
+    <TextView
+        android:id="@+id/tv_right_one_img"
+        style="@style/my_textview_style_title"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/px_10"
+        android:textSize="@dimen/textsize_small"
+        android:text="待替换" />
+
+    <TextView
+        android:id="@+id/tv_title_one_img"
+        style="@style/my_textview_style_title"
+        android:layout_alignBaseline="@+id/tv_right_one_img"
+        android:layout_alignBottom="@+id/tv_right_one_img"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title" />
+
+</RelativeLayout>
+
+

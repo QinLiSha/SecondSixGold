@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="10dp"
+    android:insetRight="10dp">
+
+    <shape>
+        <solid android:color="#55FF4455" />
+        <corners android:radius="3.0dip" />
+        <gradient
+            android:centerColor="#000"
+            android:endColor="#55888888"
+            android:startColor="#55888888" />
+    </shape>
+    <!--<gradient-->
+    <!--android:centerColor="@color/themeBlue"-->
+    <!--android:endColor="@color/paleturquoise"-->
+    <!--android:startColor="@color/paleturquoise" />-->
+
+</inset>

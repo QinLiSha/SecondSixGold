@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.HomeActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_home_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:visibility="gone"
+            android:background="@drawable/ic_local_florist_red_24dp" />
+
+        <TextView
+            android:id="@+id/tv_home_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_middle" />
+
+        <ImageView
+            android:id="@+id/iv_home_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_local_florist_red_24dp"
+            android:layout_marginRight="@dimen/dp_10"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contianer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></RelativeLayout>
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/View_in_actionbar_lightgray"-->
+        <!--android:background="@color/lightgray" />-->
+
+    <LinearLayout
+        android:id="@+id/ll_home_bottom_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:id="@+id/ll_home_homepage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_home_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/ic_person_outline_blue_24dp" />
+
+            <TextView
+                android:id="@+id/tv_home_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="@string/homepage"
+                android:textColor="@color/themeBlue"
+                style="@style/my_textview_style_title"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_home_individual_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_home_individual_order"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/ic_person_outline_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_home_individual_order"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="@string/individual_order"
+                android:textColor="@color/lightgray"
+                style="@style/my_textview_style_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_home_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_home_nearby"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/ic_person_outline_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_home_nearby"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="@string/nearby"
+                android:textColor="@color/lightgray"
+                style="@style/my_textview_style_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_home_I"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_home_I"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/ic_person_outline_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_home_I"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="@string/I"
+                android:textColor="@color/lightgray"
+                style="@style/my_textview_style_title" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

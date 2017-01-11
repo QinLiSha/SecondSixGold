@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--button的纯色圆角矩形蓝色按下时的颜色-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/oldThemeBlue" />
+    <corners android:radius="5dp" />
+</shape>

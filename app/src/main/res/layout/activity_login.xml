@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_blue_lightblue"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.LoginActivity">
+
+    <!--android:background="@drawable/register_and_login_background"-->
+    <!--android:background="@color/powderblue"-->
+
+    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
+        android:id="@+id/actionbarView_twoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ImageView
+        android:layout_width="@dimen/px_400"
+        android:layout_height="@dimen/px_115"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/px_80"
+        android:background="@mipmap/xinxinwhite" />
+
+
+    <EditText
+        android:id="@+id/et_tel_num"
+        style="@style/my_edittext_style_telephone_num"
+        android:hint="@string/phone_number"
+        android:padding="@dimen/px_15" />
+
+    <EditText
+        android:id="@+id/et_pwd"
+        style="@style/my_edittext_style_password"
+        android:hint="@string/password" />
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/my_button_style_01"
+        android:text="@string/log_in" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_free_register"
+            style="@style/my_textview_style_normal_white"
+            android:layout_marginRight="@dimen/px_80"
+            android:text="@string/register" />
+
+        <TextView
+            android:id="@+id/tv_foget_pwd"
+            style="@style/my_textview_style_normal_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_80"
+            android:text="@string/forget_pwd" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="@dimen/button_normal_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_50"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <View
+                android:layout_width="@dimen/px_0"
+                android:layout_height="1px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/textView11"
+                style="@style/my_textview_style_normal_white"
+                android:layout_width="@dimen/px_0"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="第三方登录" />
+
+
+            <View
+                android:layout_width="@dimen/px_0"
+                android:layout_height="1px"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/button_normal_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_qqlogo"
+                android:layout_width="@dimen/px_80"
+                android:layout_height="@dimen/px_80"
+                android:layout_margin="@dimen/px_15"
+                android:background="@mipmap/qqlogo" />
+
+            <ImageView
+                android:id="@+id/iv_weixinlogo"
+                android:layout_width="@dimen/px_80"
+                android:layout_height="@dimen/px_80"
+                android:layout_margin="@dimen/px_15"
+                android:background="@mipmap/weixinlogo" />
+
+            <ImageView
+                android:id="@+id/iv_jingdonglogo"
+                android:layout_width="@dimen/px_80"
+                android:layout_height="@dimen/px_80"
+                android:layout_margin="@dimen/px_15"
+                android:background="@mipmap/jingdonglogo" />
+
+            <ImageView
+                android:id="@+id/iv_tianmaologo"
+                android:layout_width="@dimen/px_80"
+                android:layout_height="@dimen/px_80"
+                android:layout_margin="@dimen/px_15"
+                android:background="@mipmap/tianmaologo" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

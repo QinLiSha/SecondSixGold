@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_car_type"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.home.CarTypeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_high_item_height"
+        android:background="@color/themeBlue"
+        android:weightSum="11">
+
+        <RelativeLayout
+            android:id="@+id/rl_from_address"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="@dimen/activity_car_type_textview_border_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/px_7"
+            android:layout_weight="3"
+            android:background="@drawable/text_view_border_black">
+
+
+            <TextView
+                android:id="@+id/tv_from_address"
+                style="@style/my_textview_style_small_black"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:lines="1"
+                android:maxLength="5"
+                android:text="撒哈拉沙漠市" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:background="@drawable/popupline_black_grey" />
+
+            <ImageView
+                android:id="@+id/iv_from_address_1"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_from_address_2"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/iv_from_address_1"
+                android:background="@drawable/ic_arrow_drop_up_black_24dp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <ImageView
+
+            android:layout_width="@dimen/px_0"
+            android:layout_height="@dimen/px_20"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/ic_arrow_forward_black_24dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_to_address"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="@dimen/activity_car_type_textview_border_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/px_7"
+            android:layout_weight="3"
+            android:background="@drawable/text_view_border_black">
+
+            <TextView
+                android:id="@+id/tv_to_address"
+                style="@style/my_textview_style_small_black"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLength="5"
+                android:text="全国" />
+
+            <ImageView
+                android:id="@+id/iv_to_address_1"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_to_address_2"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_arrow_drop_up_black_24dp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_cartype_carlength"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="@dimen/activity_car_type_textview_border_height"
+
+
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/px_7"
+            android:layout_weight="2"
+            android:background="@drawable/text_view_border_black">
+
+            <TextView
+                android:id="@+id/tv_cartype_carlength"
+                style="@style/my_textview_style_small_black"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLength="4"
+                android:text="车型车长" />
+
+            <ImageView
+                android:id="@+id/iv_cartype_carlength_1"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_cartype_carlength_2"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_arrow_drop_up_black_24dp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_choose_type"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="67px"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/px_7"
+            android:layout_weight="2"
+            android:background="@drawable/text_view_border_black">
+
+            <TextView
+                android:id="@+id/tv_choose_type"
+                style="@style/my_textview_style_small_black"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLength="4"
+                android:text="快递网点" />
+
+            <ImageView
+                android:id="@+id/iv_choose_type_1"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+
+            <ImageView
+                android:id="@+id/iv_choose_type_2"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_arrow_drop_up_black_24dp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/my_textview_style_normal_black"
+        android:layout_gravity="center"
+        android:text="调度中心" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_3"
+        android:background="@drawable/popupline_black_grey" />
+
+    <ListView
+        android:id="@+id/lv_car_type_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_home_bottom_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/ll_home_homepage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_home_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/ic_person_outline_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_home_homepage"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+
+                android:text="@string/homepage"
+                android:textColor="@color/lightgray" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_car_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_car_type"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/ic_local_shipping_blue_24dp" />
+
+            <TextView
+                android:id="@+id/tv_car_type"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="@string/car_type"
+                android:textColor="@color/themeBlue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_home_I"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_home_I"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/ic_person_outline_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_home_I"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="@string/I"
+                android:textColor="@color/lightgray" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
