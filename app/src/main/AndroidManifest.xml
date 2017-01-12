@@ -42,7 +42,8 @@
         <activity android:name=".activity.home.NewHomeActivity" />
         <activity android:name=".activity.home.CarTypeActivity" />
         <activity android:name=".activity.home.MineActivity" />
-        <activity android:name=".activity.mine.MyInformationActivity"></activity>
+        <activity android:name=".activity.mine.MyInformationActivity" />
+        <activity android:name=".activity.home.ChooseCarTypeActivity"></activity>
     </application>
 
 </manifest>

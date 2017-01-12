@@ -108,10 +108,8 @@
     <string name="matters_need_attention_details">注意事项 : 禁止邮寄微生物，动物，易碎，易燃易爆化学物品黄赌毒等国家法律规定违禁品，邮寄员必须开箱验视！</string>
 
 
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">我是空白的fragment页面</string>
-
 
 
 </resources>

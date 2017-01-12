@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_choose_car_type"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.home.ChooseCarTypeActivity">
+
+    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
+        android:id="@+id/actionbarView_twoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        style="@style/my_textview_style_normal_black"
+        android:text="车长："
+        android:textSize="@dimen/px_40" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+        style="@style/my_textview_style_normal_black"
+        android:text="不限"
+            android:layout_width="@dimen/px_0"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/px_10"
+        android:background="@drawable/textview_background_round_unchooseed_light"
+        />
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:layout_width="@dimen/px_0"
+            android:text="不限"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/px_10"
+            android:background="@drawable/textview_background_round_unchooseed_light"
+            />
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:text=""
+            android:layout_width="@dimen/px_0"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/px_10"
+            android:background="@drawable/textview_background_round_unchooseed_light"
+            />
+        <TextView
+            android:layout_width="@dimen/px_0"
+            style="@style/my_textview_style_normal_black"
+            android:text="不限"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/px_10"
+            android:background="@drawable/textview_background_round_unchooseed_light"
+            />
+    </LinearLayout>
+
+    <TextView
+        style="@style/my_textview_style_normal_black"
+        android:text="车型："
+        android:textSize="@dimen/px_40" />
+</LinearLayout>

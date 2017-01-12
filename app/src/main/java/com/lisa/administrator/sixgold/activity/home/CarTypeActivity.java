@@ -110,20 +110,16 @@ public class CarTypeActivity extends MyBaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_from_address:
-                break;
             case R.id.iv_from_address_1:
-                break;
             case R.id.iv_from_address_2:
-                break;
             case R.id.rl_from_address:
+                initAddress_district(tvFromAddress);
                 break;
             case R.id.tv_to_address:
-                break;
             case R.id.iv_to_address_1:
-                break;
             case R.id.iv_to_address_2:
-                break;
             case R.id.rl_to_address:
+                initAddress_district(tvToAddress);
                 break;
             case R.id.tv_cartype_carlength:
                 break;
