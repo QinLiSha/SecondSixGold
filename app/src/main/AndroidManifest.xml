@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lisa.administrator.sixgold">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 拨打电话的权限 -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +13,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="design_width"
-            android:value="720" />
+            android:value="768" />
         <meta-data
             android:name="design_height"
             android:value="1280" />
@@ -43,7 +46,21 @@
         <activity android:name=".activity.home.CarTypeActivity" />
         <activity android:name=".activity.home.MineActivity" />
         <activity android:name=".activity.mine.MyInformationActivity" />
-        <activity android:name=".activity.home.ChooseCarTypeActivity"></activity>
+        <activity android:name=".activity.home.ChooseCarTypeActivity" />
+        <activity android:name=".activity.mine.ShareToFriendActivity" />
+        <activity android:name=".activity.mine.AboutUsActivity" />
+        <activity android:name=".activity.mine.ChangePwdActivity" />
+        <activity android:name=".activity.mine.CouponActivity" />
+        <activity android:name=".activity.mine.SettingActivity" />
+        <activity android:name=".activity.mine.MessagesActivity" />
+        <activity android:name=".activity.mine.WalletActivity" />
+        <activity android:name=".activity.order.ToPlaceOrderActivity" />
+        <activity android:name=".activity.toplaceorder.PlaceOrderExpressActivity" />
+        <activity android:name=".activity.toplaceorder.PlaceOrderLegworkActivity" />
+        <activity android:name=".activity.toplaceorder.PlaceOrderLocalCityActivity" />
+        <activity android:name=".activity.toplaceorder.PlaceOrderLogisticsActivity" />
+        <activity android:name=".activity.toplaceorder.PlaceOrderLongDistanceFreightActivity" />
+        <activity android:name=".activity.order.SuccessOrderActivity"></activity>
     </application>
 
 </manifest>

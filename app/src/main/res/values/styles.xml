@@ -30,9 +30,9 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_margin">@dimen/px_35</item>
     </style>
-    <!--上面是button的大小-->
+    <!--上面是button的样式-->
 
-    <!--下面是输入框的大小-->
+    <!--下面是输入框的样式-->
     <!--my_edittext_style_normal是一般输入框的样式-->
     <style name="my_edittext_style_normal" parent="Base.Widget.AppCompat.EditText">
         <item name="android:layout_width">@dimen/button_normal_width</item><!--宽度-->
@@ -42,6 +42,40 @@
         <item name="android:background">@drawable/edittext_background_normal</item><!--背景色或形状-->
         <item name="android:layout_margin">@dimen/px_10</item><!--外边距是10px-->
         <item name="android:paddingLeft">@dimen/px_10</item><!--左边内边距是10px-->
+        <item name="android:lines">1</item><!--只允许是单行输入-->
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+    <!--my_edittext_style_normal是一般输入框的样式-->
+    <style name="my_edittext_style_normal_grey" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:layout_width">@dimen/button_normal_width</item><!--宽度-->
+        <item name="android:layout_height">@dimen/activity_low_item_height</item><!--高度-->
+        <item name="android:layout_gravity">center</item><!--居中显示-->
+        <item name="android:textSize">@dimen/textsize_normal</item><!--字体大小-->
+        <item name="android:background">@drawable/edittext_background_normal_grey</item><!--背景色或形状-->
+        <item name="android:layout_margin">@dimen/px_10</item><!--外边距是10px-->
+        <item name="android:paddingLeft">@dimen/px_10</item><!--左边内边距是10px-->
+        <item name="android:lines">1</item><!--只允许是单行输入-->
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+    <!--my_edittext_style_normal是一般输入框没有框的样式-->
+    <style name="my_edittext_style_normal_no_line" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:layout_width">@dimen/button_normal_width</item><!--宽度-->
+        <item name="android:layout_height">@dimen/activity_low_item_height</item><!--高度-->
+        <item name="android:layout_gravity">center</item><!--居中显示-->
+        <item name="android:textSize">@dimen/textsize_small</item><!--字体大小-->
+        <item name="android:layout_margin">@dimen/px_10</item><!--外边距是10px-->
+        <item name="android:paddingLeft">@dimen/px_10</item><!--左边内边距是10px-->
+        <item name="android:lines">1</item><!--只允许是单行输入-->
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+    <!--my_edittext_style_normal是一般输入框没有框的样式-->
+    <!--比较小的输入框-->
+    <style name="my_edittext_style_normal_no_line_no_padding" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:layout_width">@dimen/button_normal_width</item><!--宽度-->
+        <item name="android:layout_height">@dimen/activity_low_item_height</item><!--高度-->
+        <item name="android:layout_gravity">center</item><!--居中显示-->
+        <item name="android:textSize">@dimen/px_20</item><!--字体大小-->
+        <item name="android:layout_marginLeft">@dimen/px_5</item><!--外边距是10px-->
         <item name="android:lines">1</item><!--只允许是单行输入-->
         <item name="android:textColorHint">@color/gray</item>
     </style>
@@ -77,8 +111,9 @@
         <item name="android:inputType">phone</item>
         <item name="android:textColorHint">@color/gray</item>
     </style>
-    <!--上面是输入框的大小-->
-    <!--下面是字体的大小-->
+    <!--上面是输入框的样式-->
+
+    <!--下面是字体的样式-->
     <!--textview标题的样式-->
     <style name="my_textview_style_title">
         <item name="android:layout_width">wrap_content</item>
@@ -95,6 +130,13 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:padding">@dimen/px_10</item>
     </style>
+
+    <style name="my_textview_style_normal_small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+        <item name="android:padding">@dimen/px_10</item>
+    </style>
     <!--//车型车长的没有选中-->
     <style name="my_textview_style_normal_black_unchooseed">
         <item name="android:layout_width">wrap_content</item>
@@ -102,23 +144,27 @@
         <item name="android:textSize">@dimen/textsize_normal</item>
         <item name="android:background">@drawable/textview_background_round_unchooseed_light</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
         <item name="android:padding">@dimen/px_10</item>
     </style>
     <!--//车型车长的选中-->
     <style name="my_textview_style_normal_black_chooseed">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/textview_background_round_chooseed_blue</item>
         <item name="android:textSize">@dimen/textsize_normal</item>
+        <item name="android:gravity">center</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:padding">@dimen/px_10</item>
     </style>
+
     <style name="my_textview_style_small_black">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/textsize_small</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:padding">@dimen/px_10</item>
     </style>
+
     <style name="my_textview_style_normal_blue">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -150,10 +196,16 @@
         <item name="android:padding">@dimen/px_10</item>
     </style>
 
+
     <style name="my_textview_style_normal_default_nopadding">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/textsize_normal</item>
     </style>
-    <!--上面是字体的大小-->
+    <!--上面是字体的样式-->
+    <!--下面是图片的样式-->
+    <style name="my_imageview_style_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 </resources>

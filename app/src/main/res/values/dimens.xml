@@ -104,7 +104,7 @@
 
     <!--下面的是字体的大小px-->
     <dimen name="textsize_normal">28px</dimen>
-    <dimen name="textsize_small">23px</dimen>
+    <dimen name="textsize_small">25px</dimen>
     <dimen name="textsize_big">33px</dimen>
     <dimen name="px_0">0px</dimen>
     <dimen name="px_1">1px</dimen>
@@ -147,6 +147,7 @@
     <dimen name="px_250">250px</dimen>
     <dimen name="px_200">200px</dimen>
     <dimen name="px_350">350px</dimen>
+    <dimen name="px_360">360px</dimen>
     <dimen name="px_105">105px</dimen>
     <dimen name="px_110">110px</dimen>
     <dimen name="px_115">115px</dimen>
@@ -154,7 +155,8 @@
     <dimen name="px_400">450px</dimen>
 
     <dimen name="px_500">500px</dimen>
-    <dimen name="px_550">50px</dimen>
+    <dimen name="px_550">550px</dimen>
+    <dimen name="px_540">540px</dimen>
     <dimen name="px_600">600px</dimen>
     <dimen name="px_650">650px</dimen>
     <dimen name="px_700">700px</dimen>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300px"
+    android:layout_margin="@dimen/px_20"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/px_50"
+        android:layout_height="match_parent"
+        android:background="@mipmap/icon_coupon_cannot_use_left" />
+
+    <LinearLayout
+        android:layout_width="@dimen/px_0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/coupon_cannot_grey"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_high_item_height"
+            android:layout_marginBottom="@dimen/px_10"
+            android:layout_marginLeft="@dimen/px_10"
+            android:layout_marginRight="@dimen/px_10"
+            android:layout_marginTop="@dimen/px_20">
+
+            <TextView
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:text="¥ 1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px_90" />
+
+            <ImageView
+                android:layout_width="@dimen/px_300"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/coupon_font" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_actionbar_item_height"
+            android:layout_margin="@dimen/px_10"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:text="失效" />
+
+        <TextView
+            style="@style/my_textview_style_normal_white"
+            android:layout_gravity="center"
+            android:text="发放时间：2016-12-01    截止时间：2017-12-01" />
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="@dimen/px_50"
+        android:layout_height="match_parent"
+        android:background="@mipmap/icon_coupon_cannot_use_right" />
+</LinearLayout>

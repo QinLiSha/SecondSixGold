@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_change_pwd"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.lisa.administrator.sixgold.activity.mine.ChangePwdActivity">
+
+    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
+        android:id="@+id/actionbarView_twoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_150"/>
+    <EditText
+        android:id="@+id/et_tel_num"
+        style="@style/my_edittext_style_telephone_num" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_20" />
+
+    <LinearLayout
+        android:layout_width="@dimen/button_normal_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/px_20"
+        android:orientation="horizontal"
+        android:weightSum="21">
+
+        <EditText
+            android:id="@+id/editText14"
+            style="@style/my_edittext_style_normal"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/px_0"
+            android:layout_weight="10"
+            android:hint="@string/please_enter_verification_code" />
+
+        <TextView
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            style="@style/my_button_style_01"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/px_0"
+            android:layout_weight="10"
+            android:text="@string/ask_for_verification_code" />
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/et_pwd"
+        style="@style/my_edittext_style_password" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_20" />
+
+    <EditText
+        android:id="@+id/et_re_pwd"
+        style="@style/my_edittext_style_password" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_20" />
+
+
+    <Button
+        android:id="@+id/btn_sure"
+        style="@style/my_button_style_01"
+        android:layout_width="500px"
+        android:layout_height="@dimen/px_65"
+        android:layout_margin="@dimen/px_10"
+        android:text="@string/sure" />
+</LinearLayout>
+

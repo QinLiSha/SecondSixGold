@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_share_to_f"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.mine.ShareToFriendActivity">
+
+    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
+        android:id="@+id/actionbarView_twoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_20"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/px_100"
+                android:layout_height="@dimen/px_100"
+                android:background="@mipmap/share1" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+
+                android:text="微信朋友" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/px_100"
+                android:layout_height="@dimen/px_100"
+                android:background="@mipmap/share2" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+
+                android:text="微信朋友" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="@dimen/px_100"
+                android:layout_height="@dimen/px_100"
+                android:background="@mipmap/share3" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+
+                android:text="微信朋友" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/px_100"
+                android:layout_height="@dimen/px_100"
+                android:background="@mipmap/share4" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+
+                android:text="微信朋友" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/px_100"
+                android:layout_height="@dimen/px_100"
+                android:background="@mipmap/share5" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+
+                android:text="微信朋友" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_0"
+        android:layout_weight="1"
+        android:background="@mipmap/share6"
+        android:orientation="vertical"
+        android:weightSum="9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_0"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/my_textview_style_normal_white"
+                android:text="您的推荐码" />
+
+            <TextView
+                android:id="@+id/textView17"
+                style="@style/my_textview_style_normal_blue"
+                android:layout_width="@dimen/px_300"
+                android:background="@drawable/view_border_grey"
+                android:gravity="center"
+                android:text="268d45e5"
+                android:textSize="@dimen/px_45" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_0"
+            android:layout_weight="5">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_0"
+            android:layout_weight="2"
+            android:gravity="center_horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_blue"
+                android:layout_width="@dimen/px_500"
+                android:layout_height="@dimen/px_50"
+                android:background="@mipmap/share8"
+                android:gravity="center"
+                android:text="已邀请0人，获得0张优惠券" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

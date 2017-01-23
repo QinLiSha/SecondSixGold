@@ -1,6 +1,7 @@
 package com.lisa.administrator.sixgold.activity;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -17,9 +18,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
-
-import static com.lisa.administrator.sixgold.R.color.lightgray;
-import static com.lisa.administrator.sixgold.R.color.themeBlue;
 
 /**
  * 主页面
@@ -177,11 +175,11 @@ public class HomeActivity extends MyBaseActivity {
     }
 
     private int getPressTextColor() {
-        return getResources().getColor(themeBlue);
+        return ContextCompat.getColor(this, R.color.themeBlue);
     }
 
     private int getDefaultCorlor() {
-        return getResources().getColor(lightgray);
+        return ContextCompat.getColor(this, R.color.lightgray);
     }
 
 

@@ -12,10 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/lightgray" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,7 +22,7 @@
 
         <RelativeLayout
             android:id="@+id/rl_newest"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/px_0"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
@@ -44,50 +40,50 @@
             <View
                 android:id="@+id/view_newest"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/px_2"
                 android:layout_alignParentBottom="true"
                 android:background="@color/themeBlue" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_ing"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/px_0"
             android:layout_height="match_parent"
             android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/tv_ing"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:text="进行中" />
 
             <View
                 android:id="@+id/view_ing"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/px_2"
                 android:layout_alignParentBottom="true"
                 android:background="@color/themeBlue"
                 android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_ing"
+                style="@style/my_textview_style_normal_default"
+                android:text="进行中"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_tosure"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/px_0"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <TextView
                 android:id="@+id/tv_toSure"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/my_textview_style_normal_default"
+
                 android:layout_centerInParent="true"
                 android:text="待确定" />
 
             <View
                 android:id="@+id/view_toSure"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/px_2"
                 android:layout_alignParentBottom="true"
                 android:background="@color/themeBlue"
                 android:visibility="gone" />
@@ -95,21 +91,20 @@
 
         <RelativeLayout
             android:id="@+id/rl_historyOrder"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/px_0"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <TextView
                 android:id="@+id/tv_historyOrder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/my_textview_style_normal_default"
                 android:layout_centerInParent="true"
                 android:text="历史订单" />
 
             <View
                 android:id="@+id/view_history"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_height="@dimen/px_2"
                 android:layout_alignParentBottom="true"
                 android:background="@color/themeBlue"
                 android:visibility="gone" />
@@ -119,13 +114,13 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.1dp"
+        android:layout_height="@dimen/px_1"
         android:background="@color/lightgray" />
 
     <RelativeLayout
         android:id="@+id/contianer"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/px_0"
         android:layout_weight="1">
 
     </RelativeLayout>

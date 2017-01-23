@@ -1,13 +1,14 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.lisa.administrator.sixgold.fragment.myorder.NewestFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        style="@style/my_textview_style_normal_default"
         android:text="进行中的订单" />
+    <include layout="@layout/layout_order_details_item" />
 
-</FrameLayout>
+</LinearLayout>

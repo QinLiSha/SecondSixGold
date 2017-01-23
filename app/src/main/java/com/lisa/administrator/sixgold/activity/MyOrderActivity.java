@@ -7,6 +7,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lisa.administrator.sixgold.R;
+import com.lisa.administrator.sixgold.activity.home.MineActivity;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 import com.lisa.administrator.sixgold.fragment.myorder.HistoryOrderFragment;
 import com.lisa.administrator.sixgold.fragment.myorder.NewestFragment;
@@ -20,6 +21,9 @@ import butterknife.OnClick;
 import static com.lisa.administrator.sixgold.R.color.defaultTextViewColor;
 import static com.lisa.administrator.sixgold.R.color.themeBlue;
 
+/**
+ * 我的订单界面
+ */
 public class MyOrderActivity extends MyBaseActivity {
 
     @BindView(R.id.tv_newest)
@@ -71,7 +75,7 @@ public class MyOrderActivity extends MyBaseActivity {
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            openActivity(HomeActivity.class);
+            openActivity(MineActivity.class);
             finish();
         }
     };

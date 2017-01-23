@@ -2,9 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/activity_actionbar_item_height"
-    android:background="@drawable/themeblue">
+    android:background="@color/themeBlue">
 
-    <ImageView
+
+<ImageView
         android:id="@+id/iv_left_two_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

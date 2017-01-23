@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_place_order_legwork"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.toplaceorder.PlaceOrderLegworkActivity">
+
+    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
+        android:id="@+id/actionbarView_twoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_10"
+        android:layout_marginRight="@dimen/px_10">
+
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:text="@string/item_type_description" />
+
+        <TextView
+            style="@style/my_textview_style_normal_blue"
+            android:layout_alignParentRight="true"
+            android:text="@string/please_choose" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_10"
+        android:layout_marginRight="@dimen/px_10"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/my_imageview_style_normal"
+            android:background="@drawable/ic_notifications_24dp" />
+
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:text="@string/order_note" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/px_10">
+
+        <ImageView
+            android:layout_width="@dimen/px_150"
+            android:layout_height="@dimen/px_150"
+            android:layout_margin="@dimen/px_10"
+            android:background="@mipmap/addphoto" />
+
+        <ImageView
+            android:layout_width="@dimen/px_150"
+            android:layout_height="@dimen/px_150"
+            android:layout_margin="@dimen/px_10"
+            android:background="@mipmap/addphoto" />
+
+        <EditText
+            style="@style/my_edittext_style_normal_grey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_150"
+            android:hint="@string/matters_need_attention_details"
+            android:lines="10"
+            android:textSize="@dimen/px_20" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_50"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="起步价：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:padding="@dimen/px_0"
+                    android:text="8" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:padding="@dimen/px_0"
+                    android:text="元（含" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:padding="@dimen/px_0"
+                    android:text="2" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:padding="@dimen/px_0"
+                    android:text="公里）" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_50"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="每公里单价：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:padding="@dimen/px_0"
+                    android:text="1.5" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:padding="@dimen/px_0"
+                    android:text="元\/公里" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_80"
+        android:layout_marginRight="@dimen/px_80"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="预计：" />
+
+            <TextView
+                style="@style/my_textview_style_normal_orange"
+                android:padding="@dimen/px_0"
+                android:text="25.5"
+                android:textSize="@dimen/textsize_big" />
+
+
+            <TextView
+                style="@style/my_textview_style_normal_orange"
+                android:padding="@dimen/px_0"
+                android:text="元"
+                android:textSize="@dimen/textsize_big" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView27"
+                style="@style/my_textview_style_normal_black"
+                android:text="加赏：" />
+
+            <TextView
+                style="@style/my_textview_style_normal_orange"
+                android:padding="@dimen/px_0"
+                android:textSize="@dimen/textsize_big" />
+
+            <EditText
+                style="@style/my_edittext_style_normal_grey"
+                android:layout_width="@dimen/px_80"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textColor="@color/orange" />
+
+
+            <TextView
+                style="@style/my_textview_style_normal_orange"
+                android:padding="@dimen/px_0"
+                android:text="元"
+                android:textSize="@dimen/textsize_big" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_10"
+        android:layout_marginLeft="@dimen/px_80"
+        android:layout_marginRight="@dimen/px_80"
+        android:layout_marginTop="@dimen/px_10"
+        android:background="@drawable/background_transparent_border_black"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:layout_width="@dimen/px_0"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#50adadad"
+            android:gravity="center"
+            android:text="即时下单" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/textView26"
+            style="@style/my_textview_style_normal_black"
+            android:layout_width="@dimen/px_0"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#50adadad"
+            android:gravity="center"
+            android:text="预约下单" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_10"
+        android:layout_marginLeft="@dimen/px_80"
+        android:layout_marginRight="@dimen/px_80"
+        android:layout_marginTop="@dimen/px_10"
+        android:background="@drawable/button_background_blue"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            style="@style/my_textview_style_normal_white"
+            android:layout_width="@dimen/px_0"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="即时下单" />
+
+        <View
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <TextView
+            style="@style/my_textview_style_normal_white"
+            android:layout_width="@dimen/px_0"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="预约下单" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_50"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="首单优惠：" />
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:padding="@dimen/px_0"
+                android:text="8" />
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:padding="@dimen/px_0"
+                android:text="元" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_50"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="共计支付：" />
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:padding="@dimen/px_0"
+                android:text="1.5" />
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:padding="@dimen/px_0"
+                android:text="元" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/lightgray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_marginRight="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_20">
+
+        <ImageView
+
+            android:id="@+id/iv_weixinpay"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/weixinlogo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_weixinpay"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="微信支付" />
+
+            <TextView
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_marginLeft="@dimen/px_10"
+                android:text="推荐安装微信5.0及以上版本的使用"
+                android:textSize="@dimen/px_20" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_local_florist_red_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_marginRight="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_20">
+
+        <ImageView
+            android:id="@+id/iv_balancepay"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/icon_balance_pay" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_balancepay"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="账户余额支付" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_default_nopadding"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="账户余额："
+                    android:textSize="@dimen/px_20" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_default_nopadding"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="¥860.00" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_marginRight="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_20">
+
+        <ImageView
+            android:id="@+id/iv_free_pay"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80"
+            android:layout_alignParentLeft="true"
+            android:background="@mipmap/icon_free_pay" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_free_pay"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="立享免单" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/my_textview_style_normal_default_nopadding"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="现在充值"
+                    android:textSize="@dimen/px_20" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_default_nopadding"
+                    android:text="500"
+                    android:textColor="@color/red" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_default_nopadding"
+                    android:text="元，此单立即免单（不省商品费，保价费）"
+                    android:textSize="@dimen/px_20" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        style="@style/my_button_style_01"
+        android:layout_width="match_parent"
+        android:text="确认支付" />
+</LinearLayout>
+
+    <!--之前只写了“/”，报错了，加了一个转义字符就可以了-->

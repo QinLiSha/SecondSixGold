@@ -21,26 +21,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_margin="@dimen/px_5"
         android:weightSum="4">
 
         <TextView
-        style="@style/my_textview_style_normal_black"
+        style="@style/my_textview_style_normal_black_chooseed"
         android:text="不限"
             android:layout_width="@dimen/px_0"
         android:layout_weight="1"
         android:layout_margin="@dimen/px_10"
-        android:background="@drawable/textview_background_round_unchooseed_light"
         />
         <TextView
-            style="@style/my_textview_style_normal_black"
+            style="@style/my_textview_style_normal_black_unchooseed"
             android:layout_width="@dimen/px_0"
-            android:text="不限"
+            android:text="4.2米"
+            android:gravity="center"
             android:layout_weight="1"
             android:layout_margin="@dimen/px_10"
             android:background="@drawable/textview_background_round_unchooseed_light"
             />
         <TextView
-            style="@style/my_textview_style_normal_black"
+            style="@style/my_textview_style_normal_black_unchooseed"
             android:text=""
             android:layout_width="@dimen/px_0"
             android:layout_weight="1"
@@ -49,7 +50,7 @@
             />
         <TextView
             android:layout_width="@dimen/px_0"
-            style="@style/my_textview_style_normal_black"
+            style="@style/my_textview_style_normal_black_unchooseed"
             android:text="不限"
             android:layout_weight="1"
             android:layout_margin="@dimen/px_10"

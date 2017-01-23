@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.LoginActivity;
+import com.lisa.administrator.sixgold.activity.order.ToPlaceOrderActivity;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
 import butterknife.BindView;
@@ -78,6 +79,7 @@ public class NewHomeActivity extends MyBaseActivity {
 //            case R.id.iv_current_city:
             case R.id.tv_current_city:
             case R.id.ll_current_city:
+                openActivity(ToPlaceOrderActivity.class);
                 showToast("当前的城市");
                 break;
             case R.id.iv_weather:

@@ -4,9 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="defaultBackgroundColor">#fafafa</color><!--默认的背景颜色-->
+    <!--96  163  254 -->
     <color name="themeBlue">#60A3FE</color><!--这是鑫鑫快运新的蓝色主题：选中，主题，按钮-->
     <color name="oldThemeBlue">#2B94FD</color>
-    <!--#2B94FD-->
+    <color name="coupon_cannot_grey">#BBBBBB</color>
+    <!--#2B94FD-->te
     <!--下面是-->
     <color name="edittextBackgroundColor">#66ffffff</color>
     <color name="edittextNormalBackgroundColor">#fafafa</color>
@@ -113,7 +115,7 @@
     <color name="aquamarine">#7fffd4</color> <!-- 碧绿色 -->
     <color name="chartreuse">#7fff00</color> <!-- 黄绿色 -->
     <color name="lawngreen">#7cfc00</color> <!-- 草绿色 -->
-    <color name="mediumslateblue">#7b68ee</color> <!-- 中暗蓝色 -->
+    <color name="mediumslateblue">#7c68ee</color> <!-- 中暗蓝色 -->
     <color name="lightslategray">#778899</color> <!-- 亮蓝灰 -->
     <color name="lightslategrey">#778899</color> <!-- 亮蓝灰 -->
     <color name="slategray">#708090</color> <!-- 灰石色 -->

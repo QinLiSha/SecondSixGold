@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/px_10"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_high_item_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_high_item_height"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_white"
+                android:layout_width="@dimen/px_60"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/px_10"
+                android:layout_marginRight="@dimen/px_10"
+                android:background="@mipmap/icon_blue"
+                android:gravity="center"
+                android:padding="@dimen/px_10"
+                android:text="预约"
+                android:textSize="@dimen/px_30" />
+
+            <TextView
+                android:id="@+id/textView18"
+                style="@style/my_textview_style_small_black"
+                android:layout_gravity="bottom"
+                android:text="预约时间：2017-01-20   09:50" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/px_50"
+            android:layout_height="@dimen/px_50"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/px_20"
+            android:background="@mipmap/deletesa" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/my_textview_style_normal_blue"
+            android:layout_marginLeft="@dimen/px_10"
+            android:text="已放弃" />
+
+        <TextView
+            style="@style/my_textview_style_normal_blue"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px_50"
+            android:text="长途货运" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:background="@color/lightgray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px_10"
+            android:background="@drawable/ic_add_location_orange_24dp" />
+
+        <TextView
+            style="@style/my_textview_style_normal_default"
+            android:layout_gravity="bottom"
+            android:text="寄：河南省郑州市创业中心" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px_10"
+            android:background="@drawable/ic_add_location_blue_24dp" />
+
+        <TextView
+            style="@style/my_textview_style_normal_default"
+            android:layout_gravity="bottom"
+            android:text="收：黑龙江省齐齐哈尔市富拉尔基区人民路123号创业中心大楼1304室" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_high_item_height">
+
+        <TextView
+            style="@style/my_textview_style_normal_orange"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/px_10"
+            android:text="已支付：0.00元"
+            android:textSize="@dimen/px_40" />
+
+        <TextView
+            style="@style/my_textview_style_normal_default"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px_10"
+            android:text="放单时间：2017-01-01" />
+    </RelativeLayout>
+</LinearLayout>

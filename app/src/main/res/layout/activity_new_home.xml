@@ -111,7 +111,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@mipmap/splash_2" />
+            android:background="@mipmap/map" />
     </ScrollView>
 
     <LinearLayout
@@ -121,7 +121,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:weightSum="3">
+        android:weightSum="4">
 
         <LinearLayout
             android:id="@+id/ll_home_homepage"
@@ -132,8 +132,8 @@
 
             <ImageView
                 android:id="@+id/iv_home_homepage"
-                android:layout_width="30px"
-                android:layout_height="30px"
+                android:layout_width="40px"
+                android:layout_height="35px"
                 android:layout_margin="@dimen/px_5"
                 android:layout_gravity="center"
             android:background="@mipmap/home_house_blue"/>
@@ -199,6 +199,32 @@
                 android:layout_gravity="center"
                 android:layout_weight="2"
                 android:text="@string/I"
+                android:textColor="@color/lightgray" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_home_mail_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/iv_home_mail_list"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/ic_call_grey_24dp" />
+
+            <TextView
+                android:id="@+id/tv_home_mail_list"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="@string/mail_list"
                 android:textColor="@color/lightgray" />
         </LinearLayout>
 

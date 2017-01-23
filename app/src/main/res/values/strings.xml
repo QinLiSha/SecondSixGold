@@ -7,6 +7,7 @@
     <string name="individual_order">个人订单</string>
     <string name="nearby">附近</string>
     <string name="I">我</string>
+    <string name="mail_list">通讯录</string>
     <string name="express">快递</string>
     <string name="local_town_delivery">同城配送</string>
     <string name="online_store">商城</string>
@@ -49,6 +50,10 @@
     <string name="new_pwd">新密码</string>
     <string name="save">保存</string>
     <string name="sure">确定</string>
+    <string name="submit">提交</string>
+    <!--我的订单界面-->
+    <string name="from_person_name">发货人姓名</string>
+    <string name="to_person_name">收货人姓名</string>
     <!--popup-->
     <string name="all">全部</string>
     <string name="courier">快递员</string>
@@ -58,7 +63,6 @@
     <string name="long_distant_car">长途货车</string>
     <string name="logistics_network">物流网点</string>
     <string name="my_favorite">我的收藏</string>
-
     <!--车型-->
     <string name="cartype">车型:</string>
     <string name="distance">距离:</string>
@@ -82,8 +86,8 @@
     <string name="things_weight">物品重量</string>
     <string name="is_need_invoice">是否需要发票</string>
     <string name="item_type_description">物品类型说明</string>
-    <string name="please_choose_from_address">请选择起始地址</string>
-    <string name="please_choose_to_address">请选择终点地址</string>
+    <string name="please_choose_from_address">请选择发货地址</string>
+    <string name="please_choose_to_address">请选择收货地址</string>
     <string name="please_fill_in_detail_address">请填写详细地址</string>
 
     <string name="please_fill_in_the_name_of_the_goods">请输入货物名称</string>
@@ -109,7 +113,7 @@
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">我是空白的fragment页面</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

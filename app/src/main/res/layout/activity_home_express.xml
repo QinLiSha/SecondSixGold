@@ -45,14 +45,10 @@
 
                 <TextView
                     android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/my_textview_style_normal_blue"
                     android:layout_centerVertical="true"
-                    android:layout_toEndOf="@+id/iv_pen"
                     android:layout_toRightOf="@+id/iv_pen"
-                    android:text="@string/fast_pick_up"
-                    style="@style/my_textview_style_title"
-                    android:textColor="@color/themeBlue" />
+                    android:text="@string/fast_pick_up" />
             </RelativeLayout>
 
             <LinearLayout
@@ -75,17 +71,14 @@
                         android:background="@drawable/ic_add_location_orange_24dp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+
+                        style="@style/my_textview_style_normal_black"
                         android:layout_gravity="center_vertical"
-                        android:layout_margin="@dimen/dp_5"
                         android:text="@string/from"
-                        style="@style/my_textview_style_title"
                         android:textColor="@color/black" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
                         android:layout_gravity="center_vertical"
                         android:text="@string/please_choose_from_address" />
                 </LinearLayout>
@@ -103,16 +96,14 @@
                         android:background="@drawable/ic_add_location_blue_24dp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_black"
+
                         android:layout_gravity="center_vertical"
-                        android:layout_margin="@dimen/dp_5"
                         android:text="@string/to"
                         android:textColor="@color/black" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
                         android:layout_gravity="center_vertical"
                         android:text="@string/please_choose_to_address" />
                 </LinearLayout>
@@ -134,14 +125,12 @@
                     android:gravity="center_vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
                         android:layout_alignParentLeft="true"
                         android:text="@string/express_company" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
                         android:layout_alignParentRight="true"
                         android:text="@string/please_choose" />
                 </RelativeLayout>
@@ -149,20 +138,40 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/activity_low_item_height"
-                    android:gravity="center_vertical">
+                    android:gravity="center">
 
                     <TextView
                         android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
                         android:layout_alignParentLeft="true"
+
                         android:text="@string/things_weight" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <ImageView
+                        android:layout_width="@dimen/px_30"
+                        android:layout_height="@dimen/px_30"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/px_10"
+                        android:layout_toLeftOf="@+id/tv_kg"
+                        android:background="@mipmap/jians" />
+
+                    <ImageView
+                        android:id="@+id/iv_kg_jia"
+                        android:layout_width="@dimen/px_30"
+                        android:layout_height="@dimen/px_30"
                         android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/px_10"
+                        android:background="@mipmap/jias" />
+
+                    <TextView
+                        android:id="@+id/tv_kg"
+                        style="@style/my_textview_style_normal_default"
+                        android:layout_centerVertical="true"
+
+                        android:layout_toLeftOf="@+id/iv_kg_jia"
                         android:text="1公斤" />
+
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -171,14 +180,12 @@
                     android:gravity="center_vertical">
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
                         android:layout_alignParentLeft="true"
                         android:text="@string/is_need_invoice" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
                         android:layout_alignParentRight="true"
                         android:text="@string/please_choose" />
                 </RelativeLayout>
@@ -190,10 +197,8 @@
 
                     <TextView
                         android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
                         android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
                         android:layout_centerVertical="true"
                         android:text="@string/item_type_description" />
                 </RelativeLayout>
@@ -208,11 +213,9 @@
                         style="@style/my_edittext_style_normal"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/dp_100"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignParentTop="true"
-                        android:hint="@string/matters_need_attention_details"
-                        />
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:hint="@string/matters_need_attention_details" />
 
                 </RelativeLayout>
             </LinearLayout>
@@ -238,8 +241,8 @@
 
                         <TextView
                             android:id="@+id/textView4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            style="@style/my_textview_style_normal_default"
+
                             android:text="@string/home_freight" />
                     </RelativeLayout>
 
@@ -259,13 +262,13 @@
 
                             <TextView
                                 android:id="@+id/tv_estimated"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                style="@style/my_textview_style_normal_default"
+
                                 android:text="@string/estimated" />
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+
+                                style="@style/my_textview_style_normal_default"
                                 android:layout_toRightOf="@+id/tv_estimated"
                                 android:text="0元"
                                 android:textColor="@color/orange" />
@@ -291,8 +294,8 @@
                         android:text="@string/I_have_read_and_agreed" />
 
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        style="@style/my_textview_style_normal_default"
+
                         android:text="@string/service_agreement"
                         android:textColor="@color/orange" />
                 </LinearLayout>
@@ -301,8 +304,8 @@
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="match_parent"
                 style="@style/my_button_style_01"
+                android:layout_width="match_parent"
                 android:text="@string/I_want_to_sending" />
 
 
