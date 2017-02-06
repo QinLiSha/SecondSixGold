@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.lisa.administrator.sixgold.activity.toplaceorder.PlaceOrderLogisticsActivity">
+
     <com.lisa.administrator.sixgold.view.ActionBarTwoImg
         android:id="@+id/actionbarView_twoImg"
         android:layout_width="match_parent"
@@ -14,5 +15,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="快递" />
+        android:text="物流" />
+
 </LinearLayout>

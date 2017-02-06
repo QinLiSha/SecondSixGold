@@ -122,12 +122,10 @@ public class CarTypeActivity extends MyBaseActivity {
                 initAddress_district(tvToAddress);
                 break;
             case R.id.tv_cartype_carlength:
-                break;
             case R.id.iv_cartype_carlength_1:
-                break;
             case R.id.iv_cartype_carlength_2:
-                break;
             case R.id.rl_cartype_carlength:
+                openActivity(ChooseCarTypeActivity.class);
                 break;
             case R.id.tv_choose_type:
             case R.id.iv_choose_type_1:

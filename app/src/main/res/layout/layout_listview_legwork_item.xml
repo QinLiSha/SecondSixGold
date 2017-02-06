@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/px_150"
+    android:layout_height="@dimen/px_120"
     android:layout_margin="@dimen/px_10">
 
     <LinearLayout
@@ -16,11 +16,11 @@
         <CheckBox
             android:layout_width="@dimen/px_50"
             android:layout_height="@dimen/px_50"
-            android:layout_margin="@dimen/px_10" />
+            android:layout_marginRight="@dimen/px_10" />
 
         <ImageView
-            android:layout_width="@dimen/px_150"
-            android:layout_height="@dimen/px_150"
+            android:layout_width="@dimen/px_120"
+            android:layout_height="@dimen/px_120"
             android:background="@mipmap/qqlogo" />
 
         <LinearLayout

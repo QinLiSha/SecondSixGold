@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:weightSum="5"
     tools:context="com.lisa.administrator.sixgold.activity.home.ChooseCarTypeActivity">
 
     <com.lisa.administrator.sixgold.view.ActionBarTwoImg
@@ -13,53 +14,42 @@
         android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/tv"
+        style="@style/my_textview_style_normal_black"
+        android:layout_gravity="center"
+        android:text="显示"
+        android:textSize="@dimen/px_40" />
+
+    <TextView
         style="@style/my_textview_style_normal_black"
         android:text="车长："
         android:textSize="@dimen/px_40" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="@dimen/px_5"
-        android:weightSum="4">
 
-        <TextView
-        style="@style/my_textview_style_normal_black_chooseed"
-        android:text="不限"
-            android:layout_width="@dimen/px_0"
-        android:layout_weight="1"
-        android:layout_margin="@dimen/px_10"
-        />
-        <TextView
-            style="@style/my_textview_style_normal_black_unchooseed"
-            android:layout_width="@dimen/px_0"
-            android:text="4.2米"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/px_10"
-            android:background="@drawable/textview_background_round_unchooseed_light"
-            />
-        <TextView
-            style="@style/my_textview_style_normal_black_unchooseed"
-            android:text=""
-            android:layout_width="@dimen/px_0"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/px_10"
-            android:background="@drawable/textview_background_round_unchooseed_light"
-            />
-        <TextView
-            android:layout_width="@dimen/px_0"
-            style="@style/my_textview_style_normal_black_unchooseed"
-            android:text="不限"
-            android:layout_weight="1"
-            android:layout_margin="@dimen/px_10"
-            android:background="@drawable/textview_background_round_unchooseed_light"
-            />
-    </LinearLayout>
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="3"
+        android:numColumns="4"></GridView>
 
     <TextView
         style="@style/my_textview_style_normal_black"
         android:text="车型："
         android:textSize="@dimen/px_40" />
+
+    <GridView
+        android:id="@+id/gridView2"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="2"
+        android:numColumns="4"></GridView>
+
+    <Button
+        android:id="@+id/btn_sure_choose_cartype"
+        style="@style/my_button_style_01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_margin="@dimen/px_10"
+        android:text="@string/sure" />
 </LinearLayout>

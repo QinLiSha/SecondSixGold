@@ -11,5 +11,6 @@ public class PlaceOrderLocalCityActivity extends MyBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_order_local_city);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "同城下单", -1, null);
     }
 }

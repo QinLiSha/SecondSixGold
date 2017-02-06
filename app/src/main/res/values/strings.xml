@@ -89,7 +89,6 @@
     <string name="please_choose_from_address">请选择发货地址</string>
     <string name="please_choose_to_address">请选择收货地址</string>
     <string name="please_fill_in_detail_address">请填写详细地址</string>
-
     <string name="please_fill_in_the_name_of_the_goods">请输入货物名称</string>
     <string name="please_fill_in_the_weight_of_the_goods">请输入货物重量（单位吨）</string>
     <string name="please_choose_the_provincial_city">请选择省市区</string>
@@ -98,6 +97,9 @@
     <string name="please_fill_in_recipient_name">请填写收件人姓名</string>
     <string name="please_fill_in_recipient_tel">请填写收件人电话</string>
     <string name="order_note">订单备注</string>
+
+    <string name="instant_order">即时下单</string>
+    <string name="make_an_appointment_order">预约下单</string>
     <string name="insurance_purchase">保险购买</string>
     <string name="instant_car">即时用车</string>
     <string name="make_an_appointment">预约</string>

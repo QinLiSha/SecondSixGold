@@ -12,6 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical">-->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -24,6 +32,7 @@
             android:text="@string/item_type_description" />
 
         <TextView
+            android:id="@+id/tv_please_choose"
             style="@style/my_textview_style_normal_blue"
             android:layout_alignParentRight="true"
             android:text="@string/please_choose" />
@@ -53,18 +62,22 @@
         android:padding="@dimen/px_10">
 
         <ImageView
+            android:id="@+id/iv_goods_picture_1"
             android:layout_width="@dimen/px_150"
             android:layout_height="@dimen/px_150"
             android:layout_margin="@dimen/px_10"
             android:background="@mipmap/addphoto" />
 
         <ImageView
+            android:id="@+id/iv_goods_picture_2"
             android:layout_width="@dimen/px_150"
             android:layout_height="@dimen/px_150"
             android:layout_margin="@dimen/px_10"
             android:background="@mipmap/addphoto" />
 
+
         <EditText
+            android:id="@+id/et_order_note"
             style="@style/my_edittext_style_normal_grey"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px_150"
@@ -93,6 +106,7 @@
                     android:text="起步价：" />
 
                 <TextView
+                    android:id="@+id/tv_price_starting"
                     style="@style/my_textview_style_normal_black"
                     android:padding="@dimen/px_0"
                     android:text="8" />
@@ -103,6 +117,7 @@
                     android:text="元（含" />
 
                 <TextView
+                    android:id="@+id/tv_km_within"
                     style="@style/my_textview_style_normal_black"
                     android:padding="@dimen/px_0"
                     android:text="2" />
@@ -124,6 +139,7 @@
                     android:text="每公里单价：" />
 
                 <TextView
+                    android:id="@+id/tv_price_per_km"
                     style="@style/my_textview_style_normal_black"
                     android:padding="@dimen/px_0"
                     android:text="1.5" />
@@ -142,15 +158,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/px_80"
-        android:layout_marginRight="@dimen/px_80"
+        android:layout_marginLeft="@dimen/px_50"
+        android:layout_marginRight="@dimen/px_50"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:weightSum="5">
 
         <LinearLayout
             android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:orientation="horizontal">
 
             <TextView
@@ -158,9 +174,10 @@
                 android:text="预计：" />
 
             <TextView
+                android:id="@+id/tv_price_expected"
                 style="@style/my_textview_style_normal_orange"
                 android:padding="@dimen/px_0"
-                android:text="25.5"
+                android:text="9.5"
                 android:textSize="@dimen/textsize_big" />
 
 
@@ -174,7 +191,7 @@
         <LinearLayout
             android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:gravity="right"
             android:orientation="horizontal">
 
@@ -183,18 +200,9 @@
                 style="@style/my_textview_style_normal_black"
                 android:text="加赏：" />
 
-            <TextView
-                style="@style/my_textview_style_normal_orange"
-                android:padding="@dimen/px_0"
-                android:textSize="@dimen/textsize_big" />
-
-            <EditText
-                style="@style/my_edittext_style_normal_grey"
-                android:layout_width="@dimen/px_80"
-                android:layout_height="wrap_content"
-                android:hint=""
-                android:textColor="@color/orange" />
-
+            <com.lisa.administrator.sixgold.view.AddAndSubView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
             <TextView
                 style="@style/my_textview_style_normal_orange"
@@ -204,43 +212,6 @@
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/px_10"
-        android:layout_marginLeft="@dimen/px_80"
-        android:layout_marginRight="@dimen/px_80"
-        android:layout_marginTop="@dimen/px_10"
-        android:background="@drawable/background_transparent_border_black"
-        android:orientation="horizontal"
-        android:weightSum="2">
-
-        <TextView
-            style="@style/my_textview_style_normal_black"
-            android:layout_width="@dimen/px_0"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#50adadad"
-            android:gravity="center"
-            android:text="即时下单" />
-
-        <View
-            android:layout_width="@dimen/px_1"
-            android:layout_height="match_parent"
-            android:background="@color/black" />
-
-        <TextView
-            android:id="@+id/textView26"
-            style="@style/my_textview_style_normal_black"
-            android:layout_width="@dimen/px_0"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="#50adadad"
-            android:gravity="center"
-            android:text="预约下单" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -254,26 +225,28 @@
         android:weightSum="2">
 
         <TextView
+            android:id="@+id/tv_instant_order"
             style="@style/my_textview_style_normal_white"
             android:layout_width="@dimen/px_0"
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="即时下单" />
+            android:text="@string/instant_order" />
 
         <View
             android:layout_width="@dimen/px_1"
             android:layout_height="match_parent"
-            android:background="@color/black" />
+            android:background="@color/white" />
 
         <TextView
+            android:id="@+id/tv_make_an_appointment_order"
             style="@style/my_textview_style_normal_white"
             android:layout_width="@dimen/px_0"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="预约下单" />
+            android:text="@string/make_an_appointment_order" />
 
     </LinearLayout>
 
@@ -294,6 +267,7 @@
                 android:text="首单优惠：" />
 
             <TextView
+                android:id="@+id/tv_price_first_discount"
                 style="@style/my_textview_style_normal_black"
                 android:padding="@dimen/px_0"
                 android:text="8" />
@@ -315,6 +289,7 @@
                 android:text="共计支付：" />
 
             <TextView
+                android:id="@+id/tv_price_total"
                 style="@style/my_textview_style_normal_black"
                 android:padding="@dimen/px_0"
                 android:text="1.5" />
@@ -341,7 +316,6 @@
         android:layout_marginTop="@dimen/px_20">
 
         <ImageView
-
             android:id="@+id/iv_weixinpay"
             android:layout_width="@dimen/px_80"
             android:layout_height="@dimen/px_80"
@@ -355,10 +329,12 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_weixinpay"
                 style="@style/my_textview_style_normal_black"
                 android:text="微信支付" />
 
             <TextView
+                android:id="@+id/tv_weixinpay_details"
                 style="@style/my_textview_style_normal_default_nopadding"
                 android:layout_marginLeft="@dimen/px_10"
                 android:text="推荐安装微信5.0及以上版本的使用"
@@ -394,6 +370,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_balancepay"
                 style="@style/my_textview_style_normal_black"
                 android:text="账户余额支付" />
 
@@ -411,7 +388,12 @@
                 <TextView
                     style="@style/my_textview_style_normal_default_nopadding"
                     android:layout_marginLeft="@dimen/px_10"
-                    android:text="¥860.00" />
+                    android:text="¥" />
+
+                <TextView
+                    android:id="@+id/tv_price_balancepay"
+                    style="@style/my_textview_style_normal_default_nopadding"
+                    android:text="860.00" />
 
             </LinearLayout>
 
@@ -455,6 +437,7 @@
                     android:textSize="@dimen/px_20" />
 
                 <TextView
+                    android:id="@+id/tv_price_free_recharge"
                     style="@style/my_textview_style_normal_default_nopadding"
                     android:text="500"
                     android:textColor="@color/red" />
@@ -469,9 +452,15 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/btn_sure_to_pay"
         style="@style/my_button_style_01"
         android:layout_width="match_parent"
         android:text="确认支付" />
+
+    <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+
 </LinearLayout>
 
     <!--之前只写了“/”，报错了，加了一个转义字符就可以了-->

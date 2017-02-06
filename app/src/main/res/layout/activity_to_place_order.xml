@@ -71,6 +71,11 @@
             android:text="同城货运" />
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/lightgray" />
+
     <RelativeLayout
         android:id="@+id/contianer"
         android:layout_width="match_parent"

@@ -38,9 +38,6 @@
         <activity android:name=".activity.express.ChooseTimeActivity" />
         <activity android:name=".activity.express.DetailsForChargesActivity" />
         <activity android:name=".activity.express.ChooseAddressActivity" />
-        <activity android:name=".activity.address.ChooseProvinceActivity" />
-        <activity android:name=".activity.address.ChooseCityActivity" />
-        <activity android:name=".activity.address.ChooseDistrictActivity" />
         <activity android:name=".activity.express.AddressBookActivity" />
         <activity android:name=".activity.home.NewHomeActivity" />
         <activity android:name=".activity.home.CarTypeActivity" />
@@ -60,7 +57,7 @@
         <activity android:name=".activity.toplaceorder.PlaceOrderLocalCityActivity" />
         <activity android:name=".activity.toplaceorder.PlaceOrderLogisticsActivity" />
         <activity android:name=".activity.toplaceorder.PlaceOrderLongDistanceFreightActivity" />
-        <activity android:name=".activity.order.SuccessOrderActivity"></activity>
+        <activity android:name=".activity.order.SuccessOrderActivity" />
     </application>
 
 </manifest>

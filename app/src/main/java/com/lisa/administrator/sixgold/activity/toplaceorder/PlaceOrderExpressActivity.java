@@ -11,5 +11,7 @@ public class PlaceOrderExpressActivity extends MyBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_order_express);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "快递下单", -1, null);
+
     }
 }
