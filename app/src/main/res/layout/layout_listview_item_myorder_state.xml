@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <!--线条部分-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/px_10">
+
+        <View
+            android:layout_width="@dimen/px_2"
+            android:layout_height="@dimen/px_20"
+            android:background="@color/themeBlue" />
+
+        <ImageView
+            android:layout_width="@dimen/px_20"
+            android:layout_height="@dimen/px_20"
+            android:background="@drawable/ic_round_image_blue_24dp" />
+
+        <View
+            android:layout_width="@dimen/px_2"
+            android:layout_height="wrap_content"
+            android:background="@color/themeBlue" />
+    </LinearLayout>
+    <!--文字部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_item_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20">
+
+            <TextView
+                android:id="@+id/tv_orderstate_time"
+                style="@style/my_textview_style_normal_small"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/px_0"
+                android:text="2016-05-03 12:22:36" />
+
+            <TextView
+                android:id="@+id/tv_orderstate_state"
+                style="@style/my_textview_style_normal_black"
+                android:padding="@dimen/px_0"
+                android:text="司机已接单" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_item_height_low"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20">
+
+            <TextView
+                android:id="@+id/tv_orderstate_driver_state"
+                style="@style/my_textview_style_normal_default"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/px_0"
+                android:text="司机正在取货的途中" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_55"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20">
+
+            <TextView
+                android:id="@+id/tv_orderstate_driver_distance"
+                style="@style/my_textview_style_normal_default"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/px_0"
+                android:text="目前距离您的位置是7.6km" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -67,6 +67,9 @@
     <string name="cartype">车型:</string>
     <string name="distance">距离:</string>
     <string name="can_weight">载重量:</string>
+    <string name="price">价格:</string>
+    <string name="route">路线:</string>
+
     <string name="name">姓名:</string>
     <string name="rate_of_praise">好评率:</string>
     <string name="delivery_times">送货次数:</string>

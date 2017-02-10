@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="@dimen/px_200"
+        android:layout_height="wrap_content"
+        android:background="@color/popupBlue"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_all_order_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_all_order_type"
+                style="@style/my_textview_style_normal_black"
+                android:layout_gravity="center"
+                android:text="@string/all" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_1"
+                android:background="@drawable/popupline_black_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_legwork"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_legwork"
+                style="@style/my_textview_style_normal_black"
+                android:layout_gravity="center"
+                android:text="跑腿" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_1"
+                android:background="@drawable/popupline_black_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_express"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_express"
+                style="@style/my_textview_style_normal_black"
+                android:layout_gravity="center"
+                android:text="快递" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_1"
+                android:background="@drawable/popupline_black_grey" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_local_city_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_local_city_car"
+                style="@style/my_textview_style_normal_black"
+
+                android:layout_gravity="center"
+                android:text="@string/local_city_car" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_1"
+                android:background="@drawable/popupline_black_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_long_distant_car"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_long_distant_car"
+                style="@style/my_textview_style_normal_black"
+
+                android:layout_gravity="center"
+                android:text="@string/long_distant_car" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_1"
+                android:background="@drawable/popupline_black_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_logistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_logistics"
+                style="@style/my_textview_style_normal_black"
+                android:layout_gravity="center"
+                android:text="物流" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+

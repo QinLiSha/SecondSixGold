@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_account_security"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.setting.AccountSecurityActivity">
+
+    <!--账户安全的界面-->
+    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
+        android:id="@+id/actionbarView_twoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/px_10"
+        android:paddingRight="@dimen/px_10">
+
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:text="账户安全" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="风险等级" />
+
+            <TextView
+                android:id="@+id/tv_accountsecurity_risk_gradelevel"
+                style="@style/my_textview_style_normal_black"
+                android:text="高"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/px_10"
+        android:paddingRight="@dimen/px_10">
+
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:text="换绑手机" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="136****4568" />
+
+            <ImageView
+                android:id="@+id/iv_accountsecurity_bind_phone_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/px_10"
+        android:paddingRight="@dimen/px_10">
+
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:text="社交账号绑定" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="绑定/解绑" />
+
+            <ImageView
+                android:id="@+id/iv_accountsecurity_bind_otheraccount_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/px_10"
+        android:paddingRight="@dimen/px_10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_accountsecurity_login_password"
+                style="@style/my_textview_style_normal_black"
+                android:text="登录密码" />
+
+            <TextView
+                android:id="@+id/tv_accountsecurity_login_password_level"
+                style="@style/my_textview_style_normal_black"
+                android:text="弱"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="修改" />
+
+            <ImageView
+                android:id="@+id/iv_accountsecurity_login_password_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/px_10"
+        android:paddingRight="@dimen/px_10">
+
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:text="密保问题" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="未设置" />
+
+            <ImageView
+                android:id="@+id/iv_accountsecurity_password_question_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

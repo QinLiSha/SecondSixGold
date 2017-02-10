@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.LoginActivity;
+import com.lisa.administrator.sixgold.activity.order.SuccessOrderActivity;
 import com.lisa.administrator.sixgold.activity.order.ToPlaceOrderActivity;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
@@ -18,10 +19,8 @@ import butterknife.OnClick;
 public class NewHomeActivity extends MyBaseActivity {
 
 
-//    @BindView(R.id.iv_current_city)
+    //    @BindView(R.id.iv_current_city)
 //    ImageView ivCurrentCity;
-    @BindView(R.id.tv_current_city)
-    TextView tvCurrentCity;
     @BindView(R.id.ll_current_city)
     LinearLayout llCurrentCity;
     @BindView(R.id.iv_weather)
@@ -32,10 +31,8 @@ public class NewHomeActivity extends MyBaseActivity {
     LinearLayout llWeather;
     @BindView(R.id.iv_notice)
     ImageView ivNotice;
-//    @BindView(R.id.tv_notice)
+    //    @BindView(R.id.tv_notice)
 //    TextView tvNotice;
-    @BindView(R.id.ll_notice)
-    LinearLayout llNotice;
     @BindView(R.id.tv_rolling_word)
     TextView tvRollingWord;
     @BindView(R.id.ll_tv_rolling_word)
@@ -62,6 +59,16 @@ public class NewHomeActivity extends MyBaseActivity {
     LinearLayout llHomeBottomItem;
     @BindView(R.id.activity_new_home)
     LinearLayout activityNewHome;
+    @BindView(R.id.tv_current_city)
+    TextView tvCurrentCity;
+    @BindView(R.id.ll_notice)
+    LinearLayout llNotice;
+    @BindView(R.id.iv_home_mail_list)
+    ImageView ivHomeMailList;
+    @BindView(R.id.tv_home_mail_list)
+    TextView tvHomeMailList;
+    @BindView(R.id.ll_home_mail_list)
+    LinearLayout llHomeMailList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,8 +79,12 @@ public class NewHomeActivity extends MyBaseActivity {
 
     }
 
-//    R.id.tv_notice,R.id.iv_current_city,
-    @OnClick({ R.id.tv_current_city, R.id.ll_current_city, R.id.iv_weather, R.id.tv_weather, R.id.ll_weather, R.id.iv_notice, R.id.ll_notice, R.id.tv_rolling_word, R.id.ll_tv_rolling_word, R.id.iv_home_homepage, R.id.tv_home_homepage, R.id.ll_home_homepage, R.id.iv_car_type, R.id.tv_car_type, R.id.ll_car_type, R.id.iv_home_I, R.id.tv_home_I, R.id.ll_home_I, R.id.ll_home_bottom_item, R.id.activity_new_home})
+    //    R.id.tv_notice,R.id.iv_current_city,
+    @OnClick({R.id.tv_current_city, R.id.ll_current_city, R.id.iv_weather, R.id.tv_weather, R.id.ll_weather,
+            R.id.iv_notice, R.id.ll_notice, R.id.tv_rolling_word, R.id.ll_tv_rolling_word,
+            R.id.iv_home_homepage, R.id.tv_home_homepage, R.id.ll_home_homepage, R.id.iv_car_type,
+            R.id.tv_car_type, R.id.ll_car_type, R.id.iv_home_I, R.id.tv_home_I, R.id.ll_home_I, R.id.ll_home_bottom_item,
+            R.id.activity_new_home,  R.id.iv_home_mail_list, R.id.tv_home_mail_list, R.id.ll_home_mail_list})
     public void onClick(View view) {
         switch (view.getId()) {
 //            case R.id.iv_current_city:
@@ -85,7 +96,8 @@ public class NewHomeActivity extends MyBaseActivity {
             case R.id.iv_weather:
             case R.id.tv_weather:
             case R.id.ll_weather:
-                showToast("当前城市的天气");
+//                showToast("当前城市的天气");
+                openActivity(SuccessOrderActivity.class);
                 break;
             case R.id.iv_notice:
 //            case R.id.tv_notice:
@@ -111,13 +123,17 @@ public class NewHomeActivity extends MyBaseActivity {
             case R.id.ll_home_I:
                 openActivity(LoginActivity.class);
                 break;
+            case R.id.iv_home_mail_list:
+            case R.id.tv_home_mail_list:
+            case R.id.ll_home_mail_list:
+                openActivity(MailListActivity.class);
+                break;
             case R.id.ll_home_bottom_item:
                 break;
             case R.id.activity_new_home:
                 break;
         }
     }
-
 
 
 }

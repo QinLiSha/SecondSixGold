@@ -92,6 +92,8 @@
     <dimen name="activity_low_item_height">70px</dimen>
 
     <dimen name="activity_item_height">65px</dimen>
+    <dimen name="activity_item_height_low">55px</dimen>
+
     <dimen name="activity_car_type_textview_border_height">68px</dimen>
 
     <dimen name="View_in_item_lightgray">3dp</dimen>

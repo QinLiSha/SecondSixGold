@@ -13,12 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/tv"
-        style="@style/my_textview_style_normal_black"
-        android:layout_gravity="center"
-        android:text="显示"
-        android:textSize="@dimen/px_40" />
 
     <TextView
         style="@style/my_textview_style_normal_black"

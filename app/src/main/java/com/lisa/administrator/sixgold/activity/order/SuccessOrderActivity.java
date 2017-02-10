@@ -11,5 +11,7 @@ public class SuccessOrderActivity extends MyBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_success_order);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "下单成功", -1, null);
+
     }
 }

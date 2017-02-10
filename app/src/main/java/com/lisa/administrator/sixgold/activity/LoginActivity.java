@@ -39,7 +39,7 @@ public class LoginActivity extends MyBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp,"注册",-1,null);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "注册", -1, null);
         binder = ButterKnife.bind(this);
 
     }
@@ -50,10 +50,9 @@ public class LoginActivity extends MyBaseActivity {
         binder.unbind();
     }
 
-    @OnClick({ R.id.et_tel_num, R.id.et_pwd, R.id.btn_login, R.id.tv_free_register, R.id.tv_foget_pwd, R.id.activity_login})
+    @OnClick({R.id.et_tel_num, R.id.et_pwd, R.id.btn_login, R.id.tv_free_register, R.id.tv_foget_pwd, R.id.activity_login})
     public void onClick(View view) {
         switch (view.getId()) {
-
             case R.id.et_tel_num:
                 break;
             case R.id.et_pwd:

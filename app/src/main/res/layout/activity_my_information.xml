@@ -4,6 +4,7 @@
     android:id="@+id/activity_my_information"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightgray"
     android:orientation="vertical"
     tools:context="com.lisa.administrator.sixgold.activity.mine.MyInformationActivity">
 
@@ -13,8 +14,12 @@
         android:layout_height="wrap_content" />
 
     <RelativeLayout
+
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
+        android:layout_height="@dimen/px_120"
+        android:layout_marginTop="@dimen/px_20"
+        android:background="@color/white"
+        android:gravity="center_vertical"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
@@ -23,165 +28,185 @@
             android:layout_centerVertical="true"
             android:text="头像" />
 
-        <ImageView
-            android:layout_width="@dimen/px_90"
-            android:layout_height="@dimen/px_90"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@mipmap/head" />
-    </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_2"
-        android:background="@color/lightgray" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/px_110"
+                android:layout_height="@dimen/px_110"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/iv_my_head_image" />
+
+            <ImageView
+                android:id="@+id/iv_myinformation_headimg_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
         <TextView
             style="@style/my_textview_style_normal_black"
-            android:layout_centerVertical="true"
-            android:text="ID" />
+            android:text="昵称" />
 
-        <TextView
-            style="@style/my_textview_style_normal_black"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="ID00000004561" />
-    </RelativeLayout>
+            android:orientation="horizontal">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_2"
-        android:background="@color/lightgray" />
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="张三" />
+
+            <ImageView
+                android:id="@+id/iv_myinformation_name_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
         <TextView
             style="@style/my_textview_style_normal_black"
-            android:layout_centerVertical="true"
-            android:text="姓名" />
+            android:text="生日" />
 
-        <TextView
-            style="@style/my_textview_style_normal_black"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="张三" />
-    </RelativeLayout>
+            android:orientation="horizontal">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_2"
-        android:background="@color/lightgray" />
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="1984-02-03" />
+
+            <ImageView
+                android:id="@+id/iv_myinformation_birthday_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
         <TextView
             style="@style/my_textview_style_normal_black"
-            android:layout_centerVertical="true"
-            android:text="性别" />
+            android:text="收货地址" />
 
-        <TextView
-            style="@style/my_textview_style_normal_black"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="男" />
-    </RelativeLayout>
+            android:orientation="horizontal">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_2"
-        android:background="@color/lightgray" />
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="添加/修改" />
+
+            <ImageView
+                android:id="@+id/iv_myinformation_addaddress_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
-        android:paddingLeft="@dimen/px_10"
-        android:paddingRight="@dimen/px_10">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/textView20"
-            style="@style/my_textview_style_normal_black"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="15698754463" />
-
-        <TextView
-            android:id="@+id/textView21"
-            style="@style/my_textview_style_normal_black"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:text="手机号码" />
+        <Button
+            android:id="@+id/btn_myinformation_sure"
+            style="@style/my_button_style_01"
+            android:text="@string/submit" />
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_2"
-        android:background="@color/lightgray" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
-        android:paddingLeft="@dimen/px_10"
-        android:paddingRight="@dimen/px_10">
-
-        <TextView
-            style="@style/my_textview_style_normal_black"
-            android:layout_centerVertical="true"
-            android:text="身份证号码" />
-
-        <TextView
-            android:id="@+id/textView19"
-            style="@style/my_textview_style_normal_black"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:text="422511183354628896" />
-    </RelativeLayout>
-
-
-
-    <Button
-        android:id="@+id/btn_sure"
-        style="@style/my_button_style_01"
-        android:layout_width="600px"
-        android:layout_height="@dimen/px_65"
-        android:layout_margin="@dimen/px_10"
-        android:text="@string/submit" />
 </LinearLayout>
 
 
-<!--<View-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="@dimen/px_2"-->
-<!--android:background="@color/lightgray" />-->
-<!--<RelativeLayout-->
-<!--android:layout_width="match_parent"-->
-<!--android:layout_height="@dimen/px_100"-->
-<!--android:paddingLeft="@dimen/px_10"-->
-<!--android:paddingRight="@dimen/px_10">-->
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/px_2"--><!--android:background="@color/lightgray" />--><!--
+<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/px_100"--><!--android:paddingLeft="@dimen/px_10"--><!--
+android:paddingRight="@dimen/px_10">-->
 
-<!--<TextView-->
-    <!--style="@style/my_textview_style_normal_black"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:text="密码" />-->
+    <!--<TextView--><!--style="@style/my_textview_style_normal_black"--><!--android:layout_centerVertical="true"--><!--android:text="密码" />-->
 
-<!--<ImageView-->
-    <!--style="@style/my_imageview_style_normal_center"-->
-    <!--android:layout_alignParentRight="true"-->
-    <!--android:layout_centerVertical="true"-->
-    <!--android:background="@drawable/ic_chevron_right_grey_24dp" />-->
-<!--</RelativeLayout>-->
+    <!--<ImageView--><!--style="@style/my_imageview_style_normal_center"--><!--android:layout_alignParentRight="true"--><!--
+android:layout_centerVertical="true"--><!--android:background="@drawable/ic_chevron_right_grey_24dp" />--><!--</RelativeLayout>-->
 
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/px_2"--><!--android:background="@color/lightgray" />-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/px_100"--><!--android:paddingLeft="@dimen/px_10"--><!--
+android:paddingRight="@dimen/px_10">-->
+
+    <!--<TextView--><!--style="@style/my_textview_style_normal_black"--><!--android:layout_centerVertical="true"--><!--android:text="性别" />-->
+
+    <!--<TextView--><!--style="@style/my_textview_style_normal_black"--><!--android:layout_alignParentRight="true"--><!--
+android:layout_centerVertical="true"--><!--android:text="男" />--><!--</RelativeLayout>-->
+
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/px_2"--><!--android:background="@color/lightgray" />-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/px_100"--><!--android:paddingLeft="@dimen/px_10"--><!--
+android:paddingRight="@dimen/px_10">-->
+
+    <!--<TextView--><!--android:id="@+id/textView20"--><!--style="@style/my_textview_style_normal_black"--><!--android:layout_alignParentRight="true"--><!--
+android:layout_centerVertical="true"--><!--android:text="15698754463" />-->
+
+    <!--<TextView--><!--android:id="@+id/textView21"--><!--style="@style/my_textview_style_normal_black"--><!--android:layout_alignParentLeft="true"--><!--
+android:layout_centerVertical="true"--><!--android:text="手机号码" />--><!--</RelativeLayout>-->
+
+    <!--<View--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/px_2"--><!--android:background="@color/lightgray" />-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="@dimen/px_100"--><!--android:paddingLeft="@dimen/px_10"--><!--
+android:paddingRight="@dimen/px_10">-->
+
+    <!--<TextView--><!--style="@style/my_textview_style_normal_black"--><!--android:layout_centerVertical="true"--><!--android:text="身份证号码" />-->
+
+    <!--<TextView--><!--android:id="@+id/textView19"--><!--style="@style/my_textview_style_normal_black"--><!--android:layout_alignParentEnd="true"--><!--
+android:layout_alignParentRight="true"--><!--android:layout_centerVertical="true"--><!--android:text="422511183354628896" />--><!--</RelativeLayout>-->

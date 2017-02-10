@@ -11,7 +11,7 @@ public class MyInformationActivity extends MyBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_information);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "我的个人中心", -1, null);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "个人信息", -1, null);
 
     }
 }

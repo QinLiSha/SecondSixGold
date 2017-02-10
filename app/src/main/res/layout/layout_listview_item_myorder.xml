@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/px_2"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:layout_width="@dimen/px_0"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px_10"
+                android:background="@drawable/ic_add_location_orange_24dp" />
+
+            <TextView
+                android:id="@+id/tv_goods_from_address"
+                style="@style/my_textview_style_normal_default"
+                android:layout_gravity="center_vertical"
+                android:text="发货地址：黑龙江人民路123基黑龙江人民路123基" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/px_10"
+                android:background="@drawable/ic_add_location_blue_24dp" />
+
+            <TextView
+                android:id="@+id/tv_goods_to_address"
+                style="@style/my_textview_style_normal_default"
+                android:layout_gravity="center_vertical"
+                android:text="收货地址：人民路12心大楼" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:background="@drawable/ic_add_location_orange_24dp"
+                android:visibility="invisible" />
+
+            <TextView
+                style="@style/my_textview_style_normal_default"
+                android:text="配送费：" />
+
+            <TextView
+                android:id="@+id/tv_price_transport"
+                style="@style/my_textview_style_normal_default"
+                android:text="25元 " />
+
+            <TextView
+                style="@style/my_textview_style_normal_default"
+                android:text="加赏：" />
+
+            <TextView
+                android:id="@+id/tv_add_price_transport"
+                style="@style/my_textview_style_normal_default"
+                android:text="1.5元 " />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/px_0"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_0"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_transport_type"
+                style="@style/my_textview_style_normal_blue"
+                android:layout_centerInParent="true"
+                android:text="跑腿" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_0"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_transport_state"
+                style="@style/my_textview_style_normal_blue"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="已完成" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

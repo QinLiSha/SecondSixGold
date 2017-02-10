@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/activity_item_height_low"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:text="高晓松" />
+
+        <TextView
+            style="@style/my_textview_style_small_black"
+            android:text="158****7854" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/my_textview_style_normal_default"
+        android:text="河南省郑州市高新区莲花街90号" />
+</LinearLayout>

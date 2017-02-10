@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_order_new"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.mine.MyOrderNewActivity">
+
+    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
+        android:id="@+id/actionbarView_twoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_low_item_height"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="26">
+
+        <RelativeLayout
+            android:id="@+id/rl_all_type"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+
+            <TextView
+                android:id="@+id/tv_all_type"
+                style="@style/my_textview_style_normal_small"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/px_0"
+                android:text="全部"
+                android:textColor="@color/themeBlue" />
+
+
+            <View
+                android:id="@+id/view_all_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:layout_alignParentBottom="true"
+                android:background="@color/themeBlue" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_wait_for_pickup"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <View
+                android:id="@+id/view_wait_for_pickup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:layout_alignParentBottom="true"
+                android:background="@color/themeBlue"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_wait_for_pickup"
+                style="@style/my_textview_style_normal_small"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/px_0"
+                android:text="待取件" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_transporting"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <View
+                android:id="@+id/view_transporting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:layout_alignParentBottom="true"
+                android:background="@color/themeBlue"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_transporting"
+                style="@style/my_textview_style_normal_small"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/px_0"
+                android:text="运送中" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_already_sign"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <View
+                android:id="@+id/view_already_sign"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:layout_alignParentBottom="true"
+                android:background="@color/themeBlue"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_already_sign"
+                style="@style/my_textview_style_normal_small"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/px_0"
+                android:text="已签收" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_toEvaluate"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <TextView
+                android:id="@+id/tv_toEvaluate"
+                style="@style/my_textview_style_normal_small"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/px_0"
+                android:text="待评价" />
+
+            <View
+                android:id="@+id/view_toEvaluate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:layout_alignParentBottom="true"
+                android:background="@color/themeBlue"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_refound"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <TextView
+                android:id="@+id/tv_refound"
+                style="@style/my_textview_style_normal_small"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/px_0"
+                android:text="退款/售后" />
+
+            <View
+                android:id="@+id/view_refound"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_2"
+                android:layout_alignParentBottom="true"
+                android:background="@color/themeBlue"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/contianer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_0"
+        android:layout_weight="1">
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:background="@color/lightgray" />
+
+
+</LinearLayout>

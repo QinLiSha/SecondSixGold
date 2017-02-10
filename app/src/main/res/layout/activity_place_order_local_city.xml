@@ -11,7 +11,7 @@
         android:id="@+id/actionbarView_twoImg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

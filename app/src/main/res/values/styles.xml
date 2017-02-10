@@ -51,7 +51,8 @@
         <item name="android:layout_height">@dimen/activity_low_item_height</item><!--高度-->
         <item name="android:layout_gravity">center</item><!--居中显示-->
         <item name="android:textSize">@dimen/textsize_normal</item><!--字体大小-->
-        <item name="android:background">@drawable/edittext_background_normal_grey</item><!--背景色或形状-->
+        <item name="android:background">@drawable/edittext_background_normal_grey
+        </item><!--背景色或形状-->
         <item name="android:layout_margin">@dimen/px_10</item><!--外边距是10px-->
         <item name="android:paddingLeft">@dimen/px_10</item><!--左边内边距是10px-->
         <item name="android:lines">1</item><!--只允许是单行输入-->
@@ -135,26 +136,6 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">@dimen/textsize_small</item>
-        <item name="android:padding">@dimen/px_10</item>
-    </style>
-    <!--//车型车长的没有选中-->
-    <style name="my_textview_style_normal_black_unchooseed">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/textsize_normal</item>
-        <item name="android:background">@drawable/textview_background_round_unchooseed_light</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:gravity">center</item>
-        <item name="android:padding">@dimen/px_10</item>
-    </style>
-    <!--//车型车长的选中-->
-    <style name="my_textview_style_normal_black_chooseed">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/textview_background_round_chooseed_blue</item>
-        <item name="android:textSize">@dimen/textsize_normal</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textColor">@color/black</item>
         <item name="android:padding">@dimen/px_10</item>
     </style>
 

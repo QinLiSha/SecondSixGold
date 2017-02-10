@@ -38,7 +38,6 @@
         <activity android:name=".activity.express.ChooseTimeActivity" />
         <activity android:name=".activity.express.DetailsForChargesActivity" />
         <activity android:name=".activity.express.ChooseAddressActivity" />
-        <activity android:name=".activity.express.AddressBookActivity" />
         <activity android:name=".activity.home.NewHomeActivity" />
         <activity android:name=".activity.home.CarTypeActivity" />
         <activity android:name=".activity.home.MineActivity" />
@@ -46,7 +45,7 @@
         <activity android:name=".activity.home.ChooseCarTypeActivity" />
         <activity android:name=".activity.mine.ShareToFriendActivity" />
         <activity android:name=".activity.mine.AboutUsActivity" />
-        <activity android:name=".activity.mine.ChangePwdActivity" />
+        <activity android:name=".activity.setting.ChangePwdActivity" />
         <activity android:name=".activity.mine.CouponActivity" />
         <activity android:name=".activity.mine.SettingActivity" />
         <activity android:name=".activity.mine.MessagesActivity" />
@@ -58,6 +57,12 @@
         <activity android:name=".activity.toplaceorder.PlaceOrderLogisticsActivity" />
         <activity android:name=".activity.toplaceorder.PlaceOrderLongDistanceFreightActivity" />
         <activity android:name=".activity.order.SuccessOrderActivity" />
+        <activity android:name=".activity.order.OrderStatusDetailsActivity" />
+        <activity android:name=".activity.mine.MyOrderNewActivity" />
+        <activity android:name=".activity.setting.AccountSecurityActivity" />
+        <activity android:name=".activity.home.MailListActivity" />
+        <activity android:name=".activity.setting.AddAddressActivity" />
+        <activity android:name=".activity.setting.MyAddressBookActivity"></activity>
     </application>
 
 </manifest>

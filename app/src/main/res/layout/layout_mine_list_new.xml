@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/defaultBackgroundColor"
+    android:orientation="vertical">
+    <!--修改版本的我的界面-->
+
+
+    <RelativeLayout
+        android:id="@+id/rl_share_to_friends"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_3"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <TextView
+            android:id="@+id/tv_share_to_friends"
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_toRightOf="@+id/iv_share_to_friends"
+            android:text="@string/share_to_friends" />
+
+        <ImageView
+            android:id="@+id/iv_share_to_friends_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_share_to_friends"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_share_to_friends" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_contact_customer_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_3"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <ImageView
+            android:id="@+id/iv_contact_customer_service"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_contact_customer_service" />
+
+        <TextView
+            android:id="@+id/tv_contact_customer_service"
+
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_toRightOf="@+id/iv_contact_customer_service"
+            android:text="@string/contact_customer_service" />
+
+        <ImageView
+            android:id="@+id/iv_contact_customer_service_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_my_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_3"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <ImageView
+            android:id="@+id/iv_my_collection"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_my_collection" />
+
+        <TextView
+            android:id="@+id/tv_my_collection"
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_toRightOf="@+id/iv_my_collection"
+            android:text="我的收藏" />
+
+        <ImageView
+            android:id="@+id/iv_my_collection_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_about_us"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_3"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <TextView
+            android:id="@+id/tv_about_us"
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_toRightOf="@+id/iv_about_us"
+            android:text="@string/about_us" />
+
+        <ImageView
+            android:id="@+id/iv_about_us_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_about_us"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_about_us" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_my_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_3"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <ImageView
+            android:id="@+id/iv_my_store"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_my_store" />
+
+        <TextView
+            android:id="@+id/tv_my_store"
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+
+            android:layout_toRightOf="@+id/iv_my_store"
+            android:text="@string/my_store" />
+
+        <ImageView
+            android:id="@+id/iv_my_store_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_insurance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_3"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <TextView
+            android:id="@+id/tv_insurance"
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_toRightOf="@+id/iv_insurance"
+            android:text="保险" />
+
+
+        <ImageView
+            android:id="@+id/iv_insurance_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_insurance"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_insurance" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_3"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <TextView
+            android:id="@+id/tv_counter"
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_toRightOf="@+id/iv_counter"
+            android:text="运费计算" />
+
+        <ImageView
+            android:id="@+id/iv_counter_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_counter"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_alignTop="@+id/iv_counter_details"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_counter" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_nearby_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/px_3"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <ImageView
+            android:id="@+id/iv_nearby_service"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_nearby_service" />
+
+        <TextView
+            android:id="@+id/tv_nearby_service"
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_toRightOf="@+id/iv_nearby_service"
+            android:text="附近服务"
+            android:textSize="@dimen/px_30" />
+
+        <ImageView
+            android:id="@+id/iv_nearby_service_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/px_10">
+
+        <ImageView
+            android:id="@+id/iv_game"
+            android:layout_width="@dimen/px_30"
+            android:layout_height="@dimen/px_30"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/iv_game" />
+
+        <TextView
+            android:id="@+id/tv_game"
+            style="@style/my_textview_style_normal_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_20"
+            android:layout_toRightOf="@+id/iv_game"
+            android:text="休闲游戏" />
+
+        <ImageView
+            android:id="@+id/iv_game_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+    <!--我的积分的item--><!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="@dimen/px_3"--><!--android:background="@color/white"--><!--android:padding="@dimen/px_10">-->
+
+    <!--<ImageView--><!--android:id="@+id/iv_my_point_score"--><!--android:layout_width="@dimen/px_30"--><!--android:layout_height="@dimen/px_30"--><!--android:layout_centerVertical="true"--><!--android:background="@mipmap/iv_my_point_score" />-->
+
+    <!--<ImageView--><!--android:id="@+id/iv_my_point_score_details"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentRight="true"--><!--android:layout_centerVertical="true"--><!--android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />-->
+
+    <!--<TextView--><!--android:id="@+id/tv_my_point_score"--><!--style="@style/my_textview_style_normal_default"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"-->
+
+    <!--android:text="@string/my_point_score"--><!--android:layout_alignParentTop="true"--><!--android:layout_toRightOf="@+id/iv_my_point_score"--><!--android:layout_toEndOf="@+id/iv_my_point_score" />--><!--</RelativeLayout>-->

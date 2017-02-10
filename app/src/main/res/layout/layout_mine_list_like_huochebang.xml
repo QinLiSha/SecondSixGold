@@ -5,7 +5,6 @@
     android:layout_margin="@dimen/px_15"
     android:orientation="vertical">
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +17,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-
             android:orientation="horizontal">
 
             <ImageView
@@ -28,9 +26,9 @@
                 android:background="@drawable/ic_error_red_24dp" />
 
             <TextView
+                android:id="@+id/tv_to_authenticate"
                 style="@style/my_textview_style_normal_default"
-                android:text="去认证"
-                android:id="@+id/tv_to_authenticate"/>
+                android:text="去认证" />
 
             <ImageView
                 android:id="@+id/iv_to_authenticate_details"
@@ -71,11 +69,6 @@
                     android:background="@drawable/view_border_blue"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/iv_vip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/ic_star_collection_24dp" />
 
                     <TextView
                         android:id="@+id/tv_vip"
@@ -131,7 +124,7 @@
                 android:id="@+id/iv_wallet_money"
                 android:layout_width="@dimen/px_70"
                 android:layout_height="@dimen/px_70"
-                android:background="@mipmap/iv_contact_customer_service" />
+                android:background="@mipmap/addphoto" />
 
             <TextView
                 android:id="@+id/tv_wallet_money"
@@ -233,7 +226,7 @@
                         android:id="@+id/iv_custom_service"
                         android:layout_width="@dimen/px_70"
                         android:layout_height="@dimen/px_70"
-                        android:background="@mipmap/iv_contact_customer_service" />
+                        android:background="@mipmap/addphoto" />
 
                     <TextView
                         android:id="@+id/tv_custom_service"
@@ -287,7 +280,7 @@
                         android:id="@+id/iv_mine_share"
                         android:layout_width="@dimen/px_70"
                         android:layout_height="@dimen/px_70"
-                        android:background="@mipmap/iv_share_to_friends" />
+                        android:background="@mipmap/addphoto" />
 
                     <TextView
                         android:id="@+id/tv_mine_share"
@@ -376,7 +369,7 @@
                         android:id="@+id/iv_mine_order"
                         android:layout_width="@dimen/px_70"
                         android:layout_height="@dimen/px_70"
-                        android:background="@mipmap/iv_my_order" />
+                        android:background="@mipmap/addphoto" />
 
                     <TextView
                         android:id="@+id/tv_mine_order"
@@ -413,7 +406,7 @@
                         android:id="@+id/iv_mine_about_us"
                         android:layout_width="@dimen/px_70"
                         android:layout_height="@dimen/px_70"
-                        android:background="@mipmap/iv_about_us" />
+                        android:background="@mipmap/addphoto" />
 
                     <TextView
                         android:id="@+id/tv_mine_about_us"
@@ -440,7 +433,7 @@
                         android:id="@+id/iv_mine_setting"
                         android:layout_width="@dimen/px_70"
                         android:layout_height="@dimen/px_70"
-                        android:background="@mipmap/iv_agreement_terms" />
+                        android:background="@mipmap/addphoto" />
 
                     <TextView
                         android:id="@+id/tv_mine_setting"

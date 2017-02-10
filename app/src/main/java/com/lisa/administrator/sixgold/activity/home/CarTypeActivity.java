@@ -1,5 +1,7 @@
 package com.lisa.administrator.sixgold.activity.home;
 
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.HomeLongDistanceFreightActivity;
+import com.lisa.administrator.sixgold.activity.LoginActivity;
 import com.lisa.administrator.sixgold.adapter.CarTypeListViewAdapter;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
@@ -22,40 +25,53 @@ import butterknife.OnClick;
 
 public class CarTypeActivity extends MyBaseActivity {
 
-    private PopupWindow popupWindow;
+    @BindView(R.id.tv_transport_type)
+    TextView tvTransportType;
+    @BindView(R.id.iv_transport_type_1)
+    ImageView ivTransportType1;
+    @BindView(R.id.rl_transport_type)
+    RelativeLayout rlTransportType;
+    @BindView(R.id.iv_date_1)
+    ImageView ivDate1;
+    @BindView(R.id.tv_date)
+    TextView tvDate;
+    @BindView(R.id.rl_date)
+    RelativeLayout rlDate;
+    @BindView(R.id.iv_home_mail_list)
+    ImageView ivHomeMailList;
+    @BindView(R.id.tv_home_mail_list)
+    TextView tvHomeMailList;
+    @BindView(R.id.ll_home_mail_list)
+    LinearLayout llHomeMailList;
+    private PopupWindow popupWindow_cartype;
+    private PopupWindow popupWindow_transporttype;
     private CarTypeListViewAdapter carTypeListViewAdapter_all;
+    private static final int REQUEST_CODE_CAR_TYPE_AND_LENGTH = 1;
     @BindView(R.id.lv_car_type_all)
     ListView lvCarTypeAll;
     @BindView(R.id.tv_from_address)
     TextView tvFromAddress;
     @BindView(R.id.iv_from_address_1)
     ImageView ivFromAddress1;
-    @BindView(R.id.iv_from_address_2)
-    ImageView ivFromAddress2;
     @BindView(R.id.rl_from_address)
     RelativeLayout rlFromAddress;
     @BindView(R.id.tv_to_address)
     TextView tvToAddress;
     @BindView(R.id.iv_to_address_1)
     ImageView ivToAddress1;
-    @BindView(R.id.iv_to_address_2)
-    ImageView ivToAddress2;
     @BindView(R.id.rl_to_address)
     RelativeLayout rlToAddress;
     @BindView(R.id.tv_cartype_carlength)
     TextView tvCartypeCarlength;
     @BindView(R.id.iv_cartype_carlength_1)
     ImageView ivCartypeCarlength1;
-    @BindView(R.id.iv_cartype_carlength_2)
-    ImageView ivCartypeCarlength2;
     @BindView(R.id.rl_cartype_carlength)
     RelativeLayout rlCartypeCarlength;
     @BindView(R.id.tv_choose_type)
     TextView tvChooseType;
     @BindView(R.id.iv_choose_type_1)
     ImageView ivChooseType1;
-    @BindView(R.id.iv_choose_type_2)
-    ImageView ivChooseType2;
+
     @BindView(R.id.rl_choose_type)
     RelativeLayout rlChooseType;
     @BindView(R.id.iv_home_homepage)
@@ -87,16 +103,18 @@ public class CarTypeActivity extends MyBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_type);
         ButterKnife.bind(this);
-        initPopupWindow();
+        initPopupWindowCarType();
+        initPopupWindowTransportType();
     }
 
-
+    /**
+     * listview的初始化（车型的）
+     */
     private void initListView() {
         if (carTypeListViewAdapter_all == null) {
             carTypeListViewAdapter_all = new CarTypeListViewAdapter(this);
         }
         lvCarTypeAll.setAdapter(carTypeListViewAdapter_all);
-
         lvCarTypeAll.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -105,105 +123,134 @@ public class CarTypeActivity extends MyBaseActivity {
         });
     }
 
+    //重写onActivityResult方法
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-    @OnClick({R.id.tv_from_address, R.id.iv_from_address_1, R.id.iv_from_address_2, R.id.rl_from_address, R.id.tv_to_address, R.id.iv_to_address_1, R.id.iv_to_address_2, R.id.rl_to_address, R.id.tv_cartype_carlength, R.id.iv_cartype_carlength_1, R.id.iv_cartype_carlength_2, R.id.rl_cartype_carlength, R.id.tv_choose_type, R.id.iv_choose_type_1, R.id.iv_choose_type_2, R.id.rl_choose_type, R.id.iv_home_homepage, R.id.tv_home_homepage, R.id.ll_home_homepage, R.id.iv_car_type, R.id.tv_car_type, R.id.ll_car_type, R.id.iv_home_I, R.id.tv_home_I, R.id.ll_home_I, R.id.ll_home_bottom_item, R.id.activity_car_type})
+        if (requestCode == REQUEST_CODE_CAR_TYPE_AND_LENGTH && resultCode == RESULT_OK) {
+            if (data != null) {
+                String result = data.getStringExtra(ChooseCarTypeActivity.KEY_CAR_TYPE_AND_LENGTH);
+                tvCartypeCarlength.setText(result);
+            }
+        }
+    }
+
+
+    @OnClick({R.id.tv_from_address, R.id.iv_from_address_1, R.id.rl_from_address, R.id.tv_to_address, R.id.iv_to_address_1,
+            R.id.rl_to_address, R.id.tv_cartype_carlength, R.id.iv_cartype_carlength_1, R.id.rl_cartype_carlength, R.id.tv_choose_type,
+            R.id.iv_choose_type_1, R.id.rl_choose_type, R.id.iv_home_homepage, R.id.tv_home_homepage, R.id.ll_home_homepage,
+            R.id.tv_transport_type, R.id.iv_transport_type_1, R.id.rl_transport_type, R.id.iv_date_1, R.id.tv_date, R.id.rl_date,
+            R.id.iv_car_type, R.id.tv_car_type, R.id.ll_car_type, R.id.iv_home_I, R.id.tv_home_I, R.id.ll_home_I, R.id.ll_home_bottom_item,
+            R.id.iv_home_mail_list, R.id.tv_home_mail_list, R.id.ll_home_mail_list, R.id.activity_car_type})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_from_address:
             case R.id.iv_from_address_1:
-            case R.id.iv_from_address_2:
             case R.id.rl_from_address:
                 initAddress_district(tvFromAddress);
                 break;
             case R.id.tv_to_address:
             case R.id.iv_to_address_1:
-            case R.id.iv_to_address_2:
             case R.id.rl_to_address:
                 initAddress_district(tvToAddress);
                 break;
             case R.id.tv_cartype_carlength:
             case R.id.iv_cartype_carlength_1:
-            case R.id.iv_cartype_carlength_2:
             case R.id.rl_cartype_carlength:
-                openActivity(ChooseCarTypeActivity.class);
+                Intent intent = new Intent(CarTypeActivity.this, ChooseCarTypeActivity.class);
+                startActivityForResult(intent, REQUEST_CODE_CAR_TYPE_AND_LENGTH);
+                break;
+            case R.id.tv_transport_type:
+            case R.id.iv_transport_type_1:
+            case R.id.rl_transport_type:
+                if (popupWindow_transporttype.isShowing()) {
+                    popupWindow_transporttype.dismiss();
+                } else if (popupWindow_transporttype != null) {
+                    popupWindow_transporttype.showAsDropDown(tvTransportType, 0, 0);//最后一个是对距离网页标题栏的设置
+                }
+                break;
+            case R.id.iv_date_1:
+            case R.id.tv_date:
+            case R.id.rl_date:
                 break;
             case R.id.tv_choose_type:
             case R.id.iv_choose_type_1:
-            case R.id.iv_choose_type_2:
             case R.id.rl_choose_type:
-                if (popupWindow.isShowing()) {
-                    popupWindow.dismiss();
-                } else if (popupWindow != null) {
-                    popupWindow.showAsDropDown(tvChooseType, 0, 0);//最后一个是对距离网页标题栏的设置
+                if (popupWindow_cartype.isShowing()) {
+                    popupWindow_cartype.dismiss();
+                } else if (popupWindow_cartype != null) {
+                    popupWindow_cartype.showAsDropDown(tvChooseType, 0, 0);//最后一个是对距离网页标题栏的设置
                 }
                 break;
             case R.id.iv_home_homepage:
-                break;
             case R.id.tv_home_homepage:
-                break;
             case R.id.ll_home_homepage:
+                openActivity(NewHomeActivity.class);
                 break;
             case R.id.iv_car_type:
-                break;
             case R.id.tv_car_type:
-                break;
             case R.id.ll_car_type:
+                openActivity(CarTypeActivity.class);
                 break;
             case R.id.iv_home_I:
-                break;
             case R.id.tv_home_I:
-                break;
             case R.id.ll_home_I:
+                openActivity(LoginActivity.class);
                 break;
-            case R.id.ll_home_bottom_item:
-                break;
-            case R.id.activity_car_type:
+            case R.id.iv_home_mail_list:
+            case R.id.tv_home_mail_list:
+            case R.id.ll_home_mail_list:
+                openActivity(MailListActivity.class);
                 break;
         }
     }
 
 
     /**
-     * 初始化popupwindow
+     * 初始化popupwindow 车的类型（全部，同城，长途货运）
      */
-    public void initPopupWindow() {
-        View view = getLayoutInflater().inflate(R.layout.layout_popup_item, null);
-        popupWindow = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup
+    public void initPopupWindowCarType() {
+        View view = getLayoutInflater().inflate(R.layout.layout_popup_item_cartype, null);
+        popupWindow_cartype = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup
                 .LayoutParams.WRAP_CONTENT, true);//构造方法设置为True表明点击空白的位置popup会消失
         //findViewById前面的view不能少，不然会报错(EGL_BAD_MATCH)
-        TextView tv1 = (TextView) view.findViewById(R.id.tv_all);
-        TextView tv2 = (TextView) view.findViewById(R.id.tv_courier);
-        TextView tv3 = (TextView) view.findViewById(R.id.tv_express_outlets);
-        TextView tv4 = (TextView) view.findViewById(R.id.tv_run_people);
-        TextView tv5 = (TextView) view.findViewById(R.id.tv_local_city_car);
-        TextView tv6 = (TextView) view.findViewById(R.id.tv_long_distant_car);
-        TextView tv7 = (TextView) view.findViewById(R.id.tv_logistics_network);
-        TextView tv8 = (TextView) view.findViewById(R.id.tv_my_favorite);
-        LinearLayout ll1 = (LinearLayout) view.findViewById(R.id.ll_all);
-        LinearLayout ll2 = (LinearLayout) view.findViewById(R.id.ll_courier);
-        LinearLayout ll3 = (LinearLayout) view.findViewById(R.id.ll_express_outlets);
-        LinearLayout ll4 = (LinearLayout) view.findViewById(R.id.ll_run_people);
-        LinearLayout ll5 = (LinearLayout) view.findViewById(R.id.ll_local_city_car);
-        LinearLayout ll6 = (LinearLayout) view.findViewById(R.id.ll_long_distant_car);
-        LinearLayout ll7 = (LinearLayout) view.findViewById(R.id.ll_logistics_network);
-        LinearLayout ll8 = (LinearLayout) view.findViewById(R.id.ll_my_favorite);
-
+        TextView tv1 = (TextView) view.findViewById(R.id.tv_all_car_type);
+        TextView tv2 = (TextView) view.findViewById(R.id.tv_local_city_car);
+        TextView tv3 = (TextView) view.findViewById(R.id.tv_long_distant_car);
+        LinearLayout ll1 = (LinearLayout) view.findViewById(R.id.ll_all_car_type);
+        LinearLayout ll2 = (LinearLayout) view.findViewById(R.id.ll_local_city_car);
+        LinearLayout ll3 = (LinearLayout) view.findViewById(R.id.ll_long_distant_car);
         tv1.setOnClickListener(onClickListener);
         tv2.setOnClickListener(onClickListener);
         tv3.setOnClickListener(onClickListener);
-        tv4.setOnClickListener(onClickListener);
-        tv5.setOnClickListener(onClickListener);
-        tv6.setOnClickListener(onClickListener);
-        tv7.setOnClickListener(onClickListener);
-        tv8.setOnClickListener(onClickListener);
         ll1.setOnClickListener(onClickListener);
         ll2.setOnClickListener(onClickListener);
         ll3.setOnClickListener(onClickListener);
-        ll4.setOnClickListener(onClickListener);
-        ll5.setOnClickListener(onClickListener);
-        ll6.setOnClickListener(onClickListener);
-        ll7.setOnClickListener(onClickListener);
-        ll8.setOnClickListener(onClickListener);
+    }
+
+    /**
+     * 初始化popupwindow 运输类型（全部，往返，单程，中转）
+     */
+    public void initPopupWindowTransportType() {
+        View view = getLayoutInflater().inflate(R.layout.layout_popup_item_transporttype, null);
+        popupWindow_transporttype = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup
+                .LayoutParams.WRAP_CONTENT, true);//构造方法设置为True表明点击空白的位置popup会消失
+        TextView textView1 = (TextView) view.findViewById(R.id.tv_all_transport_type);
+        TextView textView2 = (TextView) view.findViewById(R.id.tv_go_and_back);
+        TextView textView3 = (TextView) view.findViewById(R.id.tv_one_way);
+        TextView textView4 = (TextView) view.findViewById(R.id.tv_transship);
+        LinearLayout linearLayout1 = (LinearLayout) view.findViewById(R.id.ll_all_transport_type);
+        LinearLayout linearLayout2 = (LinearLayout) view.findViewById(R.id.ll_go_and_back);
+        LinearLayout linearLayout3 = (LinearLayout) view.findViewById(R.id.ll_one_way);
+        LinearLayout linearLayout4 = (LinearLayout) view.findViewById(R.id.ll_transship);
+        textView1.setOnClickListener(onClickListener);
+        textView2.setOnClickListener(onClickListener);
+        textView3.setOnClickListener(onClickListener);
+        textView4.setOnClickListener(onClickListener);
+        linearLayout1.setOnClickListener(onClickListener);
+        linearLayout2.setOnClickListener(onClickListener);
+        linearLayout3.setOnClickListener(onClickListener);
+        linearLayout4.setOnClickListener(onClickListener);
 
     }
 
@@ -214,18 +261,9 @@ public class CarTypeActivity extends MyBaseActivity {
         @Override
         public void onClick(View view) {
             switch (view.getId()) {
-                case R.id.tv_all:
-                case R.id.ll_all:
+                case R.id.tv_all_car_type:
+                case R.id.ll_all_car_type:
                     initListView();
-                    break;
-                case R.id.tv_courier:
-                case R.id.ll_courier:
-                    break;
-                case R.id.tv_express_outlets:
-                case R.id.ll_express_outlets:
-                    break;
-                case R.id.tv_run_people:
-                case R.id.ll_run_people:
                     break;
                 case R.id.tv_local_city_car:
                 case R.id.ll_local_city_car:
@@ -233,17 +271,32 @@ public class CarTypeActivity extends MyBaseActivity {
                 case R.id.tv_long_distant_car:
                 case R.id.ll_long_distant_car:
                     break;
-                case R.id.tv_logistics_network:
-                case R.id.ll_logistics_network:
+
+                case R.id.tv_all_transport_type:
+                case R.id.ll_all_transport_type:
+                    initListView();
                     break;
-                case R.id.tv_my_favorite:
-                case R.id.ll_my_favorite:
+                case R.id.tv_go_and_back:
+                case R.id.ll_go_and_back:
+                    break;
+                case R.id.tv_one_way:
+                case R.id.ll_one_way:
+                    break;
+                case R.id.tv_transship:
+                case R.id.ll_transship:
                     break;
             }
-            popupWindow.dismiss();
-        }
+            if (popupWindow_transporttype != null) {
+                popupWindow_transporttype.dismiss();
+            }
+            if (popupWindow_cartype != null) {
+                popupWindow_cartype.dismiss();
+            }
 
+        }
     };
+
+
 
 }
 

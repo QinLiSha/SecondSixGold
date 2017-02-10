@@ -12,6 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
     <include layout="@layout/layout_coupon_can_use" />
+
+    <include layout="@layout/layout_coupon_can_use" />
+
+    <include layout="@layout/layout_coupon_can_use" />
+
+    <include layout="@layout/layout_coupon_can_not_use" />
+
     <include layout="@layout/layout_coupon_can_not_use" />
 </LinearLayout>

@@ -62,9 +62,9 @@
             <TextView
                 android:id="@+id/tv_ing"
                 style="@style/my_textview_style_normal_default"
-                android:text="进行中"
+                android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:text="进行中" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -111,12 +111,10 @@
         </RelativeLayout>
 
     </LinearLayout>
-
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/px_1"
         android:background="@color/lightgray" />
-
     <RelativeLayout
         android:id="@+id/contianer"
         android:layout_width="match_parent"
@@ -124,6 +122,8 @@
         android:layout_weight="1">
 
     </RelativeLayout>
+
+
 
 
 </LinearLayout>

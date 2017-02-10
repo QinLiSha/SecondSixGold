@@ -128,6 +128,17 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
     }
 
     /**
+     * 拨打电话的功能
+     */
+    public void dialByPhoneNumber(long phonenumber){
+        // TODO: 2017/1/21 直接拨打客服电话
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        Uri data = Uri.parse("tel:" + phonenumber);
+        intent.setData(data);
+        startActivity(intent);
+    }
+
+    /**
      * 有2个ImageView的ActionBar
      *
      * @param leftId

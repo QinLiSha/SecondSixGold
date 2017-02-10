@@ -72,21 +72,22 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/px_50"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="7">
 
             <View
                 android:layout_width="@dimen/px_0"
                 android:layout_height="1px"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@color/white" />
 
             <TextView
                 android:id="@+id/textView11"
                 style="@style/my_textview_style_normal_white"
                 android:layout_width="@dimen/px_0"
-                android:layout_weight="1"
+                android:layout_weight="3"
                 android:gravity="center"
+                android:lines="1"
                 android:text="第三方登录" />
 
 
@@ -94,7 +95,7 @@
                 android:layout_width="@dimen/px_0"
                 android:layout_height="1px"
                 android:layout_gravity="center_vertical"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:background="@color/white" />
         </LinearLayout>
     </RelativeLayout>

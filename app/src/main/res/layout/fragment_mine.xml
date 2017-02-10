@@ -12,7 +12,7 @@
 
         <include
             android:id="@+id/setting_list"
-            layout="@layout/layout_mine_list" />
+            layout="@layout/layout_mine_list_new" />
     </ScrollView>
 
 

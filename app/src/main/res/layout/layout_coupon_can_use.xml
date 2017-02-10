@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="230px"
+    android:layout_height="180px"
     android:layout_marginBottom="@dimen/px_10"
     android:layout_marginLeft="@dimen/px_50"
     android:layout_marginRight="@dimen/px_50"
@@ -9,7 +9,7 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="@dimen/px_50"
+        android:layout_width="@dimen/px_30"
         android:layout_height="match_parent"
         android:background="@mipmap/icon_coupon_left_can_use" />
 
@@ -30,17 +30,21 @@
             android:layout_marginTop="@dimen/px_20"
             android:layout_weight="3">
 
-            <TextView
-                style="@style/my_textview_style_normal_default_nopadding"
-                android:text="¥ 5"
-                android:textColor="@color/white"
-                android:textSize="@dimen/px_80" />
-
             <ImageView
-                android:layout_width="@dimen/px_250"
+                android:layout_width="@dimen/px_180"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:background="@mipmap/coupon_font" />
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="¥ 5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px_50" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -73,7 +77,7 @@
     </LinearLayout>
 
     <ImageView
-        android:layout_width="@dimen/px_50"
+        android:layout_width="@dimen/px_30"
         android:layout_height="match_parent"
         android:background="@mipmap/icon_coupon_right_can_use" />
 </LinearLayout>

@@ -1,12 +1,12 @@
 package com.lisa.administrator.sixgold.activity.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.TextView;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.adapter.GridViewSingleAdapter;
@@ -22,16 +22,17 @@ public class ChooseCarTypeActivity extends MyBaseActivity {
     private GridView gridView2;
     private GridViewSingleAdapter gridViewSingleAdapter2;
     private ArrayList<String> mList2;
-    private TextView tv;
     private Button button;
     private String name1 = "不限";
     private String name2 = "不限";
+    public static final String KEY_CAR_TYPE_AND_LENGTH = "result_car_type_and_length";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_car_type);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "车型车长", -1, null);
+        initActionBarTwoImg(-1, "车型车长", -1, null);
         initView();
         initViewCarLength();
         initViewCarType();
@@ -39,13 +40,13 @@ public class ChooseCarTypeActivity extends MyBaseActivity {
             @Override
             public void onClick(View view) {
                 if (name1.equals("不限")) {
-                    tv.setText(name2);
+                    backCarInfo(name2);
                 }
                 if (name2.equals("不限")) {
-                    tv.setText(name1);
+                    backCarInfo(name1);
                 }
                 if (name1 != "不限" && name2 != "不限") {
-                    tv.setText(name1 + name2);
+                    backCarInfo(name1 + name2);
                 }
 // TODO: 2017/2/5
             }
@@ -53,7 +54,6 @@ public class ChooseCarTypeActivity extends MyBaseActivity {
     }
 
     private void initView() {
-        tv = (TextView) findViewById(R.id.tv);
         button = (Button) findViewById(R.id.btn_sure_choose_cartype);
     }
 
@@ -140,5 +140,12 @@ public class ChooseCarTypeActivity extends MyBaseActivity {
 //                        Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void backCarInfo(String carInfo) {
+        Intent data = new Intent();
+        data.putExtra(KEY_CAR_TYPE_AND_LENGTH, carInfo);
+        setResult(RESULT_OK, data);
+        finish();
     }
 }

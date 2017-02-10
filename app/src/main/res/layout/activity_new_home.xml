@@ -125,7 +125,7 @@
 
         <LinearLayout
             android:id="@+id/ll_home_homepage"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/px_0"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -134,9 +134,9 @@
                 android:id="@+id/iv_home_homepage"
                 android:layout_width="40px"
                 android:layout_height="35px"
-                android:layout_margin="@dimen/px_5"
                 android:layout_gravity="center"
-            android:background="@mipmap/home_house_blue"/>
+                android:layout_margin="@dimen/px_5"
+                android:background="@mipmap/home_house_blue" />
 
             <TextView
                 android:id="@+id/tv_home_homepage"
@@ -151,7 +151,7 @@
 
         <LinearLayout
             android:id="@+id/ll_car_type"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -177,7 +177,7 @@
 
         <LinearLayout
             android:id="@+id/ll_home_I"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
@@ -201,9 +201,10 @@
                 android:text="@string/I"
                 android:textColor="@color/lightgray" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/ll_home_mail_list"
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"

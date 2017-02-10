@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context="com.lisa.administrator.sixgold.activity.mine.ChangePwdActivity">
+    tools:context="com.lisa.administrator.sixgold.activity.setting.ChangePwdActivity">
 
     <com.lisa.administrator.sixgold.view.ActionBarTwoImg
         android:id="@+id/actionbarView_twoImg"

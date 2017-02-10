@@ -1,0 +1,266 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="11"
+    tools:context="com.lisa.administrator.sixgold.fragment.order.OrderDetailsFragment">
+
+    <TextView
+        style="@style/my_textview_style_normal_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightgray"
+        android:gravity="center_vertical"
+        android:text="同城货运" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_0"
+        android:layout_weight="8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="物品类型：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="文件" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="物品重量：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="1公斤" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/px_150"
+                    android:layout_height="@dimen/px_150"
+                    android:layout_marginRight="@dimen/px_10"
+                    android:background="@mipmap/addphoto" />
+
+                <ImageView
+                    android:layout_width="@dimen/px_150"
+                    android:layout_height="@dimen/px_150"
+                    android:background="@mipmap/addphoto" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="需要运单收据" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="期望时间：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="立即配送" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="发货地址：" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:text="张玲玲 19689563325" />
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:text="黑龙江省齐齐哈尔市富拉尔基区人民路123号" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="收货地址：" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:text="张玲玲 19689563325" />
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:text="黑龙江省齐齐哈尔市富拉尔基区人民路123号创业中心大楼1304室" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="配送费：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="25元 " />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="加赏：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="1.5元 " />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="总计："
+                    android:textColor="@color/themeBlue"
+                    android:textSize="@dimen/px_40" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="26.5元 "
+                    android:textColor="@color/themeBlue"
+                    android:textSize="@dimen/px_40" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        style="@style/my_textview_style_normal_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightgray"
+        android:gravity="center_vertical"
+        android:text="订单详情" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_0"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_default"
+                    android:text="订单号码：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="8546 5698 2154" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_default"
+                    android:text="订单时间：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="2017-02-08" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_default"
+                    android:text="支付方式：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="在线支付" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/my_textview_style_normal_default"
+                    android:text="订单备注：" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="易碎品" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

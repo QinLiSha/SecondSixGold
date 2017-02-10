@@ -4,6 +4,7 @@
     android:id="@+id/activity_setting"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightgray"
     android:orientation="vertical"
     tools:context="com.lisa.administrator.sixgold.activity.mine.SettingActivity">
 
@@ -14,84 +15,78 @@
 
 
     <RelativeLayout
+        android:id="@+id/rl_setting_my_information"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_20"
+        android:background="@color/white"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
         <TextView
+            android:id="@+id/tv_setting_my_information"
+
             style="@style/my_textview_style_normal_black"
             android:layout_centerVertical="true"
-            android:text="修改密码" />
+            android:text="个人信息" />
 
         <ImageView
+            android:id="@+id/iv_setting_my_information"
             style="@style/my_imageview_style_normal"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/ic_chevron_right_grey_24dp"/>
+            android:background="@drawable/ic_chevron_right_grey_24dp" />
     </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_2"
-        android:background="@color/lightgray" />
+
+
     <RelativeLayout
+        android:id="@+id/rl_setting_account_and_security"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
         <TextView
+            android:id="@+id/tv_setting_account_and_security"
             style="@style/my_textview_style_normal_black"
             android:layout_centerVertical="true"
-            android:text="常见问题" />
+            android:text="账户与安全" />
 
         <ImageView
+            android:id="@+id/iv_setting_account_and_security"
             style="@style/my_imageview_style_normal"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/ic_chevron_right_grey_24dp"/>
+            android:background="@drawable/ic_chevron_right_grey_24dp" />
     </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_2"
-        android:background="@color/lightgray" />
+
     <RelativeLayout
+        android:id="@+id/rl_setting_currency"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_20"
+        android:background="@color/white"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
         <TextView
+            android:id="@+id/tv_setting_currency"
             style="@style/my_textview_style_normal_black"
             android:layout_centerVertical="true"
-            android:text="使用须知" />
+            android:text="通用" />
 
         <ImageView
+            android:id="@+id/iv_setting_currency"
             style="@style/my_imageview_style_normal"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/ic_chevron_right_grey_24dp"/>
-    </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_2"
-        android:background="@color/lightgray" />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_100"
-        android:paddingLeft="@dimen/px_10"
-        android:paddingRight="@dimen/px_10">
-
-        <TextView
-            style="@style/my_textview_style_normal_black"
-            android:layout_centerVertical="true"
-            android:text="服务条款" />
-
-        <ImageView
-            style="@style/my_imageview_style_normal"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_chevron_right_grey_24dp"/>
+            android:background="@drawable/ic_chevron_right_grey_24dp" />
     </RelativeLayout>
 
+    <Button
+        android:id="@+id/btn_setting_sing_out"
+        style="@style/my_button_style_01"
+        android:text="退出账号" />
 </LinearLayout>

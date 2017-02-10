@@ -360,7 +360,6 @@
             android:id="@+id/iv_balancepay"
             android:layout_width="@dimen/px_80"
             android:layout_height="@dimen/px_80"
-            android:layout_alignParentLeft="true"
             android:background="@mipmap/icon_balance_pay" />
 
         <LinearLayout

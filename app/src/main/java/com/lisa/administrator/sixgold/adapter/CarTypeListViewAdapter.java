@@ -58,7 +58,7 @@ public class CarTypeListViewAdapter extends MyBaseAdapter {
 
         //获得组件，实例化组件
         if (convertView == null) {
-            convertView = layoutInflater.inflate(R.layout.cartype_listview_courier_item, null);
+            convertView = layoutInflater.inflate(R.layout.layout_listview_item_long_distance, null);
             vh = new ViewHolder();
             vh.iv_car_people_img = (ImageView) convertView.findViewById(R.id.iv_car_people_img);
             vh.tv_distance = (TextView) convertView.findViewById(R.id.tv_distance);
