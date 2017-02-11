@@ -14,7 +14,7 @@
         android:layout_height="wrap_content" />
 
     <RelativeLayout
-
+        android:id="@+id/rl_myinformation_headimg"
         android:layout_width="match_parent"
         android:layout_height="@dimen/px_120"
         android:layout_marginTop="@dimen/px_20"
@@ -24,18 +24,21 @@
         android:paddingRight="@dimen/px_10">
 
         <TextView
+            android:id="@+id/tv_myinformation_headimg"
             style="@style/my_textview_style_normal_black"
             android:layout_centerVertical="true"
             android:text="头像" />
 
 
         <LinearLayout
+            android:id="@+id/ll_myinformation_headimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/iv_myinformation_headimg"
                 android:layout_width="@dimen/px_110"
                 android:layout_height="@dimen/px_110"
                 android:layout_centerVertical="true"
@@ -55,6 +58,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_myinformation_name"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_actionbar_item_height"
         android:layout_marginTop="@dimen/px_2"
@@ -63,17 +67,15 @@
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
-        <TextView
-            style="@style/my_textview_style_normal_black"
-            android:text="昵称" />
-
         <LinearLayout
+            android:id="@+id/ll_myinformation_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_myinformation_name"
                 style="@style/my_textview_style_normal_black"
                 android:text="张三" />
 
@@ -84,6 +86,13 @@
                 android:layout_alignParentRight="true"
                 android:background="@drawable/ic_chevron_right_grey_24dp" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_myinformation_name_left"
+            style="@style/my_textview_style_normal_black"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="昵称" />
 
 
     </RelativeLayout>
@@ -98,16 +107,19 @@
         android:paddingRight="@dimen/px_10">
 
         <TextView
+            android:id="@+id/tv_myinformation_birthday_left"
             style="@style/my_textview_style_normal_black"
             android:text="生日" />
 
         <LinearLayout
+            android:id="@+id/ll_myinformation_birthday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_myinformation_birthday"
                 style="@style/my_textview_style_normal_black"
                 android:text="1984-02-03" />
 
@@ -122,6 +134,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/rl_myinformation_addaddress"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_actionbar_item_height"
         android:layout_marginTop="@dimen/px_2"
@@ -130,17 +143,15 @@
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
-        <TextView
-            style="@style/my_textview_style_normal_black"
-            android:text="收货地址" />
-
         <LinearLayout
+            android:id="@+id/ll_myinformation_addaddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_myinformation_addaddress"
                 style="@style/my_textview_style_normal_black"
                 android:text="添加/修改" />
 
@@ -152,6 +163,12 @@
 
         </LinearLayout>
 
+        <TextView
+            android:id="@+id/tv_myinformation_addaddress_left"
+            style="@style/my_textview_style_normal_black"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="收货地址" />
 
     </RelativeLayout>
 

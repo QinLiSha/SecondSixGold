@@ -84,7 +84,7 @@ public class NewHomeActivity extends MyBaseActivity {
             R.id.iv_notice, R.id.ll_notice, R.id.tv_rolling_word, R.id.ll_tv_rolling_word,
             R.id.iv_home_homepage, R.id.tv_home_homepage, R.id.ll_home_homepage, R.id.iv_car_type,
             R.id.tv_car_type, R.id.ll_car_type, R.id.iv_home_I, R.id.tv_home_I, R.id.ll_home_I, R.id.ll_home_bottom_item,
-            R.id.activity_new_home,  R.id.iv_home_mail_list, R.id.tv_home_mail_list, R.id.ll_home_mail_list})
+            R.id.activity_new_home, R.id.iv_home_mail_list, R.id.tv_home_mail_list, R.id.ll_home_mail_list})
     public void onClick(View view) {
         switch (view.getId()) {
 //            case R.id.iv_current_city:

@@ -22,8 +22,7 @@
             <ImageView
                 android:id="@+id/iv_to_authenticate"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_error_red_24dp" />
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/tv_to_authenticate"
@@ -66,6 +65,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+
                     android:background="@drawable/view_border_blue"
                     android:orientation="horizontal">
 
@@ -87,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/px_200"
         android:layout_marginBottom="@dimen/px_15"
-        android:background="@drawable/view_border_red"
+        android:background="@drawable/view_border_blue"
         android:orientation="horizontal"
         android:weightSum="3">
 
@@ -95,7 +95,7 @@
             android:id="@+id/ll_wallet"
             android:layout_width="@dimen/px_70"
             android:layout_height="match_parent"
-            android:background="@drawable/view_border_red_background"
+            android:background="@drawable/view_border_blue_background"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -478,14 +478,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/px_400"
         android:layout_marginBottom="@dimen/px_25"
-        android:background="@drawable/view_border_purple"
+        android:background="@drawable/view_border_blue"
         android:orientation="horizontal">
 
         <LinearLayout
             android:id="@+id/ll_tools"
             android:layout_width="@dimen/px_70"
             android:layout_height="match_parent"
-            android:background="@drawable/view_border_purple_background"
+            android:background="@drawable/view_border_blue_background"
             android:gravity="center"
             android:orientation="vertical">
 

@@ -11,7 +11,7 @@
 
     <!--新增收货地址的界面-->
     <com.lisa.administrator.sixgold.view.ActionBarOneImg
-        android:id="@+id/actionbarView_twoImg"
+        android:id="@+id/actionbarView_oneImg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -30,10 +30,12 @@
             android:text="姓名" />
 
         <EditText
+            android:id="@+id/et_addaddress_name"
             style="@style/my_edittext_style_normal_no_line"
             android:layout_width="match_parent"
             android:hint="请输入姓名"
-            android:maxLength="4" />
+            android:maxLength="4"
+            android:padding="@dimen/px_0" />
     </LinearLayout>
 
     <LinearLayout
@@ -50,14 +52,16 @@
             android:text="电话" />
 
         <EditText
-            android:id="@+id/editText17"
+            android:id="@+id/et_addaddress_tele_num"
             style="@style/my_edittext_style_normal_no_line"
             android:layout_width="match_parent"
             android:hint="请输入电话"
-            android:maxLength="4" />
+            android:maxLength="4"
+            android:padding="@dimen/px_0" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/ll_addaddress_choosecity"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_actionbar_item_height"
         android:layout_marginBottom="@dimen/px_3"
@@ -66,11 +70,13 @@
         android:orientation="horizontal">
 
         <TextView
+            android:id="@+id/tv_addaddress_choosecity_left"
             style="@style/my_textview_style_normal_black"
             android:layout_marginLeft="@dimen/px_60"
             android:text="地区" />
 
         <TextView
+            android:id="@+id/tv_addaddress_choosecity"
             style="@style/my_textview_style_normal_small"
             android:layout_width="match_parent"
             android:hint="请选择 省份  城市  县区"
@@ -86,16 +92,18 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView9"
             style="@style/my_textview_style_normal_black"
             android:layout_marginLeft="@dimen/px_60"
             android:text="地址" />
 
         <EditText
+            android:id="@+id/et_addaddress_detail_address"
             style="@style/my_edittext_style_normal_no_line"
             android:layout_width="match_parent"
+
             android:hint="5-60个字，且不能全为数字"
-            android:maxLength="60" />
+            android:maxLength="60"
+            android:padding="@dimen/px_0" />
     </LinearLayout>
 
     <LinearLayout
@@ -113,10 +121,12 @@
             android:text="邮编" />
 
         <EditText
+            android:id="@+id/et_addaddress_postcodes"
             style="@style/my_edittext_style_normal_no_line"
             android:layout_width="match_parent"
             android:hint="6位数邮编"
-            android:maxLength="6" />
+            android:maxLength="6"
+            android:padding="@dimen/px_0" />
     </LinearLayout>
 
     <RelativeLayout
@@ -133,6 +143,7 @@
             android:orientation="horizontal">
 
             <CheckBox
+                android:id="@+id/cb_addaddress_set_defultaddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 

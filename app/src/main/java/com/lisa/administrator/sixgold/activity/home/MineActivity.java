@@ -24,8 +24,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MineActivity extends MyBaseActivity {
-
-
     @BindView(R.id.iv_my_head_image)
     ImageView ivMyHeadImage;
     @BindView(R.id.iv_to_authenticate)
@@ -206,6 +204,7 @@ public class MineActivity extends MyBaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_mine_left_back:
+                finish();
                 break;
             case R.id.iv_mine_notice:
                 break;

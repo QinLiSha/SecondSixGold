@@ -86,8 +86,7 @@
 
                     <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/ic_error_red_24dp" />
+                        android:layout_height="wrap_content" />
 
                     <TextView
                         style="@style/my_textview_style_normal_default"
@@ -106,14 +105,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_200"
                 android:layout_marginBottom="@dimen/px_15"
-                android:background="@drawable/view_border_red"
+                android:background="@drawable/view_border_blue"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <LinearLayout
                     android:layout_width="@dimen/px_70"
                     android:layout_height="match_parent"
-                    android:background="@drawable/view_border_red_background"
+                    android:background="@drawable/view_border_blue_background"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -131,18 +130,19 @@
                 <LinearLayout
                     android:layout_width="@dimen/px_0"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_weight="1">
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="@dimen/px_70"
                         android:layout_height="@dimen/px_70"
-                        android:background="@drawable/ic_local_florist_red_24dp"/>
+                        android:background="@drawable/ic_local_florist_red_24dp" />
 
                     <TextView
+                        android:id="@+id/textView15"
                         style="@style/my_textview_style_normal_black"
-                        android:text="提现"
-                        android:id="@+id/textView15" />
+                        android:text="提现" />
 
                 </LinearLayout>
 
@@ -152,19 +152,22 @@
                     android:layout_marginBottom="@dimen/px_10"
                     android:layout_marginTop="@dimen/px_10"
                     android:background="@color/lightgray" />
+
                 <LinearLayout
                     android:layout_width="@dimen/px_0"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_weight="1">
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="@dimen/px_70"
                         android:layout_height="@dimen/px_70"
-                        android:background="@drawable/ic_local_florist_red_24dp"/>
+                        android:background="@drawable/ic_local_florist_red_24dp" />
+
                     <TextView
                         style="@style/my_textview_style_normal_black"
-                        android:text="优惠券"/>
+                        android:text="优惠券" />
 
                 </LinearLayout>
 
@@ -174,19 +177,22 @@
                     android:layout_marginBottom="@dimen/px_10"
                     android:layout_marginTop="@dimen/px_10"
                     android:background="@color/lightgray" />
+
                 <LinearLayout
                     android:layout_width="@dimen/px_0"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:layout_weight="1">
+                    android:orientation="vertical">
+
                     <ImageView
                         android:layout_width="@dimen/px_70"
                         android:layout_height="@dimen/px_70"
-                        android:background="@drawable/ic_local_florist_red_24dp"/>
+                        android:background="@drawable/ic_local_florist_red_24dp" />
+
                     <TextView
                         style="@style/my_textview_style_normal_black"
-                        android:text="充值"/>
+                        android:text="充值" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -217,225 +223,247 @@
                 </LinearLayout>
 
                 <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:weightSum="3">
-
-                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/px_0"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
                     android:weightSum="3">
 
-
-
                     <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="@dimen/px_70"
-                            android:layout_height="@dimen/px_70"
-                            android:background="@drawable/ic_local_florist_red_24dp"/>
-                        <TextView
-                            style="@style/my_textview_style_normal_black"
-                            android:text="联系客服"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_0"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
 
+
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/px_70"
+                                android:layout_height="@dimen/px_70"
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
+                            <TextView
+                                style="@style/my_textview_style_normal_black"
+                                android:text="联系客服" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/px_1"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/px_10"
+                            android:background="@color/lightgray" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/px_70"
+                                android:layout_height="@dimen/px_70"
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
+                            <TextView
+                                style="@style/my_textview_style_normal_black"
+                                android:text="消息" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/px_1"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/px_10"
+                            android:background="@color/lightgray" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/px_70"
+                                android:layout_height="@dimen/px_70"
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
+                            <TextView
+                                style="@style/my_textview_style_normal_black"
+                                android:text="分享好友" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
                     <View
-                        android:layout_width="@dimen/px_1"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/px_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_1"
+                        android:layout_marginLeft="@dimen/px_15"
+                        android:layout_marginRight="@dimen/px_15"
                         android:background="@color/lightgray" />
-                    <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="@dimen/px_70"
-                            android:layout_height="@dimen/px_70"
-                            android:background="@drawable/ic_local_florist_red_24dp"/>
-                        <TextView
-                            style="@style/my_textview_style_normal_black"
-                            android:text="消息"/>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_0"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/px_70"
+                                android:layout_height="@dimen/px_70"
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
+                            <TextView
+                                style="@style/my_textview_style_normal_black"
+                                android:text="@string/my_store" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/px_1"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightgray" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/px_70"
+                                android:layout_height="@dimen/px_70"
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
+                            <TextView
+                                style="@style/my_textview_style_normal_black"
+                                android:text="@string/my_favorite" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/px_1"
+                            android:layout_height="match_parent"
+                            android:background="@color/lightgray" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/px_70"
+                                android:layout_height="@dimen/px_70"
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
+                            <TextView
+                                style="@style/my_textview_style_normal_black"
+                                android:text="@string/my_order" />
+
+                        </LinearLayout>
                     </LinearLayout>
 
                     <View
-                        android:layout_width="@dimen/px_1"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="@dimen/px_10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_1"
+                        android:layout_marginLeft="@dimen/px_15"
+                        android:layout_marginRight="@dimen/px_15"
                         android:background="@color/lightgray" />
-                    <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="@dimen/px_70"
-                            android:layout_height="@dimen/px_70"
-                            android:background="@drawable/ic_local_florist_red_24dp"/>
-                        <TextView
-                            style="@style/my_textview_style_normal_black"
-                            android:text="分享好友"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/px_1"
-                    android:background="@color/lightgray"
-                    android:layout_marginLeft="@dimen/px_15"
-                    android:layout_marginRight="@dimen/px_15"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/px_0"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
-
-
 
                     <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="@dimen/px_70"
-                            android:layout_height="@dimen/px_70"
-                            android:background="@drawable/ic_local_florist_red_24dp"/>
-                        <TextView
-                            style="@style/my_textview_style_normal_black"
-                            android:text="@string/my_store"/>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="@dimen/px_1"
-                        android:layout_height="match_parent"
-                        android:background="@color/lightgray" />
-                    <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="@dimen/px_70"
-                            android:layout_height="@dimen/px_70"
-                            android:background="@drawable/ic_local_florist_red_24dp"/>
-                        <TextView
-                            style="@style/my_textview_style_normal_black"
-                            android:text="@string/my_favorite"/>
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="@dimen/px_1"
-                        android:layout_height="match_parent"
-                        android:background="@color/lightgray" />
-                    <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="@dimen/px_70"
-                            android:layout_height="@dimen/px_70"
-                            android:background="@drawable/ic_local_florist_red_24dp"/>
-                        <TextView
-                            style="@style/my_textview_style_normal_black"
-                            android:text="@string/my_order"/>
-
-                    </LinearLayout>
-                </LinearLayout>
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/px_1"
-                    android:background="@color/lightgray"
-                    android:layout_marginLeft="@dimen/px_15"
-                    android:layout_marginRight="@dimen/px_15"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/px_0"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_0"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
 
 
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="@dimen/px_70"
-                            android:layout_height="@dimen/px_70"
-                            android:background="@drawable/ic_local_florist_red_24dp"/>
-                        <TextView
-                            style="@style/my_textview_style_normal_black"
-                            android:text="@string/about_us"/>
+                            <ImageView
+                                android:layout_width="@dimen/px_70"
+                                android:layout_height="@dimen/px_70"
+                                android:background="@drawable/ic_local_florist_red_24dp" />
 
-                    </LinearLayout>
+                            <TextView
+                                style="@style/my_textview_style_normal_black"
+                                android:text="@string/about_us" />
 
-                    <View
-                        android:layout_width="@dimen/px_1"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="@dimen/px_10"
-                        android:background="@color/lightgray" />
-                    <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <ImageView
-                            android:layout_width="@dimen/px_70"
-                            android:layout_height="@dimen/px_70"
-                            android:background="@drawable/ic_local_florist_red_24dp"/>
+                        </LinearLayout>
 
-                        <TextView
-                            style="@style/my_textview_style_normal_black"
-                            android:text="@string/setting"
-                            android:id="@+id/textView14" />
+                        <View
+                            android:layout_width="@dimen/px_1"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/px_10"
+                            android:background="@color/lightgray" />
 
-                    </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                    <View
-                        android:layout_width="@dimen/px_1"
-                        android:layout_height="match_parent"
-                        android:layout_marginBottom="@dimen/px_10"
-                        android:background="@color/lightgray" />
-                    <LinearLayout
-                        android:layout_width="@dimen/px_0"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center"
-                        android:layout_weight="1">
-                        <!--<ImageView-->
+                            <ImageView
+                                android:layout_width="@dimen/px_70"
+                                android:layout_height="@dimen/px_70"
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
+                            <TextView
+                                android:id="@+id/textView14"
+                                style="@style/my_textview_style_normal_black"
+                                android:text="@string/setting" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/px_1"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="@dimen/px_10"
+                            android:background="@color/lightgray" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/px_0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <!--<ImageView-->
                             <!--android:layout_width="@dimen/px_70"-->
                             <!--android:layout_height="@dimen/px_70"-->
                             <!--android:background="@drawable/ic_local_florist_red_24dp"/>-->
-                        <!--<TextView-->
+                            <!--<TextView-->
                             <!--style="@style/my_textview_style_normal_black"-->
                             <!--android:text="分享好友"/>-->
 
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
 
             </LinearLayout>
@@ -444,13 +472,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_400"
                 android:layout_marginBottom="@dimen/px_15"
-                android:background="@drawable/view_border_purple"
+                android:background="@drawable/view_border_blue"
                 android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="@dimen/px_70"
                     android:layout_height="match_parent"
-                    android:background="@drawable/view_border_purple_background"
+                    android:background="@drawable/view_border_blue_background"
                     android:gravity="center"
                     android:orientation="vertical">
 
@@ -464,6 +492,7 @@
                         android:gravity="center"
                         android:text="推荐工具" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -478,20 +507,21 @@
                         android:weightSum="3">
 
 
-
                         <LinearLayout
                             android:layout_width="@dimen/px_0"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
+                            android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_weight="1">
+                            android:orientation="vertical">
+
                             <ImageView
                                 android:layout_width="@dimen/px_70"
                                 android:layout_height="@dimen/px_70"
-                                android:background="@drawable/ic_local_florist_red_24dp"/>
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
                             <TextView
                                 style="@style/my_textview_style_normal_black"
-                                android:text="保险"/>
+                                android:text="保险" />
 
                         </LinearLayout>
 
@@ -500,19 +530,22 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="@dimen/px_10"
                             android:background="@color/lightgray" />
+
                         <LinearLayout
                             android:layout_width="@dimen/px_0"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
+                            android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_weight="1">
+                            android:orientation="vertical">
+
                             <ImageView
                                 android:layout_width="@dimen/px_70"
                                 android:layout_height="@dimen/px_70"
-                                android:background="@drawable/ic_local_florist_red_24dp"/>
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
                             <TextView
                                 style="@style/my_textview_style_normal_black"
-                                android:text="运费计算"/>
+                                android:text="运费计算" />
 
                         </LinearLayout>
 
@@ -521,19 +554,22 @@
                             android:layout_height="match_parent"
                             android:layout_marginTop="@dimen/px_10"
                             android:background="@color/lightgray" />
+
                         <LinearLayout
                             android:layout_width="@dimen/px_0"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
+                            android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_weight="1">
+                            android:orientation="vertical">
+
                             <ImageView
                                 android:layout_width="@dimen/px_70"
                                 android:layout_height="@dimen/px_70"
-                                android:background="@drawable/ic_local_florist_red_24dp"/>
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
                             <TextView
                                 style="@style/my_textview_style_normal_black"
-                                android:text="附近服务"/>
+                                android:text="附近服务" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -542,9 +578,10 @@
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/px_1"
-                        android:background="@color/lightgray"
                         android:layout_marginLeft="@dimen/px_15"
-                        android:layout_marginRight="@dimen/px_15"/>
+                        android:layout_marginRight="@dimen/px_15"
+                        android:background="@color/lightgray" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/px_0"
@@ -553,20 +590,21 @@
                         android:weightSum="3">
 
 
-
                         <LinearLayout
                             android:layout_width="@dimen/px_0"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
+                            android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_weight="1">
+                            android:orientation="vertical">
+
                             <ImageView
                                 android:layout_width="@dimen/px_70"
                                 android:layout_height="@dimen/px_70"
-                                android:background="@drawable/ic_local_florist_red_24dp"/>
+                                android:background="@drawable/ic_local_florist_red_24dp" />
+
                             <TextView
                                 style="@style/my_textview_style_normal_black"
-                                android:text="违章查询"/>
+                                android:text="违章查询" />
 
                         </LinearLayout>
 
@@ -575,19 +613,20 @@
                             android:layout_height="match_parent"
                             android:layout_marginBottom="@dimen/px_10"
                             android:background="@color/lightgray" />
+
                         <LinearLayout
                             android:layout_width="@dimen/px_0"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
+                            android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_weight="1">
+                            android:orientation="vertical">
                             <!--<ImageView-->
-                                <!--android:layout_width="@dimen/px_70"-->
-                                <!--android:layout_height="@dimen/px_70"-->
-                                <!--android:background="@drawable/ic_local_florist_red_24dp"/>-->
+                            <!--android:layout_width="@dimen/px_70"-->
+                            <!--android:layout_height="@dimen/px_70"-->
+                            <!--android:background="@drawable/ic_local_florist_red_24dp"/>-->
                             <!--<TextView-->
-                                <!--style="@style/my_textview_style_normal_black"-->
-                                <!--android:text="消息"/>-->
+                            <!--style="@style/my_textview_style_normal_black"-->
+                            <!--android:text="消息"/>-->
 
                         </LinearLayout>
 
@@ -596,19 +635,20 @@
                             android:layout_height="match_parent"
                             android:layout_marginBottom="@dimen/px_10"
                             android:background="@color/lightgray" />
+
                         <LinearLayout
                             android:layout_width="@dimen/px_0"
                             android:layout_height="match_parent"
-                            android:orientation="vertical"
+                            android:layout_weight="1"
                             android:gravity="center"
-                            android:layout_weight="1">
+                            android:orientation="vertical">
                             <!--<ImageView-->
-                                <!--android:layout_width="@dimen/px_70"-->
-                                <!--android:layout_height="@dimen/px_70"-->
-                                <!--android:background="@drawable/ic_local_florist_red_24dp"/>-->
+                            <!--android:layout_width="@dimen/px_70"-->
+                            <!--android:layout_height="@dimen/px_70"-->
+                            <!--android:background="@drawable/ic_local_florist_red_24dp"/>-->
                             <!--<TextView-->
-                                <!--style="@style/my_textview_style_normal_black"-->
-                                <!--android:text="分享好友"/>-->
+                            <!--style="@style/my_textview_style_normal_black"-->
+                            <!--android:text="分享好友"/>-->
 
                         </LinearLayout>
                     </LinearLayout>

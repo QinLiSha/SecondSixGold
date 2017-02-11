@@ -152,8 +152,7 @@
                         android:layout_height="@dimen/px_30"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="@dimen/px_10"
-                        android:layout_toLeftOf="@+id/tv_kg"
-                        android:background="@mipmap/jians" />
+                        android:layout_toLeftOf="@+id/tv_kg" />
 
                     <ImageView
                         android:id="@+id/iv_kg_jia"
@@ -161,8 +160,7 @@
                         android:layout_height="@dimen/px_30"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="@dimen/px_10"
-                        android:background="@mipmap/jias" />
+                        android:layout_marginLeft="@dimen/px_10" />
 
                     <TextView
                         android:id="@+id/tv_kg"

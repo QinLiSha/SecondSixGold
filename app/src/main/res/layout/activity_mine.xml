@@ -26,26 +26,26 @@
         <ImageView
             android:id="@+id/iv_mine_notice"
             android:layout_width="@dimen/px_40"
-            android:layout_height="@dimen/px_40"
+            android:layout_height="@dimen/px_35"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/px_10"
+            android:layout_marginRight="@dimen/px_20"
             android:layout_toLeftOf="@+id/iv_mine_setting"
-            android:background="@mipmap/notice" />
+            android:background="@mipmap/new_notice" />
 
         <ImageView
             android:id="@+id/iv_mine_setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/px_35"
+            android:layout_height="@dimen/px_35"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/px_10"
-            android:background="@drawable/ic_person_outline_white_24dp" />
+            android:background="@mipmap/iv_mine_setting" />
 
         <TextView
             android:id="@+id/tv_mine_title"
             style="@style/my_textview_style_title"
-            android:layout_alignTop="@+id/iv_left_two_img"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:text="我的" />
     </RelativeLayout>
 
@@ -77,13 +77,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/iv_to_authenticate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/ic_error_red_24dp" />
+                    android:layout_width="@dimen/px_40"
+                    android:layout_height="@dimen/px_40"
+                    android:background="@mipmap/iv_to_authenticate" />
 
                 <TextView
                     android:id="@+id/tv_to_authenticate"
@@ -280,15 +281,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="5">
+            android:weightSum="2">
 
             <ImageView
                 android:id="@+id/iv_home_homepage"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/px_30"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="3"
-                android:background="@drawable/ic_person_outline_black_24dp" />
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_home_homepage" />
 
             <TextView
                 android:id="@+id/tv_home_homepage"
@@ -296,7 +298,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="2"
+                android:layout_weight="1"
 
                 android:text="@string/homepage"
                 android:textColor="@color/lightgray" />
@@ -308,15 +310,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="5">
+            android:weightSum="2">
 
             <ImageView
                 android:id="@+id/iv_car_type"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/px_35"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="3"
-                android:background="@drawable/ic_local_shipping_black_24dp" />
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_car_type" />
 
             <TextView
                 android:id="@+id/tv_car_type"
@@ -324,7 +327,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="@string/car_type"
                 android:textColor="@color/lightgray" />
         </LinearLayout>
@@ -335,15 +338,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="5">
+            android:weightSum="4">
 
             <ImageView
                 android:id="@+id/iv_home_I"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/px_35"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="3"
-                android:background="@drawable/ic_person_outline_blue_24dp" />
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="2"
+                android:background="@mipmap/iv_home_i_choosed" />
 
             <TextView
                 android:id="@+id/tv_home_I"
@@ -362,15 +366,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="5">
+            android:weightSum="2">
 
             <ImageView
                 android:id="@+id/iv_home_mail_list"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/px_35"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="3"
-                android:background="@drawable/ic_call_grey_24dp" />
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_home_mail_list" />
 
             <TextView
                 android:id="@+id/tv_home_mail_list"
@@ -378,7 +383,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="@string/mail_list"
                 android:textColor="@color/lightgray" />
         </LinearLayout>

@@ -62,7 +62,8 @@
         <activity android:name=".activity.setting.AccountSecurityActivity" />
         <activity android:name=".activity.home.MailListActivity" />
         <activity android:name=".activity.setting.AddAddressActivity" />
-        <activity android:name=".activity.setting.MyAddressBookActivity"></activity>
+        <activity android:name=".activity.setting.MyAddressBookActivity" />
+        <activity android:name=".activity.setting.SettingCurrencyActivity"></activity>
     </application>
 
 </manifest>

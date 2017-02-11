@@ -22,24 +22,43 @@
         android:layout_height="@dimen/activity_actionbar_item_height"
         android:background="@color/themeBlue"
         android:orientation="horizontal"
-        android:weightSum="5">
+        android:weightSum="12">
 
         <TextView
             android:id="@+id/tv_legwork"
             style="@style/my_textview_style_normal_white"
             android:layout_width="@dimen/px_0"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center"
             android:text="跑腿"
             android:textColor="@color/gold" />
+
+        <TextView
+            android:id="@+id/tv_local_city_freight"
+            style="@style/my_textview_style_normal_white"
+            android:layout_width="@dimen/px_0"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="同城货运" />
+
+        <TextView
+            android:id="@+id/tv_long_distance_freight"
+            style="@style/my_textview_style_normal_white"
+            android:layout_width="@dimen/px_0"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="长途货运" />
+
 
         <TextView
             android:id="@+id/tv_express"
             style="@style/my_textview_style_normal_white"
             android:layout_width="@dimen/px_0"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center"
             android:text="快递" />
 
@@ -48,27 +67,11 @@
             style="@style/my_textview_style_normal_white"
             android:layout_width="@dimen/px_0"
             android:layout_gravity="center"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:gravity="center"
             android:text="物流" />
 
-        <TextView
-            android:id="@+id/tv_long_distance_freight"
-            style="@style/my_textview_style_normal_white"
-            android:layout_width="@dimen/px_0"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="长途货运" />
 
-        <TextView
-            android:id="@+id/tv_local_city_freight"
-            style="@style/my_textview_style_normal_white"
-            android:layout_width="@dimen/px_0"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="同城货运" />
     </LinearLayout>
 
     <View

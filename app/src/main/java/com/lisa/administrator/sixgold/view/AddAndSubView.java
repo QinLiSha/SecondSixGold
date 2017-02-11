@@ -81,10 +81,13 @@ public class AddAndSubView extends AutoLinearLayout {
         setViewsLayoutParm(); // 设置内部view的布局参数
         insertView(); // 将子view放入linearlayout中
         setViewListener();
-        setButtonLayoutParm(32, 31);
-        setViewsLayoutParm(110, 31);
+        setButtonLayoutParm(25, 25);
+        setViewsLayoutParm(90, 25);
+        // TODO: 2017/2/11  之前写的值的大小
+//        setButtonLayoutParm(32, 31);
+//        setViewsLayoutParm(110, 31);
         setButtonBgResource(R.drawable.btn_add_bg, R.drawable.btn_subtract_bg);
-        setTextSize(15);//设置文字大小
+        setTextSize(13);//设置文字大小
     }
 
     /**
@@ -138,12 +141,16 @@ public class AddAndSubView extends AutoLinearLayout {
         editText.setBackgroundColor(0xffffffff);
 //        editText.setEllipsize(TextUtils.TruncateAt.END);
         editText.setPadding(15, 0, 15, 0);
+        // TODO: 2017/2/11 之前写的值的大小
+//        editText.setPadding(15, 0, 15, 0);
         editText.setTextColor(0xFF323232);
         editText.setHint("0");
         editText.setHintTextColor(0xff323232);
 //        setEditTextHeight(45);
 //        setEditTextLayoutWidth(100);
         setEditTextLayoutHeight(45);
+        // TODO: 2017/2/11 之前写的值的大小
+//        setEditTextLayoutHeight(45);
         setTextWidthHeight();
 
         viewLayoutParams.gravity = Gravity.CENTER;
@@ -162,6 +169,7 @@ public class AddAndSubView extends AutoLinearLayout {
         mainLinearLayout.setLayoutParams(viewLayoutParams);
         mainLinearLayout.setOrientation(LinearLayout.HORIZONTAL);
     }
+
 
     /**
      * 设置整体控件的宽高度
@@ -210,9 +218,9 @@ public class AddAndSubView extends AutoLinearLayout {
 
     /**
      * 将px值转换为sp值，保证文字大小不变
+     * fontScale （DisplayMetrics类中属性scaledDensity）
      *
      * @param pxValue
-     * @param fontScale （DisplayMetrics类中属性scaledDensity）
      * @return
      */
     private int px2sp(Context context, float pxValue) {
@@ -222,9 +230,9 @@ public class AddAndSubView extends AutoLinearLayout {
 
     /**
      * 将sp值转换为px值，保证文字大小不变
+     * fontScale （DisplayMetrics类中属性scaledDensity）
      *
      * @param spValue
-     * @param fontScale （DisplayMetrics类中属性scaledDensity）
      * @return
      */
     private int sp2px(Context context, float spValue) {

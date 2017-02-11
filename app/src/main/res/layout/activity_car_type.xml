@@ -230,6 +230,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1" />
 
+
     <LinearLayout
         android:id="@+id/ll_home_bottom_item"
         android:layout_width="match_parent"
@@ -245,24 +246,28 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="5">
+            android:weightSum="2">
 
             <ImageView
                 android:id="@+id/iv_home_homepage"
-                android:layout_width="40px"
-                android:layout_height="35px"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/px_5"
-                android:background="@mipmap/home_house_grey" />
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_home_homepage" />
 
             <TextView
                 android:id="@+id/tv_home_homepage"
                 style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
+                android:layout_weight="1"
+
                 android:text="@string/homepage"
                 android:textColor="@color/lightgray" />
         </LinearLayout>
-
 
         <LinearLayout
             android:id="@+id/ll_car_type"
@@ -270,15 +275,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="5">
+            android:weightSum="2">
 
             <ImageView
                 android:id="@+id/iv_car_type"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/px_35"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="3"
-                android:background="@drawable/ic_local_shipping_blue_24dp" />
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_car_type_choosed" />
 
             <TextView
                 android:id="@+id/tv_car_type"
@@ -286,7 +292,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="@string/car_type"
                 android:textColor="@color/themeBlue" />
         </LinearLayout>
@@ -297,15 +303,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="5">
+            android:weightSum="4">
 
             <ImageView
                 android:id="@+id/iv_home_I"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/px_35"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="3"
-                android:background="@drawable/ic_person_outline_black_24dp" />
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="2"
+                android:background="@mipmap/iv_home_i" />
 
             <TextView
                 android:id="@+id/tv_home_I"
@@ -324,15 +331,16 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:weightSum="5">
+            android:weightSum="2">
 
             <ImageView
                 android:id="@+id/iv_home_mail_list"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/px_35"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="3"
-                android:background="@drawable/ic_call_grey_24dp" />
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_home_mail_list" />
 
             <TextView
                 android:id="@+id/tv_home_mail_list"
@@ -340,10 +348,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/px_0"
                 android:layout_gravity="center"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="@string/mail_list"
                 android:textColor="@color/lightgray" />
         </LinearLayout>
+
 
     </LinearLayout>
 

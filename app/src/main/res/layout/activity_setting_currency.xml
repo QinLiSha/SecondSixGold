@@ -1,45 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_setting"
+    android:id="@+id/activity_setting_currency"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lightgray"
     android:orientation="vertical"
-    tools:context="com.lisa.administrator.sixgold.activity.mine.SettingActivity">
+    tools:context="com.lisa.administrator.sixgold.activity.setting.SettingCurrencyActivity">
+
 
     <com.lisa.administrator.sixgold.view.ActionBarTwoImg
         android:id="@+id/actionbarView_twoImg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-
     <RelativeLayout
-        android:id="@+id/rl_setting_my_information"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_actionbar_item_height"
         android:layout_marginTop="@dimen/px_20"
         android:background="@color/white"
+        android:gravity="center_vertical"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
         <TextView
             android:id="@+id/tv_setting_my_information"
             style="@style/my_textview_style_normal_black"
-            android:layout_centerVertical="true"
-            android:text="个人信息" />
+            android:text="非WIFI环境下省流量模式" />
 
-        <ImageView
-            android:id="@+id/iv_setting_my_information"
-            style="@style/my_imageview_style_normal"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_chevron_right_grey_24dp" />
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" />
     </RelativeLayout>
 
-
     <RelativeLayout
-        android:id="@+id/rl_setting_account_and_security"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_actionbar_item_height"
         android:layout_marginTop="@dimen/px_2"
@@ -48,13 +43,11 @@
         android:paddingRight="@dimen/px_10">
 
         <TextView
-            android:id="@+id/tv_setting_account_and_security"
             style="@style/my_textview_style_normal_black"
             android:layout_centerVertical="true"
-            android:text="账户与安全" />
+            android:text="网络诊断" />
 
         <ImageView
-            android:id="@+id/iv_setting_account_and_security"
             style="@style/my_imageview_style_normal"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
@@ -62,32 +55,61 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:id="@+id/rl_setting_currency"
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_actionbar_item_height"
-        android:layout_marginTop="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_2"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/px_10"
+        android:paddingRight="@dimen/px_10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="20.6M" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/ic_chevron_right_grey_24dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="清空缓存" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_marginTop="@dimen/px_2"
         android:background="@color/white"
         android:paddingLeft="@dimen/px_10"
         android:paddingRight="@dimen/px_10">
 
+        <TextView
+            style="@style/my_textview_style_normal_black"
+            android:layout_centerVertical="true"
+            android:text="消息提醒" />
+
         <ImageView
-            android:id="@+id/iv_setting_currency"
             style="@style/my_imageview_style_normal"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/ic_chevron_right_grey_24dp" />
-
-        <TextView
-            android:id="@+id/tv_setting_currency"
-            style="@style/my_textview_style_normal_black"
-            android:layout_alignBottom="@+id/iv_setting_currency"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:text="通用" />
     </RelativeLayout>
 
-    <Button
-        android:id="@+id/btn_setting_sing_out"
-        style="@style/my_button_style_01"
-        android:text="退出账号" />
+
+
+
 </LinearLayout>

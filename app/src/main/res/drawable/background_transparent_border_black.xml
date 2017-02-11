@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--bedittext的圆角边框-->
+<!--edittext的圆角边框透明色-->
 
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="@color/transparent" />

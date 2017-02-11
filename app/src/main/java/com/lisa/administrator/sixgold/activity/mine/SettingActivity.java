@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.setting.AccountSecurityActivity;
+import com.lisa.administrator.sixgold.activity.setting.SettingCurrencyActivity;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
 import butterknife.BindView;
@@ -63,7 +64,8 @@ public class SettingActivity extends MyBaseActivity {
             case R.id.tv_setting_currency:
             case R.id.iv_setting_currency:
             case R.id.rl_setting_currency:
-                // TODO: 2017/2/10 通用的设置 
+                // TODO: 2017/2/10 通用的设置
+                openActivity(SettingCurrencyActivity.class);
                 break;
             case R.id.btn_setting_sing_out:
                 // TODO: 2017/2/10 退出登录 
