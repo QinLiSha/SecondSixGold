@@ -50,15 +50,26 @@
         <activity android:name=".activity.mine.SettingActivity" />
         <activity android:name=".activity.mine.MessagesActivity" />
         <activity android:name=".activity.mine.WalletActivity" />
-        <activity android:name=".activity.order.ToPlaceOrderActivity" />
+        <activity
+            android:name=".activity.order.ToPlaceOrderActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".activity.toplaceorder.PlaceOrderExpressActivity" />
-        <activity android:name=".activity.toplaceorder.PlaceOrderLegworkActivity" />
-        <activity android:name=".activity.toplaceorder.PlaceOrderLocalCityActivity" />
-        <activity android:name=".activity.toplaceorder.PlaceOrderLogisticsActivity" />
-        <activity android:name=".activity.toplaceorder.PlaceOrderLongDistanceFreightActivity" />
+        <activity
+            android:name=".activity.toplaceorder.PlaceOrderLegworkActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.toplaceorder.PlaceOrderLocalCityActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.toplaceorder.PlaceOrderLogisticsActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".activity.toplaceorder.PlaceOrderLongDistanceFreightActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".activity.order.SuccessOrderActivity" />
         <activity android:name=".activity.order.OrderStatusDetailsActivity" />
         <activity android:name=".activity.mine.MyOrderNewActivity" />
+        <activity android:name=".activity.mine.MyStoreActivity" />
         <activity android:name=".activity.setting.AccountSecurityActivity" />
         <activity android:name=".activity.home.MailListActivity" />
         <activity android:name=".activity.setting.AddAddressActivity" />

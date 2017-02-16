@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 
 import com.lisa.administrator.sixgold.R;
 
+/**
+ * 我的界面中的一些设置界面
+ */
 public class MineFragment extends Fragment {
 
 

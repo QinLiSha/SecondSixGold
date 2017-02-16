@@ -12,9 +12,499 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="物流" />
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+
+                style="@style/my_textview_style_small_black"
+                android:layout_marginLeft="@dimen/px_20"
+                android:text="3分钟内如果没有公司接单，订单将自动取消"
+                android:textColor="@color/red" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:layout_marginRight="@dimen/px_10">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="物品重量" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+
+                    <com.lisa.administrator.sixgold.view.AddAndSubView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/my_textview_style_normal_orange"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/px_10"
+                        android:padding="@dimen/px_0"
+                        android:text="公斤" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:layout_marginRight="@dimen/px_10">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="物品单数" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+
+                    <com.lisa.administrator.sixgold.view.AddAndSubView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        style="@style/my_textview_style_normal_orange"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/px_10"
+                        android:padding="@dimen/px_0"
+                        android:text="单" />
+
+                    <TextView
+                        style="@style/my_textview_style_normal_orange"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/px_0"
+                        android:text="单"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:layout_marginRight="@dimen/px_10"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="是否需要货运单据" />
+
+                <CheckBox
+                    android:id="@+id/cb_logistics_pay_if_need"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_logistics_pay_please_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:layout_marginRight="@dimen/px_10">
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/item_type_description" />
+
+                <TextView
+                    android:id="@+id/tv_logistics_pay_please_choose"
+                    style="@style/my_textview_style_normal_blue"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/please_choose" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:layout_marginRight="@dimen/px_10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/my_imageview_style_normal"
+                    android:background="@drawable/ic_notifications_24dp" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/order_note" />
+
+                <TextView
+                    style="@style/my_textview_style_normal_orange"
+                    android:text="（选填项）" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/px_10">
+
+                <ImageView
+                    android:id="@+id/iv_logistics_pay_goods_picture_1"
+                    android:layout_width="@dimen/px_150"
+                    android:layout_height="@dimen/px_150"
+                    android:layout_margin="@dimen/px_10"
+                    android:background="@mipmap/addphoto" />
+
+                <ImageView
+                    android:id="@+id/iv_logistics_pay_goods_picture_2"
+                    android:layout_width="@dimen/px_150"
+                    android:layout_height="@dimen/px_150"
+                    android:layout_margin="@dimen/px_10"
+                    android:background="@mipmap/addphoto" />
+
+
+                <EditText
+                    android:id="@+id/et_logistics_pay_order_note"
+                    style="@style/my_edittext_style_normal_grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_150"
+                    android:hint="@string/matters_need_attention_details"
+                    android:lines="10"
+                    android:textSize="@dimen/px_20" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_50"
+                android:layout_marginRight="@dimen/px_50"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="@dimen/px_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:text="预计：" />
+
+                    <TextView
+                        android:id="@+id/tv_logistics_pay_price_expected"
+                        style="@style/my_textview_style_normal_orange"
+                        android:padding="@dimen/px_0"
+                        android:text="9.5"
+                        android:textSize="@dimen/textsize_big" />
+
+
+                    <TextView
+                        style="@style/my_textview_style_normal_orange"
+                        android:padding="@dimen/px_0"
+                        android:text="元"
+                        android:textSize="@dimen/textsize_big" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/px_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:text="加赏：" />
+
+                    <com.lisa.administrator.sixgold.view.AddAndSubView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+
+                    <TextView
+                        style="@style/my_textview_style_normal_orange"
+                        android:layout_marginLeft="@dimen/px_10"
+                        android:padding="@dimen/px_0"
+                        android:text="元"
+                        android:textSize="@dimen/textsize_big" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px_10"
+                android:layout_marginLeft="@dimen/px_80"
+                android:layout_marginRight="@dimen/px_80"
+                android:layout_marginTop="@dimen/px_10"
+                android:background="@drawable/button_background_blue"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_logistics_pay_instant_order"
+                    style="@style/my_textview_style_normal_white"
+                    android:layout_width="@dimen/px_0"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/instant_order" />
+
+                <View
+                    android:layout_width="@dimen/px_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_logistics_pay_make_an_appointment_order"
+                    style="@style/my_textview_style_normal_white"
+                    android:layout_width="@dimen/px_0"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/make_an_appointment_order" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_50"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:text="首单优惠：" />
+
+                    <TextView
+                        android:id="@+id/tv_logistics_pay_price_first_discount"
+                        style="@style/my_textview_style_normal_black"
+                        android:padding="@dimen/px_0"
+                        android:text="8" />
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:padding="@dimen/px_0"
+                        android:text="元" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_50"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:text="共计支付：" />
+
+                    <TextView
+                        android:id="@+id/tv_logistics_pay_price_total"
+                        style="@style/my_textview_style_normal_black"
+                        android:padding="@dimen/px_0"
+                        android:text="1.5" />
+
+                    <TextView
+                        style="@style/my_textview_style_normal_black"
+                        android:padding="@dimen/px_0"
+                        android:text="元" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_10"
+                android:background="@color/lightgray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:layout_marginRight="@dimen/px_20"
+                android:layout_marginTop="@dimen/px_20"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_logistics_pay_weixinpay"
+                    android:layout_width="@dimen/px_80"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_alignParentLeft="true"
+                    android:background="@mipmap/weixinlogo" />
+
+                <LinearLayout
+                    android:id="@+id/ll_logistics_pay_weixinpay"
+                    android:layout_width="@dimen/px_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_logistics_pay_weixinpay"
+                        style="@style/my_textview_style_normal_black"
+                        android:text="微信支付" />
+
+                    <TextView
+                        android:id="@+id/tv_logistics_pay_weixinpay_details"
+                        style="@style/my_textview_style_normal_default_nopadding"
+                        android:layout_marginLeft="@dimen/px_10"
+                        android:text="推荐安装微信5.0及以上版本的使用"
+                        android:textSize="@dimen/px_20" />
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/cb_logistics_pay_weixinpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_logistics_pay_balancepay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:layout_marginRight="@dimen/px_20"
+                android:layout_marginTop="@dimen/px_20"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_logistics_pay_balancepay"
+                    android:layout_width="@dimen/px_80"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@mipmap/icon_balance_pay_new" />
+
+                <LinearLayout
+                    android:id="@+id/ll_logistics_pay_balancepay_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_logistics_pay_balancepay_1"
+                        style="@style/my_textview_style_normal_black"
+                        android:text="账户余额支付" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_logistics_pay_balancepay_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/my_textview_style_normal_default_nopadding"
+                            android:layout_marginLeft="@dimen/px_10"
+                            android:layout_marginRight="@dimen/px_10"
+                            android:text="账户余额：¥"
+                            android:textSize="@dimen/px_20" />
+
+
+                        <TextView
+                            android:id="@+id/tv_logistics_pay_price_balancepay"
+                            style="@style/my_textview_style_normal_default_nopadding"
+                            android:text="860.00" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_logistics_pay_free_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_20"
+                android:layout_marginRight="@dimen/px_20"
+                android:layout_marginTop="@dimen/px_20"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_logistics_pay_free_pay"
+                    android:layout_width="@dimen/px_80"
+                    android:layout_height="@dimen/px_80"
+                    android:background="@mipmap/icon_free_pay" />
+
+                <LinearLayout
+                    android:id="@+id/ll_logistics_pay_free_pay_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_logistics_pay_free_pay_1"
+                        style="@style/my_textview_style_normal_black"
+                        android:text="立享免单" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/tv_logistics_pay_free_pay_2"
+                            style="@style/my_textview_style_normal_default_nopadding"
+                            android:layout_marginLeft="@dimen/px_10"
+                            android:text="现在充值"
+                            android:textSize="@dimen/px_20" />
+
+                        <TextView
+                            android:id="@+id/tv_logistics_pay_price_free_recharge"
+                            style="@style/my_textview_style_normal_default_nopadding"
+                            android:text="500"
+                            android:textColor="@color/red" />
+
+                        <TextView
+                            android:id="@+id/tv_logistics_pay_free_pay_3"
+                            style="@style/my_textview_style_normal_default_nopadding"
+                            android:text="元，此单立即免单（不省商品费，保价费）"
+                            android:textSize="@dimen/px_20" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_logistics_pay_sure_to_pay"
+                style="@style/my_button_style_01"
+                android:layout_width="match_parent"
+                android:text="确认支付" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

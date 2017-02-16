@@ -13,17 +13,23 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.android.datetimepicker.date.DatePickerDialog;
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.HomeLongDistanceFreightActivity;
 import com.lisa.administrator.sixgold.activity.LoginActivity;
 import com.lisa.administrator.sixgold.adapter.CarTypeListViewAdapter;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class CarTypeActivity extends MyBaseActivity {
+public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.OnDateSetListener {
 
     @BindView(R.id.tv_transport_type)
     TextView tvTransportType;
@@ -103,9 +109,11 @@ public class CarTypeActivity extends MyBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_car_type);
         ButterKnife.bind(this);
+        initDate();//初始化日历的方法
         initPopupWindowCarType();
         initPopupWindowTransportType();
     }
+
 
     /**
      * listview的初始化（车型的）
@@ -172,6 +180,8 @@ public class CarTypeActivity extends MyBaseActivity {
             case R.id.iv_date_1:
             case R.id.tv_date:
             case R.id.rl_date:
+                // TODO: 2017/2/15 年月日
+                DatePickerDialog.newInstance(this, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH)).show(getFragmentManager(), "datePicker");
                 break;
             case R.id.tv_choose_type:
             case R.id.iv_choose_type_1:
@@ -190,7 +200,8 @@ public class CarTypeActivity extends MyBaseActivity {
             case R.id.iv_car_type:
             case R.id.tv_car_type:
             case R.id.ll_car_type:
-                openActivity(CarTypeActivity.class);
+                // TODO: 2017/2/15 因为是车型界面上的车型，所以不设点击事件
+//                openActivity(CarTypeActivity.class);
                 break;
             case R.id.iv_home_I:
             case R.id.tv_home_I:
@@ -296,8 +307,43 @@ public class CarTypeActivity extends MyBaseActivity {
         }
     };
 
+    /*********************************************************************************************************************************************
+     * 以下是选择date日历的方法
+     */
+    private Calendar calendar;
+    private DateFormat dateFormat;
+    private SimpleDateFormat timeFormat;
+    private static final String TIME_PATTERN = "HH:mm";
+
+    /**
+     * initDate()需要写在create方法中
+     */
+    private void initDate() {
+        calendar = Calendar.getInstance();
+        dateFormat = DateFormat.getDateInstance(DateFormat.LONG, Locale.getDefault());
+        timeFormat = new SimpleDateFormat(TIME_PATTERN, Locale.getDefault());
+        update();
+    }
 
 
+    private void update() {
+        tvDate.setText(dateFormat.format(calendar.getTime()));
+    }
+
+    /**
+     * @param dialog
+     * @param year
+     * @param monthOfYear
+     * @param dayOfMonth
+     */
+    @Override
+    public void onDateSet(DatePickerDialog dialog, int year, int monthOfYear, int dayOfMonth) {
+        calendar.set(year, monthOfYear, dayOfMonth);
+        update();
+    }
+    /**
+     *以上是选择date日历的方法
+     ********************************************************************************************************************************************/
 }
 
 

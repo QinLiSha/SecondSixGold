@@ -137,10 +137,11 @@ public class AddAndSubView extends AutoLinearLayout {
         subButton.setLayoutParams(viewLayoutParams);
         editText.setLayoutParams(viewLayoutParams);
         editText.setGravity(Gravity.CENTER);
-        editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(9)});
+        editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(4)});//edittext输入的数字最多有几位数
+//        editText.setFilters(new InputFilter[]{new InputFilter.LengthFilter(9)});//之前写的默认edittext输入的数字最多有9位数
         editText.setBackgroundColor(0xffffffff);
 //        editText.setEllipsize(TextUtils.TruncateAt.END);
-        editText.setPadding(15, 0, 15, 0);
+        editText.setPadding(5, 0, 5, 0);
         // TODO: 2017/2/11 之前写的值的大小
 //        editText.setPadding(15, 0, 15, 0);
         editText.setTextColor(0xFF323232);

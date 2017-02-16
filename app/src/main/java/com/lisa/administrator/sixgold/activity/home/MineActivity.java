@@ -14,6 +14,7 @@ import com.lisa.administrator.sixgold.activity.mine.AboutUsActivity;
 import com.lisa.administrator.sixgold.activity.mine.CouponActivity;
 import com.lisa.administrator.sixgold.activity.mine.MyInformationActivity;
 import com.lisa.administrator.sixgold.activity.mine.MyOrderNewActivity;
+import com.lisa.administrator.sixgold.activity.mine.MyStoreActivity;
 import com.lisa.administrator.sixgold.activity.mine.SettingActivity;
 import com.lisa.administrator.sixgold.activity.mine.ShareToFriendActivity;
 import com.lisa.administrator.sixgold.activity.mine.WalletActivity;
@@ -271,7 +272,7 @@ public class MineActivity extends MyBaseActivity {
             case R.id.tv_my_store:
             case R.id.iv_my_store_details:
             case R.id.rl_my_store:
-                // TODO: 2017/2/8 商城 
+                openActivity(MyStoreActivity.class);
                 break;
             case R.id.tv_insurance:
             case R.id.iv_insurance_details:

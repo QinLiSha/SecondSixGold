@@ -22,6 +22,7 @@
     <!--android:orientation="vertical">-->
 
     <RelativeLayout
+        android:id="@+id/rl_legwork_pay_please_choose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/px_10"
@@ -32,11 +33,10 @@
             android:text="@string/item_type_description" />
 
         <TextView
-            android:id="@+id/tv_please_choose"
+            android:id="@+id/tv_legwork_pay_please_choose"
             style="@style/my_textview_style_normal_blue"
             android:layout_alignParentRight="true"
             android:text="@string/please_choose" />
-
     </RelativeLayout>
 
     <LinearLayout
@@ -62,14 +62,14 @@
         android:padding="@dimen/px_10">
 
         <ImageView
-            android:id="@+id/iv_goods_picture_1"
+            android:id="@+id/iv_legwork_pay_goods_picture_1"
             android:layout_width="@dimen/px_150"
             android:layout_height="@dimen/px_150"
             android:layout_margin="@dimen/px_10"
             android:background="@mipmap/addphoto" />
 
         <ImageView
-            android:id="@+id/iv_goods_picture_2"
+            android:id="@+id/iv_legwork_pay_goods_picture_2"
             android:layout_width="@dimen/px_150"
             android:layout_height="@dimen/px_150"
             android:layout_margin="@dimen/px_10"
@@ -77,7 +77,7 @@
 
 
         <EditText
-            android:id="@+id/et_order_note"
+            android:id="@+id/et_legwork_pay_order_note"
             style="@style/my_edittext_style_normal_grey"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px_150"
@@ -106,7 +106,7 @@
                     android:text="起步价：" />
 
                 <TextView
-                    android:id="@+id/tv_price_starting"
+                    android:id="@+id/tv_legwork_pay_price_starting"
                     style="@style/my_textview_style_normal_black"
                     android:padding="@dimen/px_0"
                     android:text="8" />
@@ -117,7 +117,7 @@
                     android:text="元（含" />
 
                 <TextView
-                    android:id="@+id/tv_km_within"
+                    android:id="@+id/tv_legwork_pay_km_within"
                     style="@style/my_textview_style_normal_black"
                     android:padding="@dimen/px_0"
                     android:text="2" />
@@ -139,7 +139,7 @@
                     android:text="每公里单价：" />
 
                 <TextView
-                    android:id="@+id/tv_price_per_km"
+                    android:id="@+id/tv_legwork_pay_price_per_km"
                     style="@style/my_textview_style_normal_black"
                     android:padding="@dimen/px_0"
                     android:text="1.5" />
@@ -174,7 +174,7 @@
                 android:text="预计：" />
 
             <TextView
-                android:id="@+id/tv_price_expected"
+                android:id="@+id/tv_legwork_pay_price_expected"
                 style="@style/my_textview_style_normal_orange"
                 android:padding="@dimen/px_0"
                 android:text="9.5"
@@ -196,16 +196,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textView27"
                 style="@style/my_textview_style_normal_black"
                 android:text="加赏：" />
 
             <com.lisa.administrator.sixgold.view.AddAndSubView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
 
             <TextView
                 style="@style/my_textview_style_normal_orange"
+                android:layout_marginLeft="@dimen/px_10"
                 android:padding="@dimen/px_0"
                 android:text="元"
                 android:textSize="@dimen/textsize_big" />
@@ -225,7 +226,7 @@
         android:weightSum="2">
 
         <TextView
-            android:id="@+id/tv_instant_order"
+            android:id="@+id/tv_legwork_pay_instant_order"
             style="@style/my_textview_style_normal_white"
             android:layout_width="@dimen/px_0"
             android:layout_centerVertical="true"
@@ -240,7 +241,7 @@
             android:background="@color/white" />
 
         <TextView
-            android:id="@+id/tv_make_an_appointment_order"
+            android:id="@+id/tv_legwork_pay_make_an_appointment_order"
             style="@style/my_textview_style_normal_white"
             android:layout_width="@dimen/px_0"
             android:layout_gravity="center"
@@ -267,7 +268,7 @@
                 android:text="首单优惠：" />
 
             <TextView
-                android:id="@+id/tv_price_first_discount"
+                android:id="@+id/tv_legwork_pay_price_first_discount"
                 style="@style/my_textview_style_normal_black"
                 android:padding="@dimen/px_0"
                 android:text="8" />
@@ -289,7 +290,7 @@
                 android:text="共计支付：" />
 
             <TextView
-                android:id="@+id/tv_price_total"
+                android:id="@+id/tv_legwork_pay_price_total"
                 style="@style/my_textview_style_normal_black"
                 android:padding="@dimen/px_0"
                 android:text="1.5" />
@@ -302,62 +303,66 @@
         </LinearLayout>
     </LinearLayout>
 
+
     <View
-        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/px_10"
         android:background="@color/lightgray" />
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/px_20"
         android:layout_marginRight="@dimen/px_20"
-        android:layout_marginTop="@dimen/px_20">
+        android:layout_marginTop="@dimen/px_20"
+        android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/iv_weixinpay"
+            android:id="@+id/iv_legwork_pay_weixinpay"
             android:layout_width="@dimen/px_80"
             android:layout_height="@dimen/px_80"
             android:layout_alignParentLeft="true"
             android:background="@mipmap/weixinlogo" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/ll_legwork_pay_weixinpay"
+            android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/iv_weixinpay"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_weixinpay"
+                android:id="@+id/tv_legwork_pay_weixinpay"
                 style="@style/my_textview_style_normal_black"
                 android:text="微信支付" />
 
             <TextView
-                android:id="@+id/tv_weixinpay_details"
+                android:id="@+id/tv_legwork_pay_weixinpay_details"
                 style="@style/my_textview_style_normal_default_nopadding"
                 android:layout_marginLeft="@dimen/px_10"
                 android:text="推荐安装微信5.0及以上版本的使用"
                 android:textSize="@dimen/px_20" />
         </LinearLayout>
 
-        <ImageView
+        <CheckBox
+            android:id="@+id/cb_legwork_pay_weixinpay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/ic_local_florist_red_24dp" />
-    </RelativeLayout>
+            android:layout_centerVertical="true" />
+    </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/ll_legwork_pay_balancepay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/px_20"
         android:layout_marginRight="@dimen/px_20"
-        android:layout_marginTop="@dimen/px_20">
+        android:layout_marginTop="@dimen/px_20"
+        android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/iv_balancepay"
+            android:id="@+id/iv_legwork_pay_balancepay"
             android:layout_width="@dimen/px_80"
             android:layout_height="@dimen/px_80"
             android:layout_alignParentLeft="true"
@@ -366,17 +371,18 @@
             android:background="@mipmap/icon_balance_pay_new" />
 
         <LinearLayout
+            android:id="@+id/ll_legwork_pay_balancepay_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/iv_balancepay"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_balancepay"
+                android:id="@+id/tv_legwork_pay_balancepay_1"
                 style="@style/my_textview_style_normal_black"
                 android:text="账户余额支付" />
 
             <LinearLayout
+                android:id="@+id/ll_legwork_pay_balancepay_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -384,46 +390,44 @@
                 <TextView
                     style="@style/my_textview_style_normal_default_nopadding"
                     android:layout_marginLeft="@dimen/px_10"
-                    android:text="账户余额："
+                    android:layout_marginRight="@dimen/px_10"
+                    android:text="账户余额：¥"
                     android:textSize="@dimen/px_20" />
 
-                <TextView
-                    style="@style/my_textview_style_normal_default_nopadding"
-                    android:layout_marginLeft="@dimen/px_10"
-                    android:text="¥" />
 
                 <TextView
-                    android:id="@+id/tv_price_balancepay"
+                    android:id="@+id/tv_legwork_pay_price_balancepay"
                     style="@style/my_textview_style_normal_default_nopadding"
                     android:text="860.00" />
 
             </LinearLayout>
 
         </LinearLayout>
+    </LinearLayout>
 
-    </RelativeLayout>
-
-    <RelativeLayout
+    <LinearLayout
+        android:id="@+id/ll_legwork_pay_free_pay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/px_20"
         android:layout_marginRight="@dimen/px_20"
-        android:layout_marginTop="@dimen/px_20">
+        android:layout_marginTop="@dimen/px_20"
+        android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/iv_free_pay"
+            android:id="@+id/iv_legwork_pay_free_pay"
             android:layout_width="@dimen/px_80"
             android:layout_height="@dimen/px_80"
-            android:layout_alignParentLeft="true"
             android:background="@mipmap/icon_free_pay" />
 
         <LinearLayout
+            android:id="@+id/ll_legwork_pay_free_pay_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/iv_free_pay"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_legwork_pay_free_pay_1"
                 style="@style/my_textview_style_normal_black"
                 android:text="立享免单" />
 
@@ -434,35 +438,36 @@
 
 
                 <TextView
+                    android:id="@+id/tv_legwork_pay_free_pay_2"
                     style="@style/my_textview_style_normal_default_nopadding"
                     android:layout_marginLeft="@dimen/px_10"
                     android:text="现在充值"
                     android:textSize="@dimen/px_20" />
 
                 <TextView
-                    android:id="@+id/tv_price_free_recharge"
+                    android:id="@+id/tv_legwork_pay_price_free_recharge"
                     style="@style/my_textview_style_normal_default_nopadding"
                     android:text="500"
                     android:textColor="@color/red" />
 
                 <TextView
+                    android:id="@+id/tv_legwork_pay_free_pay_3"
                     style="@style/my_textview_style_normal_default_nopadding"
                     android:text="元，此单立即免单（不省商品费，保价费）"
                     android:textSize="@dimen/px_20" />
             </LinearLayout>
 
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
 
     <Button
-        android:id="@+id/btn_sure_to_pay"
+        android:id="@+id/btn_legwork_pay_sure_to_pay"
         style="@style/my_button_style_01"
         android:layout_width="match_parent"
         android:text="确认支付" />
 
     <!--</LinearLayout>-->
     <!--</ScrollView>-->
-
 
 </LinearLayout>
 

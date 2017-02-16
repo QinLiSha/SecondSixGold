@@ -12,6 +12,5 @@ public class PlaceOrderLegworkActivity extends MyBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_order_legwork);
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "跑腿下单", -1, null);
-
     }
 }

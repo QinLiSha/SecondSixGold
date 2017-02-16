@@ -12,7 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- *两边都是ImageView的ActionBar
+ * 两边都是ImageView的ActionBar
  * Created by One Of A Kind Lisa on 2016/12/24
  */
 
@@ -40,7 +40,7 @@ public class ActionBarTwoImg extends AutoLinearLayout {
             ivLeftTwoImg.setVisibility(INVISIBLE);
         }
         if (rightImgId != -1) {
-            ivRightTwoImg.setImageResource(leftImgId);
+            ivRightTwoImg.setImageResource(rightImgId);
             ivRightTwoImg.setOnClickListener(onClickListener);
         } else {
             ivRightTwoImg.setVisibility(INVISIBLE);

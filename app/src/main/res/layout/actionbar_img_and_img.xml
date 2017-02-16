@@ -3,32 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/activity_actionbar_item_height"
     android:background="@color/themeBlue">
+    <!--2个img的标题行-->
 
-
-<ImageView
+    <ImageView
         android:id="@+id/iv_left_two_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/px_50"
+        android:layout_height="@dimen/px_50"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/px_10"
-        android:background="@drawable/ic_chevron_left_grey_24dp" />
+        android:layout_marginLeft="@dimen/px_10" />
 
     <ImageView
         android:id="@+id/iv_right_two_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/px_50"
+        android:layout_height="@dimen/px_50"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginRight="@dimen/px_10"
-        android:background="@drawable/ic_chevron_right_grey_24dp" />
+        android:layout_marginRight="@dimen/px_10" />
 
     <TextView
         android:id="@+id/tv_title_two_img"
-        android:text="@string/title"
         style="@style/my_textview_style_title"
         android:layout_alignTop="@+id/iv_left_two_img"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/title" />
 </RelativeLayout>
 
 

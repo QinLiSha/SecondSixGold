@@ -1,6 +1,7 @@
 package com.lisa.administrator.sixgold.activity;
 
 import android.os.Bundle;
+
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 

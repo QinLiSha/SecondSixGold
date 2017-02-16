@@ -12,9 +12,9 @@ import com.lisa.administrator.sixgold.R;
 import java.util.ArrayList;
 
 /**
+ * 车型车长的GridView单选
  * Created by One Of A Kind Lisa on 2017/2/5
  */
-
 public class GridViewSingleAdapter extends BaseAdapter {
     private ArrayList<String> mList;
     private Context mContext;
@@ -35,7 +35,6 @@ public class GridViewSingleAdapter extends BaseAdapter {
     public int getCount() {
         // TODO: 2017/2/5
         return mList.size();
-
     }
 
     @Override
@@ -59,10 +58,8 @@ public class GridViewSingleAdapter extends BaseAdapter {
         tv.setText(mList.get(position));
         if (clickTemp == position) {
             layout.setBackgroundResource(R.drawable.gradview_item_box_choosed);
-            ;
         } else {
             layout.setBackgroundResource(R.drawable.gradview_item_box);
-            ;
         }
         return view;
     }

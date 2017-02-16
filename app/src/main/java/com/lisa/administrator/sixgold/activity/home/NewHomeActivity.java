@@ -111,7 +111,8 @@ public class NewHomeActivity extends MyBaseActivity {
             case R.id.iv_home_homepage:
             case R.id.tv_home_homepage:
             case R.id.ll_home_homepage:
-                openActivity(NewHomeActivity.class);
+                // TODO: 2017/2/15 因为是主页上的主页，所以不设点击事件 
+//                openActivity(NewHomeActivity.class);
                 break;
             case R.id.iv_car_type:
             case R.id.tv_car_type:

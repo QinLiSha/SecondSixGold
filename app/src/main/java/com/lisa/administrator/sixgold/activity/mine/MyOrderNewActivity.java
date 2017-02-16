@@ -75,7 +75,8 @@ public class MyOrderNewActivity extends MyBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_order_new);
         ButterKnife.bind(this);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "我的订单", -1, null);
+        //右边是详情的符号
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "我的订单", R.drawable.ic_more_vert_white_24dp, null);
         loadOrderTypeFragment();
     }
 

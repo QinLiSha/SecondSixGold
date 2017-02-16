@@ -3,9 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="200px"
     android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
     android:orientation="horizontal"
     android:padding="@dimen/px_5"
     android:weightSum="14">
+
+    <!--解决ListView中Item的子控件与Item点击事件冲突：
+    1、在Item的xml文件根元素中添加属性：android:descendantFocusability="blocksDescendants"
+    2、在冲突的子控件中添加属性：android:focusable="false"和android:clickable="true"
+    网上有人说步骤2不需要也行，但在项目中试了不行，所以说步骤2还是需要的..
+    不过我的这个没有加第二个-->
+
+    <!--CheckBox的高度设置为自适应时，listview中显示的item"变得很矮-->
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical" />
 
     <LinearLayout
         android:layout_width="@dimen/px_0"
@@ -130,6 +143,7 @@
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="2">
+
             <LinearLayout
                 android:layout_width="@dimen/px_0"
                 android:layout_height="wrap_content"

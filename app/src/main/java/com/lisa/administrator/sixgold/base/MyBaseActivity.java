@@ -111,6 +111,13 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
 //        overridePendingTransition(R.anim.anim_activity_right_in, R.anim.anim_activity_right_out);
     }
 
+    /**
+     * 出现对话框的方法
+     *
+     * @param context
+     * @param msg
+     * @param cancel
+     */
     public void showLoadingDialog(Context context, String msg, boolean cancel) {
         View view = LayoutInflater.from(context).inflate(R.layout.loading_dialog, null);//加载一个自定义的布局
         LinearLayout layout = (LinearLayout) view.findViewById(R.id.ll_dialog_view);
@@ -130,7 +137,7 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
     /**
      * 拨打电话的功能
      */
-    public void dialByPhoneNumber(long phonenumber){
+    public void dialByPhoneNumber(long phonenumber) {
         // TODO: 2017/1/21 直接拨打客服电话
         Intent intent = new Intent(Intent.ACTION_DIAL);
         Uri data = Uri.parse("tel:" + phonenumber);
@@ -262,10 +269,13 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
                             + " " + cityList.get(options1).get(option2)
                             + " " + districtList.get(options1).get(option2).get(options3);
                 }
+                textView.setText(address);
+
             }
         });
         pvOptions.show();
     }
+
     /**
      * 每一次点击时将textView初始化(只显示省)
      */
@@ -304,6 +314,7 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
         });
         pvOptions.show();
     }
+
     /**
      * 每一次点击时将textView初始化(只显示市)
      */
@@ -336,13 +347,14 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
                 if ("北京市".equals(city) || "上海市".equals(city) || "天津市".equals(city) || "重庆市".equals(city) || "澳门".equals(city) || "香港".equals(city)) {
                     address = provinceBeanList.get(options1).getPickerViewText();
                 } else {
-                    address =cityList.get(options1).get(option2);
+                    address = cityList.get(options1).get(option2);
                 }
                 textView.setText(address);
             }
         });
         pvOptions.show();
     }
+
     /**
      * 每一次点击时将textView初始化(只显示区)
      */
@@ -373,15 +385,16 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
 
                 //**********************************************下面是只显示区的********************************************/
                 if ("北京市".equals(city) || "上海市".equals(city) || "天津市".equals(city) || "重庆市".equals(city) || "澳门".equals(city) || "香港".equals(city)) {
-                    address =districtList.get(options1).get(option2).get(options3);
+                    address = districtList.get(options1).get(option2).get(options3);
                 } else {
-                    address =districtList.get(options1).get(option2).get(options3);
+                    address = districtList.get(options1).get(option2).get(options3);
                 }
                 textView.setText(address);
             }
         });
         pvOptions.show();
     }
+
     //  解析json填充集合
     public void parseJson(String str) {
         try {

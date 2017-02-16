@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 /**
+ * 引导页的适配器
  * Created by Administrator on 2016/12/10.
  */
 public class GuidePageAdapter extends PagerAdapter {//pager:呼叫机
@@ -15,21 +16,23 @@ public class GuidePageAdapter extends PagerAdapter {//pager:呼叫机
     private Context context;
     private ArrayList<View> arrayList = new ArrayList<View>();//存储的是一个View,也就是ViewPager每一个页面显示的图片
 
-    public GuidePageAdapter(Context context ) {
+    public GuidePageAdapter(Context context) {
         super();
         this.context = context;
     }
 
     /**
      * 添加页面
+     *
      * @param view
      */
-    public void addToAdapterView(View view){
+    public void addToAdapterView(View view) {
         arrayList.add(view);
     }
 
     /**
      * 返回ViewPager的页面数量
+     *
      * @return
      */
     @Override
@@ -39,6 +42,7 @@ public class GuidePageAdapter extends PagerAdapter {//pager:呼叫机
 
     /**
      * 判断是前后两个页面是否是同一个页面
+     *
      * @param view
      * @param object
      * @return
@@ -50,6 +54,7 @@ public class GuidePageAdapter extends PagerAdapter {//pager:呼叫机
 
     /**
      * 如果超出ViewPager缓存页面,将页面销毁
+     *
      * @param container
      * @param position
      * @param object
@@ -61,6 +66,7 @@ public class GuidePageAdapter extends PagerAdapter {//pager:呼叫机
 
     /**
      * 将要缓存的View添加到集合中
+     *
      * @param container
      * @param position
      * @return

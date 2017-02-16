@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_120"
+    android:layout_margin="@dimen/px_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="@dimen/px_50"
+            android:layout_height="@dimen/px_50"
+            android:layout_marginRight="@dimen/px_10" />
+
+        <ImageView
+            android:layout_width="@dimen/px_120"
+            android:layout_height="@dimen/px_120"
+            android:background="@mipmap/logistics_debang" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="姓名：张三" />
+
+            <TextView
+                style="@style/my_textview_style_normal_black"
+                android:text="接单范围：金水区" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/my_textview_style_normal_orange"
+                android:text="上门提货"
+
+                android:textSize="@dimen/textsize_small" />
+
+            <TextView
+                style="@style/my_textview_style_normal_orange"
+                android:text="送货上门"
+                android:textSize="@dimen/textsize_small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/my_textview_style_normal_black"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="信誉评分：4.8" />
+
+</RelativeLayout>

@@ -9,16 +9,12 @@ public class MainActivity extends MyBaseActivity {
 //    private ImageView iv_splash;
 //    private TextView tv_splash;
 //
-//
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
 //        init();
-//
 //    }
-//
-//
 //
 //    private void init() {
 //        iv_splash = (ImageView) findViewById(R.id.iv_splash);

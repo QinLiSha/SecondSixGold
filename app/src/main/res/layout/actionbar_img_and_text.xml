@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/activity_actionbar_item_height"
     android:background="@color/themeBlue">
+    <!--1个img的标题行-->
 
     <ImageView
         android:id="@+id/iv_left_one_img"
@@ -10,8 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/px_10"
-        android:background="@drawable/ic_chevron_left_grey_24dp" />
+        android:layout_marginLeft="@dimen/px_10" />
 
     <TextView
         android:id="@+id/tv_right_one_img"
@@ -19,8 +19,8 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/px_10"
-        android:textSize="@dimen/textsize_small"
-        android:text="待替换" />
+        android:text="待替换"
+        android:textSize="@dimen/textsize_small" />
 
     <TextView
         android:id="@+id/tv_title_one_img"

@@ -5,111 +5,121 @@
     android:orientation="vertical"
     tools:context="com.lisa.administrator.sixgold.fragment.toplaceorder.PlaceOrderLongDistanceFreightFragment">
 
-
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_low_item_height">
+        android:layout_height="@dimen/activity_low_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/ll_long_distance_from_address"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/iv_long_distance_from_address_1"
                 style="@style/my_imageview_style_normal"
                 android:layout_margin="@dimen/px_10"
                 android:background="@drawable/ic_add_location_orange_24dp" />
 
             <TextView
+                android:id="@+id/tv_long_distance_from_address_1"
                 style="@style/my_textview_style_small_black"
                 android:text="@string/from" />
 
             <TextView
-                android:id="@+id/tv_from_address"
+                android:id="@+id/tv_long_distance_from_address"
                 style="@style/my_textview_style_normal_small"
                 android:text="@string/please_choose_from_address" />
 
         </LinearLayout>
 
         <ImageView
+
+            android:id="@+id/iv_long_distance_from_address_details"
             style="@style/my_imageview_style_normal"
             android:layout_centerVertical="true"
-            android:layout_margin="@dimen/dp_5"
-            android:layout_toLeftOf="@+id/iv_from_star"
+            android:layout_margin="@dimen/px_5"
             android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
         <ImageView
-            android:id="@+id/iv_from_star"
+            android:id="@+id/iv_long_distance_from_star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="@dimen/dp_5"
+            android:layout_margin="@dimen/px_10"
             android:background="@drawable/ic_star_collection_24dp" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/px_2"
         android:background="@color/lightgray" />
 
-    <RelativeLayout
-
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_low_item_height">
+        android:layout_height="@dimen/activity_low_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/ll_long_distance_to_address"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/iv_long_distance_to_address_1"
                 style="@style/my_imageview_style_normal"
                 android:layout_margin="@dimen/px_10"
                 android:background="@drawable/ic_add_location_blue_24dp" />
 
             <TextView
+                android:id="@+id/tv_long_distance_to_address_1"
                 style="@style/my_textview_style_small_black"
                 android:text="@string/to" />
 
             <TextView
+                android:id="@+id/tv_long_distance_to_address"
                 style="@style/my_textview_style_normal_small"
                 android:text="@string/please_choose_to_address" />
 
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/iv_long_distance_to_address_details"
             style="@style/my_imageview_style_normal"
             android:layout_centerVertical="true"
-            android:layout_margin="@dimen/dp_5"
-            android:layout_toLeftOf="@+id/iv_to_star"
+            android:layout_margin="@dimen/px_5"
             android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
         <ImageView
-            android:id="@+id/iv_to_star"
+            android:id="@+id/iv_long_distance_to_star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_margin="@dimen/dp_5"
+            android:layout_margin="@dimen/px_10"
             android:background="@drawable/ic_star_collection_24dp" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/px_10"
         android:background="@color/lightgray" />
 
-    <RelativeLayout
-
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_low_item_height">
+        android:layout_height="@dimen/activity_low_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -123,7 +133,7 @@
                 android:text="@string/from_person_name" />
 
             <EditText
-                android:id="@+id/editText15"
+                android:id="@+id/et_long_distance_shipper_name"
                 style="@style/my_edittext_style_normal_no_line_no_padding"
                 android:layout_width="@dimen/px_150"
                 android:hint="输入姓名"
@@ -134,7 +144,7 @@
                 android:text="手机号" />
 
             <EditText
-                android:id="@+id/editText16"
+                android:id="@+id/et_long_distance_shipper_num"
                 style="@style/my_edittext_style_normal_no_line_no_padding"
                 android:layout_width="wrap_content"
                 android:hint="@string/please_enter_phone_number"
@@ -144,27 +154,29 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_long_distance_shipper_mail_list"
             style="@style/my_textview_style_small_black"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/px_10"
             android:text="通讯录"
             android:textSize="@dimen/px_15" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="@dimen/px_2"
         android:background="@color/lightgray" />
 
-    <RelativeLayout
-
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/activity_low_item_height">
+        android:layout_height="@dimen/activity_low_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
@@ -178,6 +190,7 @@
                 android:text="@string/to_person_name" />
 
             <EditText
+                android:id="@+id/et_long_distance_receiver_name"
                 style="@style/my_edittext_style_normal_no_line_no_padding"
                 android:layout_width="@dimen/px_150"
                 android:hint="输入姓名"
@@ -188,6 +201,7 @@
                 android:text="手机号" />
 
             <EditText
+                android:id="@+id/et_long_distance_receiver_num"
                 style="@style/my_edittext_style_normal_no_line_no_padding"
                 android:layout_width="wrap_content"
                 android:hint="@string/please_enter_phone_number"
@@ -197,14 +211,14 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_long_distance_receiver_mail_list"
             style="@style/my_textview_style_small_black"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/px_10"
             android:text="通讯录"
             android:textSize="@dimen/px_15" />
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <View
         android:id="@+id/view"
@@ -220,6 +234,7 @@
         android:weightSum="3">
 
         <LinearLayout
+            android:id="@+id/ll_long_distance_choose_cartype"
             android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -227,10 +242,13 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_long_distance_choose_cartype"
                 style="@style/my_textview_style_small_black"
                 android:text="选择车型" />
 
             <ImageView
+                android:id="@+id/iv_long_distance_choose_cartype"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_arrow_drop_down_black_24dp" />
@@ -238,6 +256,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_long_distance_freight_company"
             android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -245,34 +264,32 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_long_distance_freight_company"
                 style="@style/my_textview_style_small_black"
                 android:text="货运公司" />
 
             <ImageView
+                android:id="@+id/iv_long_distance_freight_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_arrow_drop_down_black_24dp" />
 
         </LinearLayout>
 
-        <LinearLayout
+        <RelativeLayout
+            android:id="@+id/rl_long_distance_fast_matching"
             android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
+                android:id="@+id/tv_long_distance_fast_matching"
                 style="@style/my_textview_style_small_black"
+                android:layout_centerInParent="true"
                 android:text="快速匹配" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_arrow_drop_down_black_24dp"
-                android:visibility="invisible" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
     </LinearLayout>
@@ -285,63 +302,38 @@
 
         <LinearLayout
             android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:weightSum="3">
 
             <TextView
+                android:id="@+id/tv_long_distance_nearby"
                 style="@style/my_textview_style_small_black"
+
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="附近" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_arrow_drop_down_black_24dp"
-                android:visibility="invisible" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
-
             <TextView
+                android:id="@+id/tv_long_distance_collect_money"
                 style="@style/my_textview_style_small_black"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="代收货款" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_arrow_drop_down_black_24dp"
-                android:visibility="invisible" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
-
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/tv_long_distance_need_handling"
                 style="@style/my_textview_style_small_black"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="需要装卸" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_arrow_drop_down_black_24dp"
-                android:visibility="invisible" />
-
         </LinearLayout>
 
+
         <LinearLayout
+            android:id="@+id/ll_long_distance_price"
             android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -349,10 +341,12 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_long_distance_price"
                 style="@style/my_textview_style_small_black"
                 android:text="价格" />
 
             <ImageView
+                android:id="@+id/iv_long_distance_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_arrow_drop_down_black_24dp" />
@@ -360,6 +354,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_long_distance_credit"
             android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -367,10 +362,12 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_long_distance_credit"
                 style="@style/my_textview_style_small_black"
                 android:text="信誉度" />
 
             <ImageView
+                android:id="@+id/iv_long_distance_credit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_arrow_drop_down_black_24dp" />
@@ -378,6 +375,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/ll_long_distance_collection"
             android:layout_width="@dimen/px_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -385,12 +383,13 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tv_long_distance_collection"
                 style="@style/my_textview_style_small_black"
                 android:text="收藏" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/iv_long_distance_collection"
+                style="@style/my_imageview_style_normal"
                 android:background="@drawable/ic_arrow_drop_down_black_24dp" />
 
         </LinearLayout>
@@ -450,10 +449,9 @@
         android:text="注：您所选定的司机将会收到您的订单" />
 
     <Button
-        android:id="@+id/button_local_city_sure"
+        android:id="@+id/button_long_distance_sure"
         style="@style/my_button_style_01"
         android:layout_margin="@dimen/px_10"
         android:text="@string/sure" />
-
 
 </LinearLayout>
