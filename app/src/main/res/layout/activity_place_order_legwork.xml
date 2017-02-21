@@ -21,12 +21,13 @@
     <!--android:layout_height="wrap_content"-->
     <!--android:orientation="vertical">-->
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/rl_legwork_pay_please_choose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/px_10"
-        android:layout_marginRight="@dimen/px_10">
+        android:layout_marginRight="@dimen/px_10"
+        android:orientation="horizontal">
 
         <TextView
             style="@style/my_textview_style_normal_black"
@@ -35,9 +36,14 @@
         <TextView
             android:id="@+id/tv_legwork_pay_please_choose"
             style="@style/my_textview_style_normal_blue"
-            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/px_0"
+            android:layout_marginLeft="@dimen/px_10"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:lines="1"
             android:text="@string/please_choose" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

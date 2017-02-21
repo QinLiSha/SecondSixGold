@@ -96,8 +96,9 @@ public class ChooseCarTypeActivity extends MyBaseActivity {
                 gridViewSingleAdapter1.setSelection(arg2);
                 gridViewSingleAdapter1.notifyDataSetChanged();
                 name1 = mList1.get(arg2);
+
 //                int id1 = arg2;
-                //可把获取到的字段作为参数传递
+//               可把获取到的字段作为参数传递
 //                Toast.makeText(mContext, "你选择了" + name1 + ",第" + (arg2 + 1) + "个item",
 //                        Toast.LENGTH_SHORT).show();
             }

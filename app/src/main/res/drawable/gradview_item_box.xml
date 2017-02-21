@@ -3,10 +3,7 @@
 
     <!-- 圆角边框 -->
     <corners
-        android:bottomLeftRadius="2dp"
-        android:bottomRightRadius="2dp"
-        android:topLeftRadius="2dp"
-        android:topRightRadius="2dp" />
+        android:radius="2dp"/>
     <!-- 圆角边框底色 -->
     <solid android:color="#FFFFFF" />
     <!-- 边框线 -->

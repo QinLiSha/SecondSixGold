@@ -1,21 +1,38 @@
 package com.lisa.administrator.sixgold.activity.home;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.lisa.administrator.sixgold.R;
+import com.lisa.administrator.sixgold.tools.AvatarImageView;
 
 public class MailListActivity extends AppCompatActivity {
+
+    private AvatarImageView avatarImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail_list);
-        //距离和时间冲突
-        //沟通方面：地址没有说清，东西没有说清，
-        //资费上
-        //EMS：节假日，周末期间有额外的费用
-        //EMS，包装类的：只有文件类的包装
-        // EMS，拒绝收取像电子产品之类的
+        avatarImageView = (AvatarImageView) findViewById(R.id.avatarIv);
+        avatarImageView.setAfterCropListener(new AvatarImageView.AfterCropListener() {
+            @Override
+            public void afterCrop(Bitmap photo) {
+                Toast.makeText(MailListActivity.this, "设置新的头像成功", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        //在拍照、选取照片、裁剪Activity结束后，调用的方法
+        if (avatarImageView != null) {
+            avatarImageView.onActivityResult(requestCode, resultCode, data);
+        }
     }
 }

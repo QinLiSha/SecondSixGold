@@ -92,6 +92,7 @@ public class OrderStatusDetailsActivity extends MyBaseActivity {
         tvOrderStatus.setTextColor(getDefaultCorlor());
         viewOrderDetails.setVisibility(View.INVISIBLE);
         viewOrderStatus.setVisibility(View.INVISIBLE);
+
     }
 
 

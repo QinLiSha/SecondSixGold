@@ -3,6 +3,8 @@
     package="com.lisa.administrator.sixgold">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <!-- 拨打电话的权限 -->
     <application
@@ -74,7 +76,8 @@
         <activity android:name=".activity.home.MailListActivity" />
         <activity android:name=".activity.setting.AddAddressActivity" />
         <activity android:name=".activity.setting.MyAddressBookActivity" />
-        <activity android:name=".activity.setting.SettingCurrencyActivity"></activity>
+        <activity android:name=".activity.setting.SettingCurrencyActivity" />
+        <activity android:name=".activity.mine.FreightChargeActivity"></activity>
     </application>
 
 </manifest>

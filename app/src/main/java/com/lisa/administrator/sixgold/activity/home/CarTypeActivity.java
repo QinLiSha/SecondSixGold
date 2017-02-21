@@ -77,7 +77,6 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
     TextView tvChooseType;
     @BindView(R.id.iv_choose_type_1)
     ImageView ivChooseType1;
-
     @BindView(R.id.rl_choose_type)
     RelativeLayout rlChooseType;
     @BindView(R.id.iv_home_homepage)
@@ -174,7 +173,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
                 if (popupWindow_transporttype.isShowing()) {
                     popupWindow_transporttype.dismiss();
                 } else if (popupWindow_transporttype != null) {
-                    popupWindow_transporttype.showAsDropDown(tvTransportType, 0, 0);//最后一个是对距离网页标题栏的设置
+                    popupWindow_transporttype.showAsDropDown(rlTransportType, 0, 0);//最后一个是对距离网页标题栏的设置
                 }
                 break;
             case R.id.iv_date_1:
@@ -189,7 +188,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
                 if (popupWindow_cartype.isShowing()) {
                     popupWindow_cartype.dismiss();
                 } else if (popupWindow_cartype != null) {
-                    popupWindow_cartype.showAsDropDown(tvChooseType, 0, 0);//最后一个是对距离网页标题栏的设置
+                    popupWindow_cartype.showAsDropDown(rlChooseType, 0, 0);//最后一个是对距离网页标题栏的设置
                 }
                 break;
             case R.id.iv_home_homepage:

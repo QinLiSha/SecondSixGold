@@ -12,6 +12,7 @@ import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.LoginActivity;
 import com.lisa.administrator.sixgold.activity.mine.AboutUsActivity;
 import com.lisa.administrator.sixgold.activity.mine.CouponActivity;
+import com.lisa.administrator.sixgold.activity.mine.FreightChargeActivity;
 import com.lisa.administrator.sixgold.activity.mine.MyInformationActivity;
 import com.lisa.administrator.sixgold.activity.mine.MyOrderNewActivity;
 import com.lisa.administrator.sixgold.activity.mine.MyStoreActivity;
@@ -284,7 +285,8 @@ public class MineActivity extends MyBaseActivity {
             case R.id.iv_counter_details:
             case R.id.iv_counter:
             case R.id.rl_counter:
-                // TODO: 2017/2/8 运费计算 
+                // TODO: 2017/2/8 运费计算
+                openActivity(FreightChargeActivity.class);
                 break;
             case R.id.iv_nearby_service:
             case R.id.tv_nearby_service:
