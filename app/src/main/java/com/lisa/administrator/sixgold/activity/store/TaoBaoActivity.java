@@ -1,4 +1,4 @@
-package com.lisa.administrator.sixgold.activity.mine;
+package com.lisa.administrator.sixgold.activity.store;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,24 +11,28 @@ import android.webkit.WebViewClient;
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
-public class AboutUsActivity extends MyBaseActivity {
+public class TaoBaoActivity extends MyBaseActivity {
 
     private WebView browser;
     WebSettings settings;
-    //        String TestUrl = "https://m.taobao.com/#index";
-//    String TestUrl = "http://www.xinxin88.net/";
-    String TestUrl = "http://www.xinxin88.net/plus/list.php?tid=2/";
+    String TestUrl = "https://m.taobao.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "关于我们", -1, null);
+        setContentView(R.layout.activity_tao_bao);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "淘宝", -1, null);
+
+        initBrowser();
+    }
+    /**
+     * 初始化和设置webview
+     */
+    private void initBrowser() {
         //WebView
-        browser = (WebView) findViewById(R.id.testStore);
+        browser = (WebView) findViewById(R.id.wv_taobao);
         browser.loadUrl(TestUrl);
         settings = browser.getSettings();
-
         //设置可自由缩放网页
         settings.setSupportZoom(true);
         settings.setJavaScriptEnabled(true);//有JavaScript功能的一定要实现
@@ -60,8 +64,9 @@ public class AboutUsActivity extends MyBaseActivity {
     //go back
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        WebView browser = (WebView) findViewById(R.id.testStore);
+//        WebView browser = (WebView) findViewById(R.id.);
         // Check if the key event was the Back button and if there's history
+
         if ((keyCode == KeyEvent.KEYCODE_BACK) && browser.canGoBack()) {
             browser.goBack();
             return true;
@@ -72,3 +77,4 @@ public class AboutUsActivity extends MyBaseActivity {
         return super.onKeyDown(keyCode, event);
     }
 }
+

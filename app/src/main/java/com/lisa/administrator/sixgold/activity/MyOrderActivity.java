@@ -66,7 +66,6 @@ public class MyOrderActivity extends MyBaseActivity {
         ButterKnife.bind(this);
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "我的订单", R.drawable.ic_more_vert_white_24dp, onClickListener);
         loadNewestFragment();
-
     }
 
     /**

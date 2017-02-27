@@ -27,7 +27,7 @@
             android:id="@+id/tv_setting_my_information"
             style="@style/my_textview_style_normal_black"
             android:layout_centerVertical="true"
-            android:text="个人信息" />
+            android:text="@string/personal_information" />
 
         <ImageView
             android:id="@+id/iv_setting_my_information"
@@ -51,7 +51,7 @@
             android:id="@+id/tv_setting_account_and_security"
             style="@style/my_textview_style_normal_black"
             android:layout_centerVertical="true"
-            android:text="账户与安全" />
+            android:text="@string/accounts_and_security" />
 
         <ImageView
             android:id="@+id/iv_setting_account_and_security"
@@ -83,11 +83,11 @@
             android:layout_alignBottom="@+id/iv_setting_currency"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:text="通用" />
+            android:text="@string/setting_currency" />
     </RelativeLayout>
 
     <Button
         android:id="@+id/btn_setting_sing_out"
         style="@style/my_button_style_01"
-        android:text="退出账号" />
+        android:text="@string/sign_out_from_account" />
 </LinearLayout>

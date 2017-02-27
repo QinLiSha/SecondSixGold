@@ -16,7 +16,7 @@
     <RelativeLayout
         android:id="@+id/rl_myinformation_headimg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/px_120"
+        android:layout_height="@dimen/px_150"
         android:layout_marginTop="@dimen/px_20"
         android:background="@color/white"
         android:gravity="center_vertical"
@@ -43,6 +43,15 @@
                 android:layout_height="@dimen/px_110"
                 android:layout_centerVertical="true"
                 android:background="@mipmap/iv_my_head_image" />
+
+            <!--AvatarImageView是src，不是background-->
+
+            <com.lisa.administrator.sixgold.tools.AvatarImageView
+                android:id="@+id/avatarIv"
+                android:layout_width="@dimen/px_150"
+                android:layout_height="@dimen/px_150"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/iv_my_head_image" />
 
             <ImageView
                 android:id="@+id/iv_myinformation_headimg_details"

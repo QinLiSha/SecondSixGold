@@ -11,5 +11,265 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/px_15"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_0"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_taobao"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/px_15"
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_taobao"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/logotaobao" />
+
+                <TextView
+                    android:id="@+id/tv_my_store_taobao"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/taobao" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_tianmao"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/px_15"
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_tianmao"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/tianmaologo" />
+
+
+                <TextView
+                    android:id="@+id/tv_my_store_tianmao"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/tianmao" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_jingdong"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/px_15"
+
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_jingdong"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/jingdonglogo" />
+
+                <TextView
+                    android:id="@+id/tv_my_store_jingdong"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/jingdong" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_0"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_yihaodian"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+
+                android:layout_margin="@dimen/px_15"
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_yihaodian"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/logoyihaodian" />
+
+
+                <TextView
+                    android:id="@+id/tv_my_store_yihaodian"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/yihaodian" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_weipinhui"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/px_15"
+
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_weipinhui"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/logoweipinhui" />
+
+
+                <TextView
+                    android:id="@+id/tv_my_store_weipinhui"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/weipinhui" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_jumeiyoupin"
+                android:layout_width="@dimen/px_0"
+
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/px_15"
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_jumeiyoupin"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/logojumei" />
+
+                <TextView
+                    android:id="@+id/tv_my_store_jumeiyoupin"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/jumeiyoupin" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_0"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_mogujie"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/px_15"
+
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_mogujie"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/logomogujie" />
+
+                <TextView
+                    android:id="@+id/tv_my_store_mogujie"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/mogujie" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_dangdang"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+
+                android:layout_margin="@dimen/px_15"
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_dangdang"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/logodangdagn" />
+
+                <TextView
+                    android:id="@+id/tv_my_store_dangdang"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/dangdangwang" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_my_store_suning"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+
+                android:layout_margin="@dimen/px_15"
+                android:layout_weight="1"
+                android:background="@drawable/view_border_blue"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_my_store_suning"
+                    android:layout_width="@dimen/px_100"
+                    android:layout_height="@dimen/px_100"
+                    android:background="@mipmap/logosuning" />
+
+
+                <TextView
+                    android:id="@+id/tv_my_store_suning"
+                    style="@style/my_textview_style_normal_black"
+                    android:text="@string/suningyigou" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
 
 </LinearLayout>

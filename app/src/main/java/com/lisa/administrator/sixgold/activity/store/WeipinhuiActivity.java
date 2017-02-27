@@ -1,4 +1,4 @@
-package com.lisa.administrator.sixgold.activity.mine;
+package com.lisa.administrator.sixgold.activity.store;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,24 +11,27 @@ import android.webkit.WebViewClient;
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
-public class AboutUsActivity extends MyBaseActivity {
-
+public class WeipinhuiActivity extends MyBaseActivity {
     private WebView browser;
-    WebSettings settings;
-    //        String TestUrl = "https://m.taobao.com/#index";
-//    String TestUrl = "http://www.xinxin88.net/";
-    String TestUrl = "http://www.xinxin88.net/plus/list.php?tid=2/";
+    private WebSettings settings;
+    private String TestUrl = "http://www.vip.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "关于我们", -1, null);
-        //WebView
-        browser = (WebView) findViewById(R.id.testStore);
-        browser.loadUrl(TestUrl);
-        settings = browser.getSettings();
+        setContentView(R.layout.activity_weipinhui);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "唯品会", -1, null);
 
+        initBrowser();
+    }
+    /**
+     * 初始化和设置webview
+     */
+    private void initBrowser() {
+        //WebView
+        browser = (WebView) findViewById(R.id.wv_weipinhui);//初始化webview
+        browser.loadUrl(TestUrl);//加载URL
+        settings = browser.getSettings();//初始化WebSetting
         //设置可自由缩放网页
         settings.setSupportZoom(true);
         settings.setJavaScriptEnabled(true);//有JavaScript功能的一定要实现
@@ -50,18 +53,19 @@ public class AboutUsActivity extends MyBaseActivity {
                     startActivity(intent);
                     return true;
                 }
+
 //                view.loadUrl(url);
 //                //  重写此方法表明点击网页里面的链接还是在当前的webview里跳转，不跳到浏览器那边
 //                return false;
             }
-        });
-    }
+        });   }
 
     //go back
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        WebView browser = (WebView) findViewById(R.id.testStore);
+//        WebView browser = (WebView) findViewById(R.id.wv_tianmao);
         // Check if the key event was the Back button and if there's history
+
         if ((keyCode == KeyEvent.KEYCODE_BACK) && browser.canGoBack()) {
             browser.goBack();
             return true;
@@ -72,3 +76,5 @@ public class AboutUsActivity extends MyBaseActivity {
         return super.onKeyDown(keyCode, event);
     }
 }
+
+

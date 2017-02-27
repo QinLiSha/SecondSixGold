@@ -119,6 +119,19 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="setting_currency">通用</string>
+    <string name="personal_information">个人信息</string>
+    <string name="accounts_and_security">账户与安全</string>
+    <string name="sign_out_from_account">退出账号</string>
+    <string name="taobao">淘宝</string>
+    <string name="tianmao">天猫</string>
+    <string name="jingdong">京东</string>
+    <string name="yihaodian">1号店</string>
+    <string name="weipinhui">唯品会</string>
+    <string name="jumeiyoupin">聚美优品</string>
+    <string name="mogujie">蘑菇街</string>
+    <string name="dangdangwang">当当网</string>
+    <string name="suningyigou">苏宁易购</string>
 
 
 </resources>
