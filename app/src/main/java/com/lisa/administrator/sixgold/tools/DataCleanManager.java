@@ -9,7 +9,6 @@ package com.lisa.administrator.sixgold.tools;
 import android.content.Context;
 import android.os.Environment;
 import android.text.TextUtils;
-import android.util.Log;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -146,7 +145,7 @@ public class DataCleanManager {
      * 删除指定目录下文件及目录
      *
      * @param deleteThisPath
-     * @param filepath
+     * @param filePath
      * @return
      */
     public static void deleteFolderFile(String filePath, boolean deleteThisPath) {

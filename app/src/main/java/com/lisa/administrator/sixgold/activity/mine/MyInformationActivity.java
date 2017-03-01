@@ -69,7 +69,7 @@ public class MyInformationActivity extends MyBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_information);
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "个人信息", -1, null);
-        ImageView back = (ImageView) findViewById(R.id.iv_left_two_img);
+        initBack();
         ButterKnife.bind(this);
         avatarImageView = (AvatarImageView) findViewById(R.id.avatarIv);
         avatarImageView.setAfterCropListener(new AvatarImageView.AfterCropListener() {
@@ -80,6 +80,24 @@ public class MyInformationActivity extends MyBaseActivity {
         });
     }
 
+    /********************************************************************************
+     * 以下是返回ImageView
+     ******************************************************************************/
+    protected ImageView ivBack;
+
+    private void initBack() {
+        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    /********************************************************************************
+     * 以上是返回ImageView
+     ******************************************************************************/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

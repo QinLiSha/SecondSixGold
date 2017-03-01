@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.lisa.administrator.sixgold.R;
 
 /**
+ * 仿第一个版本的我的界面
  * 我的界面中的一些设置界面
  */
 public class MineFragment extends Fragment {

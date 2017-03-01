@@ -139,7 +139,6 @@ public class HomeActivity extends MyBaseActivity {
 
     public void show() {
         openActivity(LoginActivity.class);
-//        openActivity(ChooseTimeActivity.class);
         finish();
     }
 

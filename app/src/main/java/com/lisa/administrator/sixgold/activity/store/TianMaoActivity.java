@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
@@ -24,7 +26,26 @@ public class TianMaoActivity extends MyBaseActivity {
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "天猫", -1, null);
 
         initBrowser();
+        initBack();
     }
+
+    /********************************************************************************
+     * 以下是返回ImageView
+     ******************************************************************************/
+    protected ImageView ivBack;
+
+    private void initBack() {
+        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+    /********************************************************************************
+     *以上是返回ImageView
+     ******************************************************************************/
     /**
      * 初始化和设置webview
      */

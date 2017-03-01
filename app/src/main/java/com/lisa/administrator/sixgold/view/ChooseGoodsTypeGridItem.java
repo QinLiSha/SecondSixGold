@@ -50,9 +50,7 @@ public class ChooseGoodsTypeGridItem extends AutoLinearLayout implements Checkab
 // TODO Auto-generated method stub
         mChecked = checked;
         mSecletView.setVisibility(checked ? View.VISIBLE : View.GONE);//选上了图片变成选中状态
-
     }
-
 
     @Override
     public boolean isChecked() {

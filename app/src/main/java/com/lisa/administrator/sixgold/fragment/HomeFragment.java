@@ -30,7 +30,8 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 
 /**
- * create by Lisa in2016/12/13
+ * 仿第一个版本的home界面，有4大模块
+ * create by Lisa
  */
 public class HomeFragment extends Fragment implements ViewPager.OnPageChangeListener, View.OnTouchListener {
     public static final int VIEW_PAGER_DELAY = 2000;

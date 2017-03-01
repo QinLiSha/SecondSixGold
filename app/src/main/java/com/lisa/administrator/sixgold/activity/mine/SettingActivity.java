@@ -45,9 +45,28 @@ public class SettingActivity extends MyBaseActivity {
         setContentView(R.layout.activity_setting);
         ButterKnife.bind(this);
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "设置", -1, null);
+        initBack();
 
     }
 
+    /********************************************************************************
+     * 以下是返回ImageView
+     ******************************************************************************/
+    protected ImageView ivBack;
+
+    private void initBack() {
+        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    /********************************************************************************
+     * 以上是返回ImageView
+     ******************************************************************************/
     @OnClick({R.id.tv_setting_my_information, R.id.iv_setting_my_information, R.id.rl_setting_my_information, R.id.tv_setting_account_and_security, R.id.iv_setting_account_and_security, R.id.rl_setting_account_and_security, R.id.tv_setting_currency, R.id.iv_setting_currency, R.id.rl_setting_currency, R.id.btn_setting_sing_out})
     public void onClick(View view) {
         switch (view.getId()) {

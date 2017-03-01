@@ -10,18 +10,17 @@ import android.view.ViewGroup;
 import com.lisa.administrator.sixgold.R;
 
 /**
+ * 第一个版本的附近界面
  * 附近的地图定位
  */
 public class NearbyFragment extends Fragment {
-
-
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_nearby, container, false);
-        return view ;
+        return view;
     }
 
 }

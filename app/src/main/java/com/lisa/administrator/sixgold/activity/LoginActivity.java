@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -41,9 +42,27 @@ public class LoginActivity extends MyBaseActivity {
         setContentView(R.layout.activity_login);
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "注册", -1, null);
         binder = ButterKnife.bind(this);
-
+        initBack();
     }
 
+    /********************************************************************************
+     * 以下是返回ImageView
+     ******************************************************************************/
+    protected ImageView ivBack;
+
+    private void initBack() {
+        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    /********************************************************************************
+     * 以上是返回ImageView
+     ******************************************************************************/
     @Override
     protected void onDestroy() {
         super.onDestroy();

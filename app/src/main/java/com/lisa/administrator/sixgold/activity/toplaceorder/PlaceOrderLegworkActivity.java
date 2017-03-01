@@ -13,6 +13,7 @@ import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
@@ -55,7 +56,25 @@ public class PlaceOrderLegworkActivity extends MyBaseActivity implements AbsList
                 }
             }
         });
+        initBack();
     }
+    /********************************************************************************
+     * 以下是返回ImageView
+     ******************************************************************************/
+    protected ImageView ivBack;
+
+    private void initBack() {
+        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+    /********************************************************************************
+     *以上是返回ImageView
+     ******************************************************************************/
 
     public void initPopupWindowChooseGoodsType() {
         View view = getLayoutInflater().inflate(R.layout.layout_popup_item_choose_goods_type, null);

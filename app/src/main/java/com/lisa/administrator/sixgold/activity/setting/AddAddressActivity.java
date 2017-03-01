@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -39,8 +40,25 @@ public class AddAddressActivity extends MyBaseActivity {
         setContentView(R.layout.activity_add_address);
         initActionBarOneImg(R.drawable.ic_chevron_left_grey_24dp, "新建收货地址", "保存", null);
         ButterKnife.bind(this);
+        initBack();
     }
+    /********************************************************************************
+     * 以下是返回ImageView
+     ******************************************************************************/
+    protected ImageView ivBack;
 
+    private void initBack() {
+        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+    /********************************************************************************
+     *以上是返回ImageView
+     ******************************************************************************/
     @OnClick({R.id.tv_addaddress_choosecity_left, R.id.tv_addaddress_choosecity,
             R.id.ll_addaddress_choosecity, R.id.cb_addaddress_set_defultaddress})
     public void onClick(View view) {

@@ -2,6 +2,8 @@ package com.lisa.administrator.sixgold.activity.setting;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,9 +30,8 @@ public class SettingCurrencyActivity extends MyBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting_currency);
         ButterKnife.bind(this);
-
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "通用", -1, null);
-
+        initBack();
         try {
             tvCleanCache.setText(DataCleanManager.getTotalCacheSize(this));
             Log.e(TAG, "onCreate: ++++++++++++++++++++++++++++++++++" + DataCleanManager.getTotalCacheSize(this));
@@ -39,6 +40,24 @@ public class SettingCurrencyActivity extends MyBaseActivity {
         }
     }
 
+    /********************************************************************************
+     * 以下是返回ImageView
+     ******************************************************************************/
+    protected ImageView ivBack;
+
+    private void initBack() {
+        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    /********************************************************************************
+     * 以上是返回ImageView
+     ******************************************************************************/
     @OnClick(R.id.tv_clean_cache)
     public void onClick() {
         DataCleanManager.clearAllCache(this);
