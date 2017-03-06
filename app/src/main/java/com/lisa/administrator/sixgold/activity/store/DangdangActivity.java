@@ -16,7 +16,7 @@ import com.lisa.administrator.sixgold.base.MyBaseActivity;
 public class DangdangActivity extends MyBaseActivity {
     private WebView browser;
     WebSettings settings;
-    String TestUrl = "http://www.dangdang.com/?_utm_brand_id=11106&_ddclickunion=460-5-biaoti|ad_type=0|sys_id=1";
+    String TestUrl = "http://www.dangdang.com/";
 
 
     @Override

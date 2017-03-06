@@ -55,6 +55,7 @@ public class ToPlaceOrderActivity extends MyBaseActivity {
         loadLegworkFragment();
         initBack();
     }
+
     /********************************************************************************
      * 以下是返回ImageView
      ******************************************************************************/

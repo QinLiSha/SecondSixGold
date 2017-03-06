@@ -64,6 +64,7 @@ public class MyInformationActivity extends MyBaseActivity {
     Button btnMyinformationSure;
     private AvatarImageView avatarImageView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,7 +123,8 @@ public class MyInformationActivity extends MyBaseActivity {
             case R.id.ll_myinformation_name:
             case R.id.tv_myinformation_name_left:
             case R.id.rl_myinformation_name:
-                // TODO: 2017/2/11 昵称 
+                tvMyinformationName.setText(inputTitleDialog());
+                // TODO: 2017/2/11 昵称
                 break;
             case R.id.tv_myinformation_birthday_left:
             case R.id.tv_myinformation_birthday:

@@ -43,10 +43,16 @@ public class GuidePageActivity extends MyBaseActivity {
             openActivity(NewHomeActivity.class);
             finish();
         } else {
-            setContentView(R.layout.activity_guide_page);
-            initUI();
-            init();
-            initData();
+            openActivity(NewHomeActivity.class);
+            finish();
+            /**
+             *  取消初次启动有引导页的操作了
+
+             //              setContentView(R.layout.activity_guide_page);
+             //             initUI();
+             //             init();
+             //             initData();
+             */
         }
 
 

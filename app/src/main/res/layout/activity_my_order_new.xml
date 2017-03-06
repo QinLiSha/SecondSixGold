@@ -159,6 +159,11 @@
 
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_1"
+        android:background="@color/lightgray" />
+
     <RelativeLayout
         android:id="@+id/contianer"
         android:layout_width="match_parent"
@@ -167,10 +172,6 @@
 
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_1"
-        android:background="@color/lightgray" />
 
 
 </LinearLayout>

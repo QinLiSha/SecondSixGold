@@ -2,6 +2,7 @@ package com.lisa.administrator.sixgold.activity.mine;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
@@ -34,8 +36,9 @@ public class AboutUsActivity extends MyBaseActivity {
             }
         });
     }
+
     /********************************************************************************
-     *以上是返回ImageView
+     * 以上是返回ImageView
      ******************************************************************************/
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +58,17 @@ public class AboutUsActivity extends MyBaseActivity {
         settings.setUseWideViewPort(true);
         settings.setLoadWithOverviewMode(true);
         settings.setAppCacheEnabled(true);//是否使用缓存
-
         // 如果页面中链接，如果希望点击链接继续在当前browser中响应，
         // 而不是新开Android的系统browser中响应该链接，必须覆盖webview的WebViewClient对象
 //        browser.setWebChromeClient(new WebChromeClient());//只写这句会选择使用web浏览器选择
+
+//////////////
+        settings.setBuiltInZoomControls(false);
+        settings.setRenderPriority(WebSettings.RenderPriority.HIGH);
+        settings.setBlockNetworkImage(true);
+
+//////////////
+
         browser.setWebViewClient(new WebViewClient() {
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 if (url.startsWith("http:") || url.startsWith("https:")) {
@@ -74,6 +84,11 @@ public class AboutUsActivity extends MyBaseActivity {
 //                return false;
             }
         });
+        if (Build.VERSION.SDK_INT >= 19) {
+            Toast.makeText(this, "hhahhhhaha", Toast.LENGTH_LONG).show();
+            settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+
+        }
     }
 
     //go back

@@ -51,9 +51,8 @@ public class SplashActivity extends MyBaseActivity {
 //        }).sendEmptyMessageDelayed(0,2000);
         //方法三：使用Java计时器
         Timer timer = new Timer();
-        timer.schedule(new MyTask(), 2000);//定时器延时执行任务的方法
+        timer.schedule(new MyTask(), 1000);//定时器延时执行任务的方法
     }
-
 
 
     //方法三：使用Java计时器

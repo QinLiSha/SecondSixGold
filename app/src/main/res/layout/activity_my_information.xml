@@ -41,8 +41,7 @@
                 android:id="@+id/iv_myinformation_headimg"
                 android:layout_width="@dimen/px_110"
                 android:layout_height="@dimen/px_110"
-                android:layout_centerVertical="true"
-                android:background="@mipmap/iv_my_head_image" />
+                android:layout_centerVertical="true" />
 
             <!--AvatarImageView是src，不是background-->
 

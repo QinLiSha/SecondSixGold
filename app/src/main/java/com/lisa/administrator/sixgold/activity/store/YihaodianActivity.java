@@ -2,6 +2,7 @@ package com.lisa.administrator.sixgold.activity.store;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -9,6 +10,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
@@ -62,6 +64,16 @@ public class YihaodianActivity extends MyBaseActivity {
         settings.setAllowContentAccess(true);//
         settings.setBlockNetworkLoads(true);//
         settings.setAppCacheEnabled(true);//是否使用缓存
+
+//////////////
+        settings.setBuiltInZoomControls(false);
+        settings.setRenderPriority(WebSettings.RenderPriority.HIGH);
+        settings.setBlockNetworkImage(true);
+
+//////////////
+
+
+
         // 如果页面中链接，如果希望点击链接继续在当前browser中响应，
         // 而不是新开Android的系统browser中响应该链接，必须覆盖webview的WebViewClient对象
 //        browser.setWebChromeClient(new WebChromeClient());//只写这句会选择使用web浏览器选择
@@ -80,6 +92,11 @@ public class YihaodianActivity extends MyBaseActivity {
 //                return false;
             }
         });
+        if (Build.VERSION.SDK_INT >= 19) {
+            Toast.makeText(this, "hhahhhhaha", Toast.LENGTH_LONG).show();
+            settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+
+        }
     }
 
     //go back

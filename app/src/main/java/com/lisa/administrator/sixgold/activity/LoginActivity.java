@@ -77,12 +77,15 @@ public class LoginActivity extends MyBaseActivity {
             case R.id.et_pwd:
                 break;
             case R.id.btn_login:
+                finish();
                 openActivity(MineActivity.class);
                 break;
             case R.id.tv_free_register:
+                finish();
                 openActivity(RegisterActivity.class);
                 break;
             case R.id.tv_foget_pwd:
+                finish();
                 openActivity(FindPwdActivity.class);
                 break;
             case R.id.activity_login:

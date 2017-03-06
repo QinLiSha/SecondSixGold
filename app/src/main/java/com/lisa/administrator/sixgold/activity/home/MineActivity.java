@@ -9,7 +9,6 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.lisa.administrator.sixgold.R;
-import com.lisa.administrator.sixgold.activity.LoginActivity;
 import com.lisa.administrator.sixgold.activity.mine.AboutUsActivity;
 import com.lisa.administrator.sixgold.activity.mine.CouponActivity;
 import com.lisa.administrator.sixgold.activity.mine.FreightChargeActivity;
@@ -206,7 +205,6 @@ public class MineActivity extends MyBaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_mine_left_back:
-                finish();
                 break;
             case R.id.iv_mine_notice:
                 break;
@@ -303,21 +301,24 @@ public class MineActivity extends MyBaseActivity {
             case R.id.iv_home_homepage:
             case R.id.tv_home_homepage:
             case R.id.ll_home_homepage:
+                finish();
                 openActivity(NewHomeActivity.class);
                 break;
             case R.id.iv_car_type:
             case R.id.tv_car_type:
             case R.id.ll_car_type:
+                finish();
                 openActivity(CarTypeActivity.class);
                 break;
             case R.id.iv_home_I:
             case R.id.tv_home_I:
             case R.id.ll_home_I:
-                openActivity(LoginActivity.class);
+//                openActivity(LoginActivity.class);
                 break;
             case R.id.iv_home_mail_list:
             case R.id.tv_home_mail_list:
             case R.id.ll_home_mail_list:
+                finish();
                 openActivity(MailListActivity.class);
                 break;
             case R.id.ll_home_bottom_item:

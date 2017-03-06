@@ -15,7 +15,132 @@
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></ListView>
+        android:layout_height="@dimen/px_0"
+        android:layout_weight="1"></ListView>
 
+    <LinearLayout
+        android:id="@+id/ll_home_bottom_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:id="@+id/ll_home_homepage"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/iv_home_homepage"
+                android:layout_width="@dimen/px_30"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_home_homepage" />
+
+            <TextView
+                android:id="@+id/tv_home_homepage"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+
+                android:text="@string/homepage"
+                android:textColor="@color/lightgray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_car_type"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/iv_car_type"
+                android:layout_width="@dimen/px_35"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_car_type" />
+
+            <TextView
+                android:id="@+id/tv_car_type"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/car_type"
+                android:textColor="@color/lightgray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_home_I"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/iv_home_I"
+                android:layout_width="@dimen/px_35"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="2"
+                android:background="@mipmap/iv_home_i" />
+
+            <TextView
+                android:id="@+id/tv_home_I"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:text="@string/I"
+                android:textColor="@color/lightgray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_home_mail_list"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/iv_home_mail_list"
+                android:layout_width="@dimen/px_35"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/px_10"
+                android:layout_weight="1"
+                android:background="@mipmap/iv_home_mail_list_choosed" />
+
+            <TextView
+                android:id="@+id/tv_home_mail_list"
+                style="@style/my_textview_style_normal_default_nopadding"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_0"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/mail_list"
+                android:textColor="@color/themeBlue" />
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </LinearLayout>

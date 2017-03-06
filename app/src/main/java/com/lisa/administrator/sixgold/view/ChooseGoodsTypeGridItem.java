@@ -18,8 +18,6 @@ import com.lisa.administrator.sixgold.R;
 import com.zhy.autolayout.AutoLinearLayout;
 
 public class ChooseGoodsTypeGridItem extends AutoLinearLayout implements Checkable {
-
-
     private Context mContext;
     private boolean mChecked;//判断该选项是否被选上的标志量
     private ImageView mImgView = null; //点击前的图片
@@ -70,10 +68,7 @@ public class ChooseGoodsTypeGridItem extends AutoLinearLayout implements Checkab
         }
     }
 
-
     public void setItemText(String itemText) {
         mItemText.setText(itemText); //设置文字
     }
-
-
 }

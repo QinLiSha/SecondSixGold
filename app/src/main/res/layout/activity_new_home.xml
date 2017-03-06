@@ -112,12 +112,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+        <TextView
+            android:id="@+id/tv_to_order"
+            style="@style/my_textview_style_normal_default"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/px_20"
+            android:background="@drawable/background_border_white"
+            android:padding="@dimen/px_20"
+            android:text="@string/I_want_to_order" />
+
         <ImageView
             android:id="@+id/iv_home_current_location"
             android:layout_width="@dimen/px_100"
             android:layout_height="@dimen/px_100"
             android:layout_margin="@dimen/px_20"
             android:background="@drawable/btn_location" />
+
+
     </FrameLayout>
 
     <LinearLayout

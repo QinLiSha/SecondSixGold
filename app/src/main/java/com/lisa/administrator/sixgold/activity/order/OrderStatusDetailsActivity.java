@@ -2,6 +2,7 @@ package com.lisa.administrator.sixgold.activity.order;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -43,9 +44,27 @@ public class OrderStatusDetailsActivity extends MyBaseActivity {
         ButterKnife.bind(this);
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "订单状态", -1, null);
         loadOrderStatusFragment();
-
+        initBack();
     }
 
+    /********************************************************************************
+     * 以下是返回ImageView
+     ******************************************************************************/
+    protected ImageView ivBack;
+
+    private void initBack() {
+        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    /********************************************************************************
+     * 以上是返回ImageView
+     ******************************************************************************/
     private void loadOrderStatusFragment() {
         orderStatusFragment = new OrderStatusFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.contianer, orderStatusFragment).commit();

@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 import com.android.datetimepicker.date.DatePickerDialog;
 import com.lisa.administrator.sixgold.R;
-import com.lisa.administrator.sixgold.activity.HomeLongDistanceFreightActivity;
 import com.lisa.administrator.sixgold.activity.LoginActivity;
+import com.lisa.administrator.sixgold.activity.ordercar.OrderCarLongActivity;
 import com.lisa.administrator.sixgold.adapter.CarTypeListViewAdapter;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
@@ -125,7 +125,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
         lvCarTypeAll.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                openActivity(HomeLongDistanceFreightActivity.class);
+                openActivity(OrderCarLongActivity.class);
             }
         });
     }
@@ -194,6 +194,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
             case R.id.iv_home_homepage:
             case R.id.tv_home_homepage:
             case R.id.ll_home_homepage:
+                finish();
                 openActivity(NewHomeActivity.class);
                 break;
             case R.id.iv_car_type:
@@ -205,11 +206,13 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
             case R.id.iv_home_I:
             case R.id.tv_home_I:
             case R.id.ll_home_I:
+                finish();
                 openActivity(LoginActivity.class);
                 break;
             case R.id.iv_home_mail_list:
             case R.id.tv_home_mail_list:
             case R.id.ll_home_mail_list:
+                finish();
                 openActivity(MailListActivity.class);
                 break;
         }

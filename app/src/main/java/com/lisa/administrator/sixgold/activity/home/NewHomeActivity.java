@@ -89,6 +89,8 @@ public class NewHomeActivity extends MyBaseActivity {
     private static final String TAG = "NewHomeActivity";
     @BindView(R.id.iv_home_current_location)
     ImageView ivHomeCurrentLocation;
+    @BindView(R.id.tv_to_order)
+    TextView tvToOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -219,7 +221,7 @@ public class NewHomeActivity extends MyBaseActivity {
      *************************************************************/
     //    R.id.tv_notice,R.id.iv_current_city,
     @OnClick({R.id.tv_current_city, R.id.ll_current_city, R.id.iv_weather, R.id.tv_weather, R.id.ll_weather,
-            R.id.iv_home_current_location,
+            R.id.iv_home_current_location, R.id.tv_to_order,
             R.id.iv_notice, R.id.ll_notice, R.id.tv_rolling_word, R.id.ll_tv_rolling_word,
             R.id.iv_home_homepage, R.id.tv_home_homepage, R.id.ll_home_homepage, R.id.iv_car_type,
             R.id.tv_car_type, R.id.ll_car_type, R.id.iv_home_I, R.id.tv_home_I, R.id.ll_home_I, R.id.ll_home_bottom_item,
@@ -229,14 +231,13 @@ public class NewHomeActivity extends MyBaseActivity {
 //            case R.id.iv_current_city:
             case R.id.tv_current_city:
             case R.id.ll_current_city:
-                openActivity(ToPlaceOrderActivity.class);
                 showToast("当前的城市");
                 break;
             case R.id.iv_weather:
             case R.id.tv_weather:
             case R.id.ll_weather:
-                initView();
-//                showToast("当前城市的天气");
+//                initView();
+                showToast("当前城市的天气");
 //                openActivity(SuccessOrderActivity.class);
                 break;
             case R.id.iv_notice:
@@ -247,6 +248,9 @@ public class NewHomeActivity extends MyBaseActivity {
             case R.id.tv_rolling_word:
             case R.id.ll_tv_rolling_word:
                 showToast("滚动字幕");
+                break;
+            case R.id.tv_to_order:
+                openActivity(ToPlaceOrderActivity.class);
                 break;
             case R.id.iv_home_current_location:
                 initView();
@@ -260,16 +264,19 @@ public class NewHomeActivity extends MyBaseActivity {
             case R.id.iv_car_type:
             case R.id.tv_car_type:
             case R.id.ll_car_type:
+                finish();
                 openActivity(CarTypeActivity.class);
                 break;
             case R.id.iv_home_I:
             case R.id.tv_home_I:
             case R.id.ll_home_I:
+                finish();
                 openActivity(LoginActivity.class);
                 break;
             case R.id.iv_home_mail_list:
             case R.id.tv_home_mail_list:
             case R.id.ll_home_mail_list:
+                finish();
                 openActivity(MailListActivity.class);
                 break;
             case R.id.ll_home_bottom_item:
@@ -277,5 +284,9 @@ public class NewHomeActivity extends MyBaseActivity {
             case R.id.activity_new_home:
                 break;
         }
+    }
+
+    @OnClick(R.id.tv_to_order)
+    public void onClick() {
     }
 }

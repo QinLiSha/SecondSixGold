@@ -1,7 +1,9 @@
 package com.lisa.administrator.sixgold.base;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -406,6 +409,7 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
                 JSONObject provinceObject = jsonArray.optJSONObject(i);
                 //  获取省份名称放入集合
                 String provinceName = provinceObject.getString("name");
+
                 provinceBeanList.add(new ProvinceBean(provinceName));
                 //  获取城市数组
                 JSONArray cityArray = provinceObject.optJSONArray("city");
@@ -438,5 +442,52 @@ public class MyBaseActivity<T> extends AutoLayoutActivity {
             e.printStackTrace();
         }
     }
-    /***三级联动公共方法结束 ************************************************************************/
+
+    /******************************三级联动公共方法结束************************************************************************/
+    /**
+     *
+     */
+
+
+    public String inputTitleDialog() {
+        final String[] inputName = new String[1];
+        final EditText inputServer = new EditText(this);
+        inputServer.setFocusable(true);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(getString(R.string.please_input))
+                .setIcon(R.drawable.ic_add_location_orange_24dp)
+                .setView(inputServer)
+                .setNegativeButton(getString(R.string.pickerview_cancel), null);
+        builder.setPositiveButton(getString(R.string.sure), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                inputName[0] = inputServer.getText().toString();
+                // TODO: 2017/3/3  
+            }
+        });
+
+        builder.show();
+        inputName[0] = inputServer.getText().toString();
+        return inputName[0];
+    }
+/**    public void inputTitleDialog(TextView textView) {
+ final String[] inputName = new String[1];
+ final EditText inputServer = new EditText(this);
+ inputServer.setFocusable(true);
+ AlertDialog.Builder builder = new AlertDialog.Builder(this);
+ builder.setTitle(getString(R.string.please_input))
+ .setIcon(R.drawable.ic_add_location_orange_24dp)
+ .setView(inputServer)
+ .setNegativeButton(getString(R.string.pickerview_cancel), null);
+ builder.setPositiveButton(getString(R.string.sure),
+ new DialogInterface.OnClickListener() {
+
+ public void onClick(DialogInterface dialog, int which) {
+ inputName[0] = inputServer.getText().toString();
+ }
+ });
+ builder.show();
+ textView.setText(inputName[0]);
+ }*/
+
 }

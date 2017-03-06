@@ -18,10 +18,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.lisa.administrator.sixgold.R;
+import com.lisa.administrator.sixgold.activity.LoginActivity;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
 import java.io.InputStream;
@@ -29,17 +31,46 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MailListActivity extends MyBaseActivity {
 
     ArrayList<Map<String, String>> mList;
     Map<String, String> contacts;
     ListView mListView;
+    @BindView(R.id.iv_home_homepage)
+    ImageView ivHomeHomepage;
+    @BindView(R.id.tv_home_homepage)
+    TextView tvHomeHomepage;
+    @BindView(R.id.ll_home_homepage)
+    LinearLayout llHomeHomepage;
+    @BindView(R.id.iv_car_type)
+    ImageView ivCarType;
+    @BindView(R.id.tv_car_type)
+    TextView tvCarType;
+    @BindView(R.id.ll_car_type)
+    LinearLayout llCarType;
+    @BindView(R.id.iv_home_I)
+    ImageView ivHomeI;
+    @BindView(R.id.tv_home_I)
+    TextView tvHomeI;
+    @BindView(R.id.ll_home_I)
+    LinearLayout llHomeI;
+    @BindView(R.id.iv_home_mail_list)
+    ImageView ivHomeMailList;
+    @BindView(R.id.tv_home_mail_list)
+    TextView tvHomeMailList;
+    @BindView(R.id.ll_home_mail_list)
+    LinearLayout llHomeMailList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail_list);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "通讯录", -1, null);
+        ButterKnife.bind(this);
+        initActionBarTwoImg(-1, "通讯录", -1, null);
         initview();
         getContacts();
         initdata();
@@ -121,6 +152,35 @@ public class MailListActivity extends MyBaseActivity {
         }
     }
 
+    @OnClick({R.id.iv_home_homepage, R.id.tv_home_homepage, R.id.ll_home_homepage, R.id.iv_car_type, R.id.tv_car_type, R.id.ll_car_type, R.id.iv_home_I, R.id.tv_home_I, R.id.ll_home_I, R.id.iv_home_mail_list, R.id.tv_home_mail_list, R.id.ll_home_mail_list})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.iv_home_homepage:
+            case R.id.tv_home_homepage:
+            case R.id.ll_home_homepage:
+                finish();
+                openActivity(NewHomeActivity.class);
+                break;
+            case R.id.iv_car_type:
+            case R.id.tv_car_type:
+            case R.id.ll_car_type:
+                finish();
+                openActivity(CarTypeActivity.class);
+                break;
+            case R.id.iv_home_I:
+            case R.id.tv_home_I:
+            case R.id.ll_home_I:
+                finish();
+                openActivity(LoginActivity.class);
+                break;
+            case R.id.iv_home_mail_list:
+            case R.id.tv_home_mail_list:
+            case R.id.ll_home_mail_list:
+//                openActivity(MailListActivity.class);
+                break;
+        }
+    }
+
     class contactAdapter extends BaseAdapter {
 
         Context context;
@@ -162,11 +222,9 @@ public class MailListActivity extends MyBaseActivity {
                 String phoneNumber = theContacer.get("phoneNumber");
                 long pid = Long.parseLong(theContacer.get("pId"));
                 long cid = Long.parseLong(theContacer.get("cId"));
-                Bitmap pBitmap = null;
+                Bitmap pBitmap;
                 if (pid > 0) {
-                    /*
-                为存在联系人图片的位置增加图片
-				*/
+                    /*为存在联系人图片的位置增加图片*/
                     Uri uri = ContentUris.withAppendedId(ContactsContract.Contacts.CONTENT_URI, cid);
                     InputStream input = ContactsContract.Contacts.openContactPhotoInputStream(context.getContentResolver(), uri);
                     pBitmap = BitmapFactory.decodeStream(input);
@@ -182,9 +240,7 @@ public class MailListActivity extends MyBaseActivity {
                 TextView mTextView = (TextView) view.findViewById(R.id.textView2);
                 mTextView.setText(name);
                 TextView sTextView = (TextView) view.findViewById(R.id.textView3);
-
                 sTextView.setText(phoneNumber);
-
 //                TextView tTextView = (TextView) view.findViewById(R.id.textView4);
 //                tTextView.setText("id:" + "" + cid);
                 return view;
