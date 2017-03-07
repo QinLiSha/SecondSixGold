@@ -1,11 +1,369 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.lisa.administrator.sixgold.fragment.toplaceorder.PlaceOrderExpressFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_low_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_express_from_address"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_express_from_address_1"
+                style="@style/my_imageview_style_normal"
+                android:layout_margin="@dimen/px_10"
+                android:background="@drawable/ic_add_location_orange_24dp" />
+
+            <TextView
+                android:id="@+id/tv_express_from_address_1"
+                style="@style/my_textview_style_small_black"
+                android:text="@string/from" />
+
+            <TextView
+                android:id="@+id/tv_express_from_address"
+                style="@style/my_textview_style_normal_small"
+                android:text="@string/please_choose_from_address" />
+
+        </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/iv_express_from_address_details"
+            style="@style/my_imageview_style_normal"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/px_5"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_express_from_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px_10"
+            android:background="@drawable/ic_star_collection_24dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_2"
+        android:background="@color/lightgray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_low_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_express_to_address"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_express_to_address_1"
+                style="@style/my_imageview_style_normal"
+                android:layout_margin="@dimen/px_10"
+                android:background="@drawable/ic_add_location_blue_24dp" />
+
+            <TextView
+                android:id="@+id/tv_express_to_address_1"
+                style="@style/my_textview_style_small_black"
+                android:text="@string/to" />
+
+            <TextView
+                android:id="@+id/tv_express_to_address"
+                style="@style/my_textview_style_normal_small"
+                android:text="@string/please_choose_to_address" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_express_to_address_details"
+            style="@style/my_imageview_style_normal"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/px_5"
+            android:background="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_express_to_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px_10"
+            android:background="@drawable/ic_star_collection_24dp" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/lightgray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_low_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/my_imageview_style_normal"
+                android:layout_margin="@dimen/px_10"
+                android:background="@drawable/ic_person_outline_black_24dp" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+                android:text="@string/from_person_name" />
+
+            <EditText
+                android:id="@+id/et_express_shipper_name"
+                style="@style/my_edittext_style_normal_no_line_no_padding"
+                android:layout_width="@dimen/px_150"
+                android:hint="输入姓名"
+                android:maxLength="4" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+                android:text="手机号" />
+
+            <EditText
+                android:id="@+id/et_express_shipper_num"
+                style="@style/my_edittext_style_normal_no_line_no_padding"
+                android:layout_width="wrap_content"
+                android:hint="@string/please_enter_phone_number"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_express_shipper_mail_list"
+            style="@style/my_textview_style_small_black"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_10"
+            android:text="通讯录"
+            android:textSize="@dimen/px_15" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_2"
+        android:background="@color/lightgray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_low_item_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/px_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/my_imageview_style_normal"
+                android:layout_margin="@dimen/px_10"
+                android:background="@drawable/ic_person_outline_blue_24dp" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+                android:text="@string/to_person_name" />
+
+            <EditText
+                android:id="@+id/et_express_receiver_name"
+                style="@style/my_edittext_style_normal_no_line_no_padding"
+                android:layout_width="@dimen/px_150"
+                android:hint="输入姓名"
+                android:maxLength="4" />
+
+            <TextView
+                style="@style/my_textview_style_small_black"
+                android:text="手机号" />
+
+            <EditText
+                android:id="@+id/et_express_receiver_num"
+                style="@style/my_edittext_style_normal_no_line_no_padding"
+                android:layout_width="wrap_content"
+                android:hint="@string/please_enter_phone_number"
+                android:inputType="phone"
+                android:maxLength="11" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_express_receiver_mail_list"
+            style="@style/my_textview_style_small_black"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_10"
+            android:text="通讯录"
+            android:textSize="@dimen/px_15" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/lightgray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="快递"/>
-</FrameLayout>
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:id="@+id/ll_express_collection"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_express_collection"
+
+                style="@style/my_textview_style_small_black"
+                android:text="收藏" />
+
+            <ImageView
+                android:id="@+id/iv_express_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_express_nearby"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_express_nearby"
+                style="@style/my_textview_style_small_black"
+                android:text="@string/nearby" />
+
+            <ImageView
+                android:id="@+id/iv_express_nearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_express_credit"
+            android:layout_width="@dimen/px_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_express_credit"
+                style="@style/my_textview_style_small_black"
+                android:text="信誉度" />
+
+            <ImageView
+                android:id="@+id/iv_express_credit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_arrow_drop_down_black_24dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--<ListView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/px_0"-->
+    <!--android:layout_weight="1">-->
+
+    <!--</ListView>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_0"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+
+            <include layout="@layout/layout_listview_express_item" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_10"
+        android:background="@color/lightgray" />
+
+    <TextView
+        style="@style/my_textview_style_small_black"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/px_0"
+        android:text="注：您所选定的司机将会收到您的订单" />
+
+    <Button
+        android:id="@+id/button_express_sure"
+        style="@style/my_button_style_01"
+        android:layout_margin="@dimen/px_10"
+        android:text="@string/sure" />
+</LinearLayout>

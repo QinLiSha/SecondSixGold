@@ -264,7 +264,6 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
         linearLayout2.setOnClickListener(onClickListener);
         linearLayout3.setOnClickListener(onClickListener);
         linearLayout4.setOnClickListener(onClickListener);
-
     }
 
     /**
@@ -280,9 +279,11 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
                     break;
                 case R.id.tv_local_city_car:
                 case R.id.ll_local_city_car:
+                    initListView();
                     break;
                 case R.id.tv_long_distant_car:
                 case R.id.ll_long_distant_car:
+                    initListView();
                     break;
 
                 case R.id.tv_all_transport_type:
@@ -291,12 +292,15 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
                     break;
                 case R.id.tv_go_and_back:
                 case R.id.ll_go_and_back:
+                    initListView();
                     break;
                 case R.id.tv_one_way:
                 case R.id.ll_one_way:
+                    initListView();
                     break;
                 case R.id.tv_transship:
                 case R.id.ll_transship:
+                    initListView();
                     break;
             }
             if (popupWindow_transporttype != null) {

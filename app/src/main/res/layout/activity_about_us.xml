@@ -11,10 +11,13 @@
         android:id="@+id/actionbarView_twoImg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    <WebView
-        android:id="@+id/testStore"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/px_0"
-        android:layout_weight="1"></WebView>
 
+    <TextView
+        style="@style/my_textview_style_normal_default"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/px_30"
+        android:background="@color/white"
+        android:padding="@dimen/px_30"
+        android:text="@string/about_us_details"
+        android:textSize="@dimen/textsize_big" />
 </LinearLayout>

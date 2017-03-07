@@ -20,10 +20,7 @@ android {
     //降低png格式要求
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
-
 }
-
-
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

@@ -6,7 +6,7 @@
     <LinearLayout
         android:layout_width="@dimen/px_200"
         android:layout_height="wrap_content"
-        android:background="@color/popupBlue"
+        android:background="@color/themeBlue"
         android:orientation="vertical">
 
         <LinearLayout
@@ -17,14 +17,14 @@
 
             <TextView
                 android:id="@+id/tv_all_transport_type"
-                style="@style/my_textview_style_normal_black"
+                style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
                 android:text="@string/all" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_1"
-                android:background="@drawable/popupline_black_grey" />
+                android:background="@color/white" />
         </LinearLayout>
 
 
@@ -36,7 +36,7 @@
 
             <TextView
                 android:id="@+id/tv_go_and_back"
-                style="@style/my_textview_style_normal_black"
+                style="@style/my_textview_style_normal_white"
 
                 android:layout_gravity="center"
                 android:text="往返" />
@@ -44,7 +44,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_1"
-                android:background="@drawable/popupline_black_grey" />
+                android:background="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -55,15 +55,15 @@
 
             <TextView
                 android:id="@+id/tv_one_way"
-                style="@style/my_textview_style_normal_black"
+                style="@style/my_textview_style_normal_white"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="单程"
-                android:layout_height="wrap_content" />
+                android:text="单程" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_1"
-                android:background="@drawable/popupline_black_grey" />
+                android:background="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,15 +74,10 @@
 
             <TextView
                 android:id="@+id/tv_transship"
-                style="@style/my_textview_style_normal_black"
-
+                style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
                 android:text="中转" />
-
         </LinearLayout>
-
-
     </LinearLayout>
-
 </RelativeLayout>
 

@@ -22,7 +22,6 @@ public class OrderTypeFragment extends Fragment {
     ListView lvOrderType;
     private OrderDetailsListviewAdapter orderDetailsListviewAdapter;
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -2,7 +2,6 @@ package com.lisa.administrator.sixgold.activity.mine;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -77,25 +76,25 @@ public class MyOrderNewActivity extends MyBaseActivity {
         setContentView(R.layout.activity_my_order_new);
         ButterKnife.bind(this);
         //右边是详情的符号
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "我的订单", R.drawable.ic_more_vert_white_24dp, null);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "我的订单", R.drawable.ic_more_vert_white_24dp, onClickListener);
         loadOrderTypeFragment();
-        initBack();
     }
 
     /********************************************************************************
      * 以下是返回ImageView
      ******************************************************************************/
-    protected ImageView ivBack;
-
-    private void initBack() {
-        ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
-        ivBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
+    private View.OnClickListener onClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.iv_left_two_img:
+                    finish();
+                    break;
+                case R.id.iv_right_two_img:
+                    break;
             }
-        });
-    }
+        }
+    };
 
     /********************************************************************************
      * 以上是返回ImageView

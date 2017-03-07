@@ -94,7 +94,14 @@ public class PlaceOrderLegworkFragment extends Fragment {
     }
 
 
-    @OnClick({R.id.iv_legwork_from_address_1, R.id.tv_legwork_from_address_1, R.id.tv_legwork_from_address, R.id.ll_legwork_from_address, R.id.iv_legwork_from_address_details, R.id.iv_legwork_from_star, R.id.iv_legwork_to_address_1, R.id.tv_legwork_to_address_1, R.id.tv_legwork_to_address, R.id.ll_legwork_to_address, R.id.iv_legwork_to_address_details, R.id.iv_legwork_to_star, R.id.et_legwork_shipper_name, R.id.et_legwork_shipper_num, R.id.tv_legwork_shipper_mail_list, R.id.et_legwork_receiver_name, R.id.et_legwork_receiver_num, R.id.tv_legwork_receiver_mail_list, R.id.tv_legwork_collection, R.id.iv_legwork_collection, R.id.ll_legwork_collection, R.id.tv_legwork_nearby, R.id.iv_legwork_nearby, R.id.ll_legwork_nearby, R.id.tv_legwork_credit, R.id.iv_legwork_credit, R.id.ll_legwork_credit, R.id.button_legwork_sure})
+    @OnClick({R.id.iv_legwork_from_address_1, R.id.tv_legwork_from_address_1, R.id.tv_legwork_from_address,
+            R.id.ll_legwork_from_address, R.id.iv_legwork_from_address_details, R.id.iv_legwork_from_star,
+            R.id.iv_legwork_to_address_1, R.id.tv_legwork_to_address_1, R.id.tv_legwork_to_address, R.id.ll_legwork_to_address,
+            R.id.iv_legwork_to_address_details, R.id.iv_legwork_to_star, R.id.et_legwork_shipper_name, R.id.et_legwork_shipper_num,
+            R.id.tv_legwork_shipper_mail_list, R.id.et_legwork_receiver_name, R.id.et_legwork_receiver_num,
+            R.id.tv_legwork_receiver_mail_list, R.id.tv_legwork_collection, R.id.iv_legwork_collection,
+            R.id.ll_legwork_collection, R.id.tv_legwork_nearby, R.id.iv_legwork_nearby, R.id.ll_legwork_nearby,
+            R.id.tv_legwork_credit, R.id.iv_legwork_credit, R.id.ll_legwork_credit, R.id.button_legwork_sure})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_legwork_from_address_1:
