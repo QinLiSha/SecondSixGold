@@ -289,9 +289,9 @@
             <TextView
                 android:id="@+id/tv_local_city_fast_matching"
                 style="@style/my_textview_style_small_black"
-                android:text="快速匹配"
+                android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
+                android:text="快速匹配" />
 
 
         </RelativeLayout>
@@ -419,37 +419,36 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
 
-            <include layout="@layout/layout_listview_legwork_item" />
+            <include layout="@layout/layout_listview_item_local_distance" />
         </LinearLayout>
-
     </ScrollView>
 
 

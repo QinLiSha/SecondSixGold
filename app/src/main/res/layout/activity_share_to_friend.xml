@@ -12,114 +12,131 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/tv_shared"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:padding="@dimen/px_20"
-        android:text="一键分享" />
-
     <LinearLayout
+        android:id="@+id/ll_share"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/px_20"
-        android:layout_marginTop="@dimen/px_20"
+        android:gravity="center"
         android:orientation="horizontal"
-        android:weightSum="5">
+        android:padding="@dimen/px_10">
 
-        <LinearLayout
-            android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_shared"
+            android:layout_width="@dimen/px_100"
+            android:layout_height="@dimen/px_100"
+            android:background="@mipmap/share" />
 
-            <ImageView
-                android:layout_width="@dimen/px_100"
-                android:layout_height="@dimen/px_100"
-                android:background="@mipmap/share1" />
-
-            <TextView
-                style="@style/my_textview_style_small_black"
-                android:layout_margin="@dimen/px_10"
-                android:text="微信好友" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="@dimen/px_100"
-                android:layout_height="@dimen/px_100"
-                android:background="@mipmap/share2" />
-
-            <TextView
-                style="@style/my_textview_style_small_black"
-                android:layout_margin="@dimen/px_10"
-                android:text="朋友圈" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="@dimen/px_100"
-                android:layout_height="@dimen/px_100"
-                android:background="@mipmap/share3" />
-
-            <TextView
-                style="@style/my_textview_style_small_black"
-                android:layout_margin="@dimen/px_10"
-                android:text="QQ好友" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="@dimen/px_100"
-                android:layout_height="@dimen/px_100"
-                android:background="@mipmap/share4" />
-
-            <TextView
-                style="@style/my_textview_style_small_black"
-                android:layout_margin="@dimen/px_10"
-
-                android:text="QQ空间" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="@dimen/px_100"
-                android:layout_height="@dimen/px_100"
-                android:background="@mipmap/share5" />
-
-            <TextView
-                style="@style/my_textview_style_small_black"
-                android:layout_margin="@dimen/px_10"
-                android:text="微博好友" />
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_shared"
+            style="@style/my_textview_style_normal_default"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/px_20"
+            android:padding="@dimen/px_20"
+            android:text="一键分享"
+            android:textSize="@dimen/px_40" />
     </LinearLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="@dimen/px_20"-->
+    <!--android:layout_marginTop="@dimen/px_20"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:weightSum="5">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="@dimen/px_0"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/px_100"-->
+    <!--android:layout_height="@dimen/px_100"-->
+    <!--android:background="@mipmap/share1" />-->
+
+    <!--<TextView-->
+    <!--style="@style/my_textview_style_small_black"-->
+    <!--android:layout_margin="@dimen/px_10"-->
+    <!--android:text="微信好友" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="@dimen/px_0"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/px_100"-->
+    <!--android:layout_height="@dimen/px_100"-->
+    <!--android:background="@mipmap/share2" />-->
+
+    <!--<TextView-->
+    <!--style="@style/my_textview_style_small_black"-->
+    <!--android:layout_margin="@dimen/px_10"-->
+    <!--android:text="朋友圈" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="@dimen/px_0"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView9"-->
+    <!--android:layout_width="@dimen/px_100"-->
+    <!--android:layout_height="@dimen/px_100"-->
+    <!--android:background="@mipmap/share3" />-->
+
+    <!--<TextView-->
+    <!--style="@style/my_textview_style_small_black"-->
+    <!--android:layout_margin="@dimen/px_10"-->
+    <!--android:text="QQ好友" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="@dimen/px_0"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/px_100"-->
+    <!--android:layout_height="@dimen/px_100"-->
+    <!--android:background="@mipmap/share4" />-->
+
+    <!--<TextView-->
+    <!--style="@style/my_textview_style_small_black"-->
+    <!--android:layout_margin="@dimen/px_10"-->
+
+    <!--android:text="QQ空间" />-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="@dimen/px_0"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_weight="1"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="@dimen/px_100"-->
+    <!--android:layout_height="@dimen/px_100"-->
+    <!--android:background="@mipmap/share5" />-->
+
+    <!--<TextView-->
+    <!--style="@style/my_textview_style_small_black"-->
+    <!--android:layout_margin="@dimen/px_10"-->
+    <!--android:text="微博好友" />-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"

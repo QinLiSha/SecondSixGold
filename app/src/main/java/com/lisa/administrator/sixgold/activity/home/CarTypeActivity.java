@@ -16,8 +16,10 @@ import android.widget.TextView;
 import com.android.datetimepicker.date.DatePickerDialog;
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.LoginActivity;
+import com.lisa.administrator.sixgold.activity.ordercar.OrderCarLocalActivity;
 import com.lisa.administrator.sixgold.activity.ordercar.OrderCarLongActivity;
 import com.lisa.administrator.sixgold.adapter.CarTypeListViewAdapter;
+import com.lisa.administrator.sixgold.adapter.CarTypeListViewLocalAdapter;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
 import java.text.DateFormat;
@@ -30,6 +32,12 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.OnDateSetListener {
+
+    private PopupWindow popupWindow_cartype;
+    private PopupWindow popupWindow_transporttype;
+    private CarTypeListViewAdapter carTypeListViewAdapter_all;
+    private CarTypeListViewLocalAdapter carTypeListViewLocalAdapter_local;
+    private static final int REQUEST_CODE_CAR_TYPE_AND_LENGTH = 1;
 
     @BindView(R.id.tv_transport_type)
     TextView tvTransportType;
@@ -49,10 +57,6 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
     TextView tvHomeMailList;
     @BindView(R.id.ll_home_mail_list)
     LinearLayout llHomeMailList;
-    private PopupWindow popupWindow_cartype;
-    private PopupWindow popupWindow_transporttype;
-    private CarTypeListViewAdapter carTypeListViewAdapter_all;
-    private static final int REQUEST_CODE_CAR_TYPE_AND_LENGTH = 1;
     @BindView(R.id.lv_car_type_all)
     ListView lvCarTypeAll;
     @BindView(R.id.tv_from_address)
@@ -116,6 +120,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
 
     /**
      * listview的初始化（车型的）
+     * 长途货运
      */
     private void initListView() {
         if (carTypeListViewAdapter_all == null) {
@@ -126,6 +131,25 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 openActivity(OrderCarLongActivity.class);
+            }
+        });
+    }
+
+    /**
+     * listview的初始化（车型的）
+     * 同城配送
+     */
+    private void initListViewLocal() {
+        if (carTypeListViewLocalAdapter_local == null) {
+            carTypeListViewLocalAdapter_local = new CarTypeListViewLocalAdapter(this);
+        }
+        lvCarTypeAll.setAdapter(carTypeListViewLocalAdapter_local);
+        lvCarTypeAll.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                openActivity(OrderCarLocalActivity.class);
+
+
             }
         });
     }
@@ -173,7 +197,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
                 if (popupWindow_transporttype.isShowing()) {
                     popupWindow_transporttype.dismiss();
                 } else if (popupWindow_transporttype != null) {
-                    popupWindow_transporttype.showAsDropDown(rlTransportType, 0, 0);//最后一个是对距离网页标题栏的设置
+                    popupWindow_transporttype.showAsDropDown(rlTransportType, 0, 0);//最后一个是对距离rlTransportType高度的设置
                 }
                 break;
             case R.id.iv_date_1:
@@ -222,7 +246,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
     /**
      * 初始化popupwindow 车的类型（全部，同城，长途货运）
      */
-    public void initPopupWindowCarType() {
+    private void initPopupWindowCarType() {
         View view = getLayoutInflater().inflate(R.layout.layout_popup_item_cartype, null);
         popupWindow_cartype = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup
                 .LayoutParams.WRAP_CONTENT, true);//构造方法设置为True表明点击空白的位置popup会消失
@@ -244,7 +268,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
     /**
      * 初始化popupwindow 运输类型（全部，往返，单程，中转）
      */
-    public void initPopupWindowTransportType() {
+    private void initPopupWindowTransportType() {
         View view = getLayoutInflater().inflate(R.layout.layout_popup_item_transporttype, null);
         popupWindow_transporttype = new PopupWindow(view, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup
                 .LayoutParams.WRAP_CONTENT, true);//构造方法设置为True表明点击空白的位置popup会消失
@@ -279,7 +303,7 @@ public class CarTypeActivity extends MyBaseActivity implements DatePickerDialog.
                     break;
                 case R.id.tv_local_city_car:
                 case R.id.ll_local_city_car:
-                    initListView();
+                    initListViewLocal();
                     break;
                 case R.id.tv_long_distant_car:
                 case R.id.ll_long_distant_car:

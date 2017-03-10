@@ -17,27 +17,235 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_20"
             android:orientation="vertical">
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--线条部分-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/px_10">
+
+                    <View
+                        android:layout_width="@dimen/px_2"
+                        android:layout_height="@dimen/px_20"
+                        android:background="@color/themeBlue" />
+
+                    <ImageView
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:background="@drawable/ic_round_image_blue_24dp" />
+
+                    <View
+                        android:layout_width="@dimen/px_2"
+                        android:layout_height="wrap_content"
+                        android:background="@color/themeBlue" />
+                </LinearLayout>
+                <!--文字部分-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/px_20">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_item_height"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_20"
+                        android:paddingRight="@dimen/px_20">
+
+                        <TextView
+                            style="@style/my_textview_style_normal_small"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/px_0"
+                            android:text="2017-03-03 12:20:15" />
+
+                        <TextView
+                            style="@style/my_textview_style_normal_black"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:padding="@dimen/px_0"
+                            android:text="下单成功" />
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_55"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_20"
+                        android:paddingRight="@dimen/px_20">
+
+                        <TextView
+                            style="@style/my_textview_style_normal_default"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/px_0"
+                            android:text="请耐心等待司机接单" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
 
             <include layout="@layout/layout_listview_item_myorder_state" />
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+                <!--线条部分-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/px_10">
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+                    <View
+                        android:layout_width="@dimen/px_2"
+                        android:layout_height="@dimen/px_20"
+                        android:background="@color/themeBlue" />
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+                    <ImageView
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:background="@drawable/ic_round_image_blue_24dp" />
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+                    <View
+                        android:layout_width="@dimen/px_2"
+                        android:layout_height="wrap_content"
+                        android:background="@color/themeBlue" />
+                </LinearLayout>
+                <!--文字部分-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/px_20">
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_item_height"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_20"
+                        android:paddingRight="@dimen/px_20">
 
-            <include layout="@layout/layout_listview_item_myorder_state" />
+                        <TextView
+                            android:id="@+id/tv_orderstate_time"
+                            style="@style/my_textview_style_normal_small"
+                            android:layout_alignParentRight="true"
+                            android:padding="@dimen/px_0"
+                            android:text="2017-03-03 13:08:32" />
+
+                        <TextView
+                            android:id="@+id/tv_orderstate_state"
+                            style="@style/my_textview_style_normal_black"
+                            android:padding="@dimen/px_0"
+                            android:text="司机已确认收货" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_item_height_low"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_20"
+                        android:paddingRight="@dimen/px_20">
+
+                        <TextView
+                            android:id="@+id/tv_orderstate_driver_state"
+                            style="@style/my_textview_style_normal_default"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/px_0"
+                            android:text="司机正在送货的途中" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_55"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_20"
+                        android:paddingRight="@dimen/px_20">
+
+                        <TextView
+                            android:id="@+id/tv_orderstate_driver_distance"
+                            style="@style/my_textview_style_normal_default"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/px_0"
+                            android:text="目前距离目的地的距离是7.8km" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--线条部分-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/px_10">
+
+                    <View
+                        android:layout_width="@dimen/px_2"
+                        android:layout_height="@dimen/px_20"
+                        android:background="@color/themeBlue" />
+
+                    <ImageView
+                        android:layout_width="@dimen/px_20"
+                        android:layout_height="@dimen/px_20"
+                        android:background="@drawable/ic_round_image_blue_24dp" />
+
+                    <View
+                        android:layout_width="@dimen/px_2"
+                        android:layout_height="wrap_content"
+                        android:background="@color/themeBlue" />
+                </LinearLayout>
+                <!--文字部分-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_item_height"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_20"
+                        android:paddingRight="@dimen/px_20">
+
+                        <TextView
+                            style="@style/my_textview_style_normal_blue"
+                            android:padding="@dimen/px_0"
+                            android:text="订单完成"
+                            android:textSize="@dimen/px_40" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

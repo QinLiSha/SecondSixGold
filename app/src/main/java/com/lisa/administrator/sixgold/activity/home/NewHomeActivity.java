@@ -21,6 +21,7 @@ import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.MarkerOptions;
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.LoginActivity;
+import com.lisa.administrator.sixgold.activity.mine.MineNoticeActivity;
 import com.lisa.administrator.sixgold.activity.order.ToPlaceOrderActivity;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
@@ -244,6 +245,7 @@ public class NewHomeActivity extends MyBaseActivity {
 //            case R.id.tv_notice:
             case R.id.ll_notice:
                 showToast("消息提示");
+                openActivity(MineNoticeActivity.class);
                 break;
             case R.id.tv_rolling_word:
             case R.id.ll_tv_rolling_word:

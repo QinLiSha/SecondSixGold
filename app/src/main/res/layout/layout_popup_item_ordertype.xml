@@ -6,116 +6,120 @@
     <LinearLayout
         android:layout_width="@dimen/px_200"
         android:layout_height="wrap_content"
-        android:background="@color/popupBlue"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/themeBlue"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/ll_all_order_type"
+            android:id="@+id/ll_order_type_all"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_all_order_type"
-                style="@style/my_textview_style_normal_black"
+                android:id="@+id/tv_order_type_all"
+                style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
+                android:padding="@dimen/px_20"
                 android:text="@string/all" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_1"
-                android:background="@drawable/popupline_black_grey" />
+                android:background="@color/white" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_legwork"
+            android:id="@+id/ll_order_type_legwork"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_legwork"
-                style="@style/my_textview_style_normal_black"
+                android:id="@+id/tv_order_type_legwork"
+                style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
-                android:text="跑腿" />
+                android:padding="@dimen/px_20"
+                android:text="@string/legwork" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_1"
-                android:background="@drawable/popupline_black_grey" />
+                android:background="@color/white" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_express"
+            android:id="@+id/ll_order_type_express"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_express"
-                style="@style/my_textview_style_normal_black"
+                android:id="@+id/tv_order_type_express"
+                style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
-                android:text="快递" />
+                android:padding="@dimen/px_20"
+                android:text="@string/express" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_1"
-                android:background="@drawable/popupline_black_grey" />
+                android:background="@color/white" />
         </LinearLayout>
 
 
         <LinearLayout
-            android:id="@+id/ll_local_city_car"
+            android:id="@+id/ll_order_type_local_city_car"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_local_city_car"
-                style="@style/my_textview_style_normal_black"
-
+                android:id="@+id/tv_order_type_local_city_car"
+                style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
+                android:padding="@dimen/px_20"
                 android:text="@string/local_city_car" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_1"
-                android:background="@drawable/popupline_black_grey" />
+                android:background="@color/white" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_long_distant_car"
+            android:id="@+id/ll_order_type_long_distant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_long_distant_car"
-                style="@style/my_textview_style_normal_black"
-
+                android:id="@+id/tv_order_type_long_distant"
+                style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
+                android:padding="@dimen/px_20"
                 android:text="@string/long_distant_car" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/px_1"
-                android:background="@drawable/popupline_black_grey" />
+                android:background="@color/white" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_logistics"
+            android:id="@+id/ll_order_type_logistics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tv_logistics"
-                style="@style/my_textview_style_normal_black"
+                android:id="@+id/tv_order_type_logistics"
+                style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
-                android:text="物流" />
+                android:padding="@dimen/px_20"
+                android:text="@string/logistic" />
 
 
         </LinearLayout>

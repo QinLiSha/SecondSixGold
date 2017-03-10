@@ -19,7 +19,7 @@ public class OrderCarLongActivity extends MyBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_car_long);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "长途货车", R.drawable.ic_more_vert_white_24dp, null);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "长途货车", -1, null);
         initBack();
         loadOrderLongFragment();
     }
@@ -31,6 +31,7 @@ public class OrderCarLongActivity extends MyBaseActivity {
 
     private void initBack() {
         ivBack = (ImageView) findViewById(R.id.iv_left_two_img);
+
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +40,7 @@ public class OrderCarLongActivity extends MyBaseActivity {
         });
     }
 
-    /********************************************************************************
+    /******************************************************************************
      * 以上是返回ImageView
      ******************************************************************************/
     private void loadOrderLongFragment() {

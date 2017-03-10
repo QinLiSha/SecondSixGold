@@ -26,19 +26,11 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.jakewharton:butterknife:8.4.0'
     //ButterKnife的依赖
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
     //ButterKnife的依赖
-    compile 'com.github.citux:datetimepicker:0.2.0'
     //选择日期和时间的选择器
-    compile 'com.bigkoo:pickerview:2.0.8'
     //地址选择三级联动地址仿ios
-    compile 'com.android.support:appcompat-v7:25.1.0'
-    compile 'com.android.support:support-v4:25.1.0'
-    compile 'com.zhy:autolayout:1.4.5'
     //    将autolayout引入//解决适配问题
-    testCompile 'junit:junit:4.12'
     compile files('libs/Amap_2DMap_V4.2.0_20170120.jar')
     compile files('libs/AMap_Location_V3.3.0_20170118.jar')
     compile files('libs/AMap_Search_V4.0.0_20170111.jar')
@@ -55,4 +47,13 @@ dependencies {
     compile files('libs/ShareSDK-Wechat-Core-2.8.1.jar')
     compile files('libs/ShareSDK-Wechat-Favorite-2.8.1.jar')
     compile files('libs/ShareSDK-Wechat-Moments-2.8.1.jar')
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.github.citux:datetimepicker:0.2.0'
+    compile 'com.bigkoo:pickerview:2.0.8'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.zhy:autolayout:1.4.5'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }

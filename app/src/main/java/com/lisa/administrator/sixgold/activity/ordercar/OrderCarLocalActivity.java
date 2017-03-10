@@ -12,15 +12,13 @@ import com.lisa.administrator.sixgold.fragment.toplaceorder.PlaceOrderLocalCityF
  * 车型界面中的同城货运的下单界面
  */
 public class OrderCarLocalActivity extends MyBaseActivity {
-
-
     private PlaceOrderLocalCityFragment placeOrderLocalCityFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_car_local);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "同城货车", R.drawable.ic_more_vert_white_24dp, null);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "同城货车", -1, null);
         initBack();
         loadOrderLocalFragment();
     }
@@ -38,6 +36,7 @@ public class OrderCarLocalActivity extends MyBaseActivity {
                 finish();
             }
         });
+
     }
 
     /********************************************************************************

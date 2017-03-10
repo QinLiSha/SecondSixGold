@@ -16,6 +16,7 @@ import com.lisa.administrator.sixgold.activity.mine.MineNoticeActivity;
 import com.lisa.administrator.sixgold.activity.mine.MyInformationActivity;
 import com.lisa.administrator.sixgold.activity.mine.MyOrderNewActivity;
 import com.lisa.administrator.sixgold.activity.mine.MyStoreActivity;
+import com.lisa.administrator.sixgold.activity.mine.NearbyServiceActivity;
 import com.lisa.administrator.sixgold.activity.mine.SettingActivity;
 import com.lisa.administrator.sixgold.activity.mine.ShareToFriendActivity;
 import com.lisa.administrator.sixgold.activity.mine.WalletActivity;
@@ -292,6 +293,7 @@ public class MineActivity extends MyBaseActivity {
             case R.id.tv_nearby_service:
             case R.id.iv_nearby_service_details:
             case R.id.rl_nearby_service:
+                openActivity(NearbyServiceActivity.class);
                 // TODO: 2017/2/8 附近服务 
                 break;
             case R.id.iv_game:

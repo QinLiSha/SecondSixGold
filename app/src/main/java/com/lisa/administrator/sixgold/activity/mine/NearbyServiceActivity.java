@@ -1,10 +1,14 @@
-package com.lisa.administrator.sixgold.activity.store;
+package com.lisa.administrator.sixgold.activity.mine;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.GeolocationPermissions;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -13,13 +17,13 @@ import android.widget.ImageView;
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
-public class TaoBaoActivity extends MyBaseActivity {
-
+public class NearbyServiceActivity extends MyBaseActivity {
     private WebView browser;
     WebSettings settings;
     //    String TestUrl = "http://map.baidu.com/";
+    String TestUrl = "http://m.amap.com/nearby/index/";
 //    String TestUrl = "http://ditu.amap.com/";
-    String TestUrl = "https://m.taobao.com/";
+    //    String TestUrl = "https://m.taobao.com/";
     /********************************************************************************
      * 以下是返回ImageView
      ******************************************************************************/
@@ -41,10 +45,49 @@ public class TaoBaoActivity extends MyBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tao_bao);
-        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "淘宝", -1, null);
+        setContentView(R.layout.activity_nearby_service);
+        initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "附近服务", -1, null);
         initBrowser();
+//        init();
         initBack();
+    }
+
+    private void init() {
+        WebView webView = (WebView) findViewById(R.id.wv_taobao);
+        WebSettings webSettings = webView.getSettings();
+
+//webview支持js脚本
+        webSettings.setJavaScriptEnabled(true);
+
+//启用数据库
+        webSettings.setDatabaseEnabled(true);
+
+//设置定位的数据库路径
+        String dir = this.getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
+        webSettings.setGeolocationDatabasePath(dir);
+
+//启用地理定位
+        webSettings.setGeolocationEnabled(true);
+
+//开启DomStorage缓存
+        webSettings.setDomStorageEnabled(true);
+
+//配置权限
+        webView.setWebChromeClient(new WebChromeClient() {
+            @Override
+            public void onReceivedIcon(WebView view, Bitmap icon) {
+                super.onReceivedIcon(view, icon);
+
+            }
+
+            @Override
+            public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
+                callback.invoke(origin, true, false);
+                super.onGeolocationPermissionsShowPrompt(origin, callback);
+
+            }
+        });
+
     }
 
 
@@ -53,7 +96,7 @@ public class TaoBaoActivity extends MyBaseActivity {
      */
     private void initBrowser() {
         //WebView
-        browser = (WebView) findViewById(R.id.wv_taobao);
+        browser = (WebView) findViewById(R.id.wv_nearby);
         browser.loadUrl(TestUrl);
         settings = browser.getSettings();
         //设置可自由缩放网页
@@ -63,6 +106,39 @@ public class TaoBaoActivity extends MyBaseActivity {
         settings.setUseWideViewPort(true);
         settings.setLoadWithOverviewMode(true);
         settings.setAppCacheEnabled(true);//是否使用缓存
+        ///////////////////////////////
+        settings.setGeolocationEnabled(true);//启用地理定位
+//***最重要的方法，一定要设置，这就是出不来的主要原因
+        settings.setDomStorageEnabled(true);
+        settings.setDatabaseEnabled(true);
+        String dir = this.getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
+        settings.setGeolocationDatabasePath(dir);
+
+//配置权限（同样在WebChromeClient中实现）
+        /**
+         * 此处很重要，必须要
+         */
+
+
+        browser.setWebChromeClient(new WebChromeClient() {
+
+            @Override
+
+            public void onReceivedIcon(WebView view, Bitmap icon) {
+                super.onReceivedIcon(view, icon);
+
+            }
+        });
+        browser.setWebChromeClient(new WebChromeClient() {
+            //配置权限（同样在WebChromeClient中实现）
+            @Override
+            public void onGeolocationPermissionsShowPrompt(String origin,
+                                                           GeolocationPermissions.Callback callback) {
+                callback.invoke(origin, true, false);
+                super.onGeolocationPermissionsShowPrompt(origin, callback);
+            }
+        });
+        ///////////////////////////////
         // 如果页面中链接，如果希望点击链接继续在当前browser中响应，
         // 而不是新开Android的系统browser中响应该链接，必须覆盖webview的WebViewClient对象
 //        browser.setWebChromeClient(new WebChromeClient());//只写这句会选择使用web浏览器选择

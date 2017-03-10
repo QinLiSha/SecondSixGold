@@ -6,6 +6,9 @@
     <LinearLayout
         android:layout_width="@dimen/px_200"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:background="@color/themeBlue"
         android:orientation="vertical">
 
@@ -19,6 +22,7 @@
                 android:id="@+id/tv_all_car_type"
                 style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
+                android:padding="@dimen/px_25"
                 android:text="@string/all" />
 
             <View
@@ -38,6 +42,7 @@
                 android:id="@+id/tv_local_city_car"
                 style="@style/my_textview_style_normal_white"
                 android:layout_gravity="center"
+                android:padding="@dimen/px_25"
                 android:text="@string/local_city_car" />
 
             <View
@@ -55,8 +60,8 @@
             <TextView
                 android:id="@+id/tv_long_distant_car"
                 style="@style/my_textview_style_normal_white"
-
                 android:layout_gravity="center"
+                android:padding="@dimen/px_25"
                 android:text="@string/long_distant_car" />
 
             <View

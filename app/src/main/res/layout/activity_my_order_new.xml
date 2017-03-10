@@ -7,11 +7,37 @@
     android:orientation="vertical"
     tools:context="com.lisa.administrator.sixgold.activity.mine.MyOrderNewActivity">
 
-    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
-        android:id="@+id/actionbarView_twoImg"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="@dimen/activity_actionbar_item_height"
+        android:background="@color/themeBlue"
+        android:gravity="center">
 
+        <ImageView
+            android:id="@+id/iv_my_order_left"
+            android:layout_width="@dimen/px_50"
+            android:layout_height="@dimen/px_50"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_10"
+            android:background="@drawable/ic_chevron_left_grey_24dp" />
+
+        <ImageView
+            android:id="@+id/iv_my_order_right"
+            android:layout_width="@dimen/px_50"
+            android:layout_height="@dimen/px_50"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_10"
+            android:background="@drawable/ic_more_vert_white_24dp" />
+
+        <TextView
+            android:id="@+id/tv_title_two_img"
+            style="@style/my_textview_style_title"
+            android:layout_alignTop="@+id/iv_left_two_img"
+            android:layout_centerInParent="true"
+            android:text="@string/my_order" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -33,7 +59,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:padding="@dimen/px_0"
-                android:text="全部"
+                android:text="@string/all"
                 android:textColor="@color/themeBlue" />
 
 

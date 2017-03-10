@@ -73,7 +73,6 @@ public class YihaodianActivity extends MyBaseActivity {
 //////////////
 
 
-
         // 如果页面中链接，如果希望点击链接继续在当前browser中响应，
         // 而不是新开Android的系统browser中响应该链接，必须覆盖webview的WebViewClient对象
 //        browser.setWebChromeClient(new WebChromeClient());//只写这句会选择使用web浏览器选择

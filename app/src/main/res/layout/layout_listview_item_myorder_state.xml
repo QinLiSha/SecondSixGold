@@ -31,7 +31,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/px_20">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -45,7 +47,7 @@
                 style="@style/my_textview_style_normal_small"
                 android:layout_alignParentRight="true"
                 android:padding="@dimen/px_0"
-                android:text="2016-05-03 12:22:36" />
+                android:text="2017-03-03 12:22:36" />
 
             <TextView
                 android:id="@+id/tv_orderstate_state"
@@ -85,7 +87,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:padding="@dimen/px_0"
-                android:text="目前距离您的位置是7.6km" />
+                android:text="目前距离您的位置是1.6km" />
         </RelativeLayout>
 
 

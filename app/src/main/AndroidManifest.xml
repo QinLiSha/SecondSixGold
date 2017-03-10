@@ -29,8 +29,6 @@
 
     <permission android:name="ACCESS_COARSE_LOCATION" />
     <!-- 高德地图权限以地图SDK（包含其搜索功能）需要的基础权限以上 -->
-
-
     <!-- SharedSDK需要的权限 -->
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
@@ -93,7 +91,9 @@
         <activity
             android:name=".activity.order.ToPlaceOrderActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-        <activity android:name=".activity.toplaceorder.PlaceOrderExpressActivity" />
+        <activity
+            android:name=".activity.toplaceorder.PlaceOrderExpressActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity
             android:name=".activity.toplaceorder.PlaceOrderLegworkActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
@@ -103,6 +103,7 @@
         <activity
             android:name=".activity.toplaceorder.PlaceOrderLogisticsActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
+        `
         <activity
             android:name=".activity.toplaceorder.PlaceOrderLongDistanceFreightActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
@@ -176,6 +177,7 @@
             android:name=".activity.ordercar.OrderCarLongActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".activity.mine.MineNoticeActivity" />
+        <activity android:name=".activity.mine.NearbyServiceActivity" />
     </application>
 
 </manifest>

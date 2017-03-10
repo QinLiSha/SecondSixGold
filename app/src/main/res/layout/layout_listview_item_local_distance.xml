@@ -26,12 +26,12 @@
         android:layout_weight="3">
 
         <ImageView
-            android:id="@+id/iv_car_long_people_img"
+            android:id="@+id/iv_car_local_people_img"
             android:layout_width="match_parent"
             android:layout_height="@dimen/px_115"
             android:layout_gravity="center"
             android:layout_margin="@dimen/px_5"
-            android:background="@mipmap/truck" />
+            android:background="@mipmap/mianbao" />
     </LinearLayout>
 
 
@@ -62,7 +62,7 @@
 
 
                 <TextView
-                    android:id="@+id/tv_car_long_name"
+                    android:id="@+id/tv_car_local_name"
                     style="@style/my_textview_style_small_black"
                     android:text="张师傅" />
 
@@ -81,7 +81,7 @@
 
 
                 <TextView
-                    android:id="@+id/tv_car_long_rate_of_praise"
+                    android:id="@+id/tv_car_local_rate_of_praise"
                     style="@style/my_textview_style_small_black"
                     android:text="98%" />
 
@@ -106,13 +106,13 @@
                     style="@style/my_textview_style_normal_black"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/px_5"
-                    android:text="范围：" />
+                    android:text="@string/route" />
 
 
                 <TextView
-                    android:id="@+id/tv_car_long_route"
+                    android:id="@+id/tv_car_local_route"
                     style="@style/my_textview_style_small_black"
-                    android:text="郑州" />
+                    android:text="郑州-周口" />
 
             </LinearLayout>
 
@@ -129,9 +129,9 @@
 
 
                 <TextView
-                    android:id="@+id/tv_car_long_price"
+                    android:id="@+id/tv_car_local_price"
                     style="@style/my_textview_style_small_black"
-                    android:text="100" />
+                    android:text="1000" />
 
             </LinearLayout>
 
@@ -156,9 +156,9 @@
                     android:text="@string/cartype" />
 
                 <TextView
-                    android:id="@+id/tv_car_long_cartype"
+                    android:id="@+id/tv_car_local_cartype"
                     style="@style/my_textview_style_small_black"
-                    android:text="面包车" />
+                    android:text="大卡车" />
 
             </LinearLayout>
 
@@ -176,9 +176,9 @@
 
 
                 <TextView
-                    android:id="@+id/tv_car_long_distance"
+                    android:id="@+id/tv_car_local_distance"
                     style="@style/my_textview_style_small_black"
-                    android:text="800m" />
+                    android:text="300m" />
 
             </LinearLayout>
 
@@ -205,10 +205,10 @@
 
 
                 <TextView
-                    android:id="@+id/tv_car_long_can_weight"
+                    android:id="@+id/tv_car_local_can_weight"
 
                     style="@style/my_textview_style_small_black"
-                    android:text="2吨" />
+                    android:text="4吨" />
 
             </LinearLayout>
 
@@ -225,10 +225,10 @@
 
 
                 <TextView
-                    android:id="@+id/tv_car_long_delivery_times"
+                    android:id="@+id/tv_car_local_delivery_times"
 
                     style="@style/my_textview_style_small_black"
-                    android:text="235" />
+                    android:text="23564" />
 
             </LinearLayout>
 

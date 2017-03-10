@@ -118,7 +118,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/px_20"
             android:background="@drawable/background_border_white"
-            android:padding="@dimen/px_20"
+            android:padding="@dimen/px_30"
             android:text="@string/I_want_to_order" />
 
         <ImageView
