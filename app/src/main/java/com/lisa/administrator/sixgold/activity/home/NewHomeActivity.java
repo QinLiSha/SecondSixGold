@@ -1,6 +1,10 @@
 package com.lisa.administrator.sixgold.activity.home;
 
+import android.content.ComponentName;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,6 +23,7 @@ import com.amap.api.maps.model.BitmapDescriptor;
 import com.amap.api.maps.model.BitmapDescriptorFactory;
 import com.amap.api.maps.model.LatLng;
 import com.amap.api.maps.model.MarkerOptions;
+import com.lisa.administrator.sixgold.BuildConfig;
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.activity.LoginActivity;
 import com.lisa.administrator.sixgold.activity.mine.MineNoticeActivity;
@@ -33,8 +38,6 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class NewHomeActivity extends MyBaseActivity {
-
-
     //    @BindView(R.id.iv_current_city)
 //    ImageView ivCurrentCity;
     @BindView(R.id.ll_current_city)
@@ -99,8 +102,7 @@ public class NewHomeActivity extends MyBaseActivity {
         setContentView(R.layout.activity_new_home);
         ButterKnife.bind(this);
         mvHomeMapView.onCreate(savedInstanceState);//在activity执行onCreate时执行mvHomeMapView.onCreate(savedInstanceState)，创建地图
-        //初始化定位
-        initView();
+        initView();//初始化定位
     }
 
     /*************
@@ -220,6 +222,74 @@ public class NewHomeActivity extends MyBaseActivity {
     /*********************************************************************************************************************
      * *************************************地图的配置****以上
      *************************************************************/
+    ///////////////////////////////////////////////权限方法以下//////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * 跳转到miui的权限管理页面
+     */
+    private void gotoMiuiPermission() {
+        Intent i = new Intent("miui.intent.action.APP_PERM_EDITOR");
+        ComponentName componentName = new ComponentName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity");
+        i.setComponent(componentName);
+        i.putExtra("extra_pkgname", getPackageName());
+        try {
+            startActivity(i);
+        } catch (Exception e) {
+            e.printStackTrace();
+            gotoMeizuPermission();
+        }
+    }
+
+    /**
+     * 跳转到魅族的权限管理系统
+     */
+    private void gotoMeizuPermission() {
+        Intent intent = new Intent("com.meizu.safe.security.SHOW_APPSEC");
+        intent.addCategory(Intent.CATEGORY_DEFAULT);
+        intent.putExtra("packageName", BuildConfig.APPLICATION_ID);
+        try {
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+            gotoHuaweiPermission();
+        }
+    }
+
+    /**
+     * 华为的权限管理页面
+     */
+    private void gotoHuaweiPermission() {
+        try {
+            Intent intent = new Intent();
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            ComponentName comp = new ComponentName("com.huawei.systemmanager", "com.huawei.permissionmanager.ui.MainActivity");//华为权限管理
+            intent.setComponent(comp);
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+            startActivity(getAppDetailSettingIntent());
+        }
+
+    }
+
+    /**
+     * 获取应用详情页面intent
+     */
+    private Intent getAppDetailSettingIntent() {
+        Intent localIntent = new Intent();
+        localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (Build.VERSION.SDK_INT >= 9) {
+            localIntent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
+            localIntent.setData(Uri.fromParts("package", getPackageName(), null));
+        } else if (Build.VERSION.SDK_INT <= 8) {
+            localIntent.setAction(Intent.ACTION_VIEW);
+            localIntent.setClassName("com.android.settings", "com.android.settings.InstalledAppDetails");
+            localIntent.putExtra("com.android.settings.ApplicationPkgName", getPackageName());
+        }
+        return localIntent;
+    }
+
+    ///////////////////////////////////////////////权限方法以上//////////////////////////////////////////////////////////////////////////////////
     //    R.id.tv_notice,R.id.iv_current_city,
     @OnClick({R.id.tv_current_city, R.id.ll_current_city, R.id.iv_weather, R.id.tv_weather, R.id.ll_weather,
             R.id.iv_home_current_location, R.id.tv_to_order,
@@ -260,8 +330,7 @@ public class NewHomeActivity extends MyBaseActivity {
             case R.id.iv_home_homepage:
             case R.id.tv_home_homepage:
             case R.id.ll_home_homepage:
-                // TODO: 2017/2/15 因为是主页上的主页，所以不设点击事件 
-//                openActivity(NewHomeActivity.class);
+//                openActivity(NewHomeActivity.class); //主页上的主页按钮就没有写点击事件
                 break;
             case R.id.iv_car_type:
             case R.id.tv_car_type:
@@ -288,7 +357,5 @@ public class NewHomeActivity extends MyBaseActivity {
         }
     }
 
-    @OnClick(R.id.tv_to_order)
-    public void onClick() {
-    }
+
 }

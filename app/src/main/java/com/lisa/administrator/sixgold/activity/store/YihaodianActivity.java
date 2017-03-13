@@ -2,7 +2,6 @@ package com.lisa.administrator.sixgold.activity.store;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -10,22 +9,25 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.lisa.administrator.sixgold.R;
 import com.lisa.administrator.sixgold.base.MyBaseActivity;
 
+/**
+ * 之前一号店的界面总是出现::ERR_CACHE_MISS错误，将一些代码不写就好了
+ * settings.setBlockNetworkLoads(true);//就是这一句话惹得错
+ */
 public class YihaodianActivity extends MyBaseActivity {
     private WebView browser;
     WebSettings settings;
     String TestUrl = "http://www.yhd.com/";
+//    String TestUrl = "http://www.suning.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yihaodian);
         initActionBarTwoImg(R.drawable.ic_chevron_left_grey_24dp, "1号店", -1, null);
-
         initBrowser();
         initBack();
     }
@@ -56,23 +58,19 @@ public class YihaodianActivity extends MyBaseActivity {
         browser.loadUrl(TestUrl);
         settings = browser.getSettings();
         //设置可自由缩放网页
+        //出现net::ERR_CACHE_MISS错误提示
+        //使用缓存的方式是基于导航类型。正常页面加载的情况下将缓存内容。当导航返回,
+        //内容不会恢复（重新加载生成）,而只是从缓存中取回内容
+//        if (Build.VERSION.SDK_INT >= 19) {
+//            settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+//        }
         settings.setSupportZoom(true);
         settings.setJavaScriptEnabled(true);//有JavaScript功能的一定要实现
-        settings.setBuiltInZoomControls(true);
+        settings.setBuiltInZoomControls(true);//支持缩放
         settings.setUseWideViewPort(true);
-        settings.setLoadWithOverviewMode(true);
+        settings.setLoadWithOverviewMode(true);//bushi
         settings.setAllowContentAccess(true);//
-        settings.setBlockNetworkLoads(true);//
         settings.setAppCacheEnabled(true);//是否使用缓存
-
-//////////////
-        settings.setBuiltInZoomControls(false);
-        settings.setRenderPriority(WebSettings.RenderPriority.HIGH);
-        settings.setBlockNetworkImage(true);
-
-//////////////
-
-
         // 如果页面中链接，如果希望点击链接继续在当前browser中响应，
         // 而不是新开Android的系统browser中响应该链接，必须覆盖webview的WebViewClient对象
 //        browser.setWebChromeClient(new WebChromeClient());//只写这句会选择使用web浏览器选择
@@ -86,33 +84,18 @@ public class YihaodianActivity extends MyBaseActivity {
                     startActivity(intent);
                     return true;
                 }
-//                view.loadUrl(url);
-//                //  重写此方法表明点击网页里面的链接还是在当前的webview里跳转，不跳到浏览器那边
-//                return false;
             }
         });
-        if (Build.VERSION.SDK_INT >= 19) {
-            Toast.makeText(this, "hhahhhhaha", Toast.LENGTH_LONG).show();
-            settings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-
-        }
     }
 
-    //go back
+    //    go back
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-//        WebView browser = (WebView) findViewById(R.id.wv_tianmao);
-        // Check if the key event was the Back button and if there's history
 
         if ((keyCode == KeyEvent.KEYCODE_BACK) && browser.canGoBack()) {
             browser.goBack();
             return true;
         }
-        //  return true;
-        // If it wasn't the Back key or there's no web page history, bubble up to the default
-        // system behavior (probably exit the activity)
         return super.onKeyDown(keyCode, event);
     }
 }
-
-

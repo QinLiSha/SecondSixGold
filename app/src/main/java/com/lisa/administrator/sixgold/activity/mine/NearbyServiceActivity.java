@@ -55,23 +55,17 @@ public class NearbyServiceActivity extends MyBaseActivity {
     private void init() {
         WebView webView = (WebView) findViewById(R.id.wv_taobao);
         WebSettings webSettings = webView.getSettings();
-
 //webview支持js脚本
         webSettings.setJavaScriptEnabled(true);
-
 //启用数据库
         webSettings.setDatabaseEnabled(true);
-
 //设置定位的数据库路径
         String dir = this.getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
         webSettings.setGeolocationDatabasePath(dir);
-
 //启用地理定位
         webSettings.setGeolocationEnabled(true);
-
 //开启DomStorage缓存
         webSettings.setDomStorageEnabled(true);
-
 //配置权限
         webView.setWebChromeClient(new WebChromeClient() {
             @Override
@@ -113,20 +107,14 @@ public class NearbyServiceActivity extends MyBaseActivity {
         settings.setDatabaseEnabled(true);
         String dir = this.getApplicationContext().getDir("database", Context.MODE_PRIVATE).getPath();
         settings.setGeolocationDatabasePath(dir);
-
 //配置权限（同样在WebChromeClient中实现）
         /**
          * 此处很重要，必须要
          */
-
-
         browser.setWebChromeClient(new WebChromeClient() {
-
             @Override
-
             public void onReceivedIcon(WebView view, Bitmap icon) {
                 super.onReceivedIcon(view, icon);
-
             }
         });
         browser.setWebChromeClient(new WebChromeClient() {

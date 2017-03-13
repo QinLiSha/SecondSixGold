@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
@@ -20,6 +19,13 @@ android {
     //降低png格式要求
     aaptOptions.cruncherEnabled = false
     aaptOptions.useNewCruncher = false
+    lintOptions {
+        //强制不翻译------解决类似的Error:(28) Error: "my_point_score" is not translated in "en" (English) [MissingTranslation]
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')

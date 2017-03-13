@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_suning"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lisa.administrator.sixgold.activity.store.GuomeiActivity">
+
+    <com.lisa.administrator.sixgold.view.ActionBarTwoImg
+        android:id="@+id/actionbarView_twoImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <WebView
+        android:id="@+id/wv_guomei"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_0"
+        android:layout_weight="1" />
+</LinearLayout>

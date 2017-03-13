@@ -118,7 +118,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/px_20"
             android:background="@drawable/background_border_white"
-            android:padding="@dimen/px_30"
+            android:padding="@dimen/px_25"
             android:text="@string/I_want_to_order" />
 
         <ImageView
@@ -128,7 +128,7 @@
             android:layout_margin="@dimen/px_20"
             android:background="@drawable/btn_location" />
 
-
+        keytool -list -v -keystore F:\Lisa_Projects\sixgold_1.jks
     </FrameLayout>
 
     <LinearLayout
@@ -143,114 +143,93 @@
         <LinearLayout
             android:id="@+id/ll_home_homepage"
             android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:weightSum="2">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/iv_home_homepage"
                 android:layout_width="@dimen/px_30"
-                android:layout_height="@dimen/px_0"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/px_10"
-                android:layout_weight="1"
+                android:layout_height="@dimen/px_30"
+                android:layout_margin="@dimen/px_5"
                 android:background="@mipmap/iv_home_homepage_choosed" />
 
             <TextView
                 android:id="@+id/tv_home_homepage"
                 style="@style/my_textview_style_normal_default_nopadding"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/px_0"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-
                 android:text="@string/homepage"
-                android:textColor="@color/themeBlue" />
+                android:textColor="@color/themeBlue"
+                android:textSize="@dimen/textsize_normal" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_car_type"
             android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:weightSum="2">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/iv_car_type"
                 android:layout_width="@dimen/px_35"
-                android:layout_height="@dimen/px_0"
+                android:layout_height="@dimen/px_30"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/px_10"
-                android:layout_weight="1"
+                android:layout_margin="@dimen/px_5"
                 android:background="@mipmap/iv_car_type" />
 
             <TextView
                 android:id="@+id/tv_car_type"
                 style="@style/my_textview_style_normal_default_nopadding"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/px_0"
-                android:layout_gravity="center"
-                android:layout_weight="1"
                 android:text="@string/car_type"
-                android:textColor="@color/lightgray" />
+                android:textColor="@color/gray" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_home_I"
             android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:weightSum="4">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/iv_home_I"
                 android:layout_width="@dimen/px_35"
-                android:layout_height="@dimen/px_0"
-                android:layout_gravity="center"
-                android:layout_margin="@dimen/px_10"
-                android:layout_weight="2"
+                android:layout_height="@dimen/px_30"
+                android:layout_margin="@dimen/px_5"
                 android:background="@mipmap/iv_home_i" />
 
             <TextView
                 android:id="@+id/tv_home_I"
                 style="@style/my_textview_style_normal_default_nopadding"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/px_0"
-                android:layout_gravity="center"
-                android:layout_weight="2"
                 android:text="@string/I"
-                android:textColor="@color/lightgray" />
+                android:textColor="@color/gray" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_home_mail_list"
             android:layout_width="@dimen/px_0"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:orientation="vertical"
             android:weightSum="2">
 
             <ImageView
                 android:id="@+id/iv_home_mail_list"
                 android:layout_width="@dimen/px_35"
-                android:layout_height="@dimen/px_0"
+                android:layout_height="@dimen/px_30"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/px_10"
-                android:layout_weight="1"
+                android:layout_margin="@dimen/px_5"
                 android:background="@mipmap/iv_home_mail_list" />
 
             <TextView
                 android:id="@+id/tv_home_mail_list"
                 style="@style/my_textview_style_normal_default_nopadding"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/px_0"
-                android:layout_gravity="center"
-                android:layout_weight="1"
                 android:text="@string/mail_list"
-                android:textColor="@color/lightgray" />
+                android:textColor="@color/gray" />
         </LinearLayout>
 
 

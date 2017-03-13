@@ -11,7 +11,7 @@ import com.lisa.administrator.sixgold.activity.store.DangdangActivity;
 import com.lisa.administrator.sixgold.activity.store.JingdongActivity;
 import com.lisa.administrator.sixgold.activity.store.JumeiActivity;
 import com.lisa.administrator.sixgold.activity.store.MogujieActivity;
-import com.lisa.administrator.sixgold.activity.store.SuningActivity;
+import com.lisa.administrator.sixgold.activity.store.GuomeiActivity;
 import com.lisa.administrator.sixgold.activity.store.TaoBaoActivity;
 import com.lisa.administrator.sixgold.activity.store.TianMaoActivity;
 import com.lisa.administrator.sixgold.activity.store.WeipinhuiActivity;
@@ -73,12 +73,12 @@ public class MyStoreActivity extends MyBaseActivity {
     TextView tvMyStoreDangdang;
     @BindView(R.id.ll_my_store_dangdang)
     LinearLayout llMyStoreDangdang;
-    @BindView(R.id.iv_my_store_suning)
-    ImageView ivMyStoreSuning;
-    @BindView(R.id.tv_my_store_suning)
-    TextView tvMyStoreSuning;
-    @BindView(R.id.ll_my_store_suning)
-    LinearLayout llMyStoreSuning;
+    @BindView(R.id.iv_my_store_guomei)
+    ImageView ivMyStoreguomei;
+    @BindView(R.id.tv_my_store_guomei)
+    TextView tvMyStoreguomei;
+    @BindView(R.id.ll_my_store_guomei)
+    LinearLayout llMyStoreguomei;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,7 +113,7 @@ public class MyStoreActivity extends MyBaseActivity {
             R.id.iv_my_store_jumeiyoupin, R.id.tv_my_store_jumeiyoupin, R.id.ll_my_store_jumeiyoupin,
             R.id.iv_my_store_mogujie, R.id.tv_my_store_mogujie, R.id.ll_my_store_mogujie,
             R.id.iv_my_store_dangdang, R.id.tv_my_store_dangdang, R.id.ll_my_store_dangdang,
-            R.id.iv_my_store_suning, R.id.tv_my_store_suning, R.id.ll_my_store_suning})
+            R.id.iv_my_store_guomei, R.id.tv_my_store_guomei, R.id.ll_my_store_guomei})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_my_store_taobao:
@@ -156,10 +156,10 @@ public class MyStoreActivity extends MyBaseActivity {
             case R.id.ll_my_store_dangdang:
                 openActivity(DangdangActivity.class);
                 break;
-            case R.id.iv_my_store_suning:
-            case R.id.tv_my_store_suning:
-            case R.id.ll_my_store_suning:
-                openActivity(SuningActivity.class);
+            case R.id.iv_my_store_guomei:
+            case R.id.tv_my_store_guomei:
+            case R.id.ll_my_store_guomei:
+                openActivity(GuomeiActivity.class);
                 break;
         }
     }

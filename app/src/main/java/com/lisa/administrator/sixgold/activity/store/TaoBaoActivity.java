@@ -17,8 +17,8 @@ public class TaoBaoActivity extends MyBaseActivity {
 
     private WebView browser;
     WebSettings settings;
-    //    String TestUrl = "http://map.baidu.com/";
-//    String TestUrl = "http://ditu.amap.com/";
+    //    String TestUrl = "http://www.suning.com/";//不可以
+//    String TestUrl = "http://www.gome.com.cn/";
     String TestUrl = "https://m.taobao.com/";
     /********************************************************************************
      * 以下是返回ImageView
