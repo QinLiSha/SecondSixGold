@@ -24,7 +24,6 @@
         android:layout_margin="@dimen/px_80"
         android:background="@mipmap/xinxinwhite" />
 
-
     <EditText
         android:id="@+id/et_tel_num"
         style="@style/my_edittext_style_telephone_num"

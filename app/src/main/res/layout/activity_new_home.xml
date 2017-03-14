@@ -71,8 +71,8 @@
 
             <ImageView
                 android:id="@+id/iv_notice"
-                android:layout_width="@dimen/px_35"
-                android:layout_height="@dimen/px_35"
+                android:layout_width="@dimen/px_45"
+                android:layout_height="@dimen/px_45"
                 android:layout_gravity="center"
                 android:background="@mipmap/new_notice" />
 

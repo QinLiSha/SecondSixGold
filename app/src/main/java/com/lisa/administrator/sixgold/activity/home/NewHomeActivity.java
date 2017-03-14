@@ -38,6 +38,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class NewHomeActivity extends MyBaseActivity {
+
+
     //    @BindView(R.id.iv_current_city)
 //    ImageView ivCurrentCity;
     @BindView(R.id.ll_current_city)
@@ -356,6 +358,4 @@ public class NewHomeActivity extends MyBaseActivity {
                 break;
         }
     }
-
-
 }
